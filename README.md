@@ -13,8 +13,8 @@ Flexible [PostCSS][postcss-doc] config with great defaults. Lets you use **Dart 
   - [Table of contents](#table-of-contents)
   - [Install](#install)
   - [Usage](#usage)
-  - [The default configuration](#the-default-configuration)
-  - [Extends the configuration](#extends-the-configuration)
+  - [The default config](#the-default-config)
+  - [Extends the config](#extends-the-config)
   - [Browsers](#browsers)
   - [Related project](#Related-project)
   - [Thanks](#thanks)
@@ -22,7 +22,7 @@ Flexible [PostCSS][postcss-doc] config with great defaults. Lets you use **Dart 
 
 ## Install
 
-Install [postcss-config] and save them to your **package.json** `devDependencies`:
+Install [PostCSS Config][postcss-config] and save them to your **package.json** `devDependencies`:
 
 ```sh
 $ npm i -D @giotramu/postcss-config
@@ -30,13 +30,13 @@ $ npm i -D @giotramu/postcss-config
 
 ## Usage
 
-Create a `postcss.config.js` or `.postcssrc.js` file in the project root and grab the default configuration from node_modules folder:
+Create a `postcss.config.js` or `.postcssrc.js` file in the project root and grab the default config from node_modules folder:
 
 ```js
 module.exports = require('@giotramu/postcss-config').getDefault();
 ```
 
-## The default configuration
+## The default config
 
 The config bundle together the following plugins:
 
@@ -46,9 +46,9 @@ The config bundle together the following plugins:
 - [postcss-reporter]
 - [postcss-sass]
 
-You can inspect the source code of the [default configuration][default-config].
+You can inspect the source code of the [default config][default-config].
 
-## Extends the configuration
+## Extends the config
 
 Install all your favourite [PostCSS plugins][postcss-plugins] and save them to your **package.json** as `devDependencies`.
 Then extends the [default PostCSS config][default-config] with the following syntax:
