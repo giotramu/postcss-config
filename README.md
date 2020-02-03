@@ -30,7 +30,7 @@ $ npm i -D @giotramu/postcss-config
 
 ## Usage
 
-Create a `postcss.config.js` or `.postcssrc.js` file in the project root and grab the default config from node_modules folder:
+Create a `.postcssrc.js` or `postcss.config.js` file in the project root and grab the default config from node_modules folder:
 
 ```js
 module.exports = require('@giotramu/postcss-config').getDefault();
