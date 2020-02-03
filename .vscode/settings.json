@@ -1,0 +1,21 @@
+{
+  "[markdown]": {
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.quickSuggestions": true,
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true
+  },
+  "typescript.validate.enable": true,
+  "typescript.reportStyleChecksAsWarnings": false,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "eslint.validate": ["typescript", "javascript"],
+  "prettier.bracketSpacing": false,
+  "prettier.singleQuote": true,
+  "css.validate": false,
+  "scss.validate": false
+}
