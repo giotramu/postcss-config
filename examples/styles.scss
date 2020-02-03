@@ -1,0 +1,67 @@
+@import './partial';
+
+$brandColor: rebeccapurple;
+$size: 4em;
+
+:root {
+  --custom-property: tomato;
+  --size: calc(#{$size} + 4px);
+}
+
+// nesting & operators
+.selector {
+  margin: $size;
+  background-color: $brandColor;
+
+  &__info {
+    margin-bottom: $size / 2;
+  }
+}
+
+// mixins
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin horizontal-list {
+  @include reset-list;
+
+  & > li {
+    display: inline-block;
+    margin: {
+      left: -2px;
+      right: 2em;
+    }
+  }
+}
+
+nav > ul {
+  @include horizontal-list;
+}
+
+// extends
+.error {
+  display: flex;
+  border-width: 2px;
+}
+
+.big-error {
+  @extend .error;
+  border: 1px $brandColor;
+  background-color: $brandColor;
+}
+
+// functions
+@function sum($numbers...) {
+  $sum: 0;
+  @each $number in $numbers {
+    $sum: $sum + $number;
+  }
+  @return $sum;
+}
+
+.sum {
+  width: sum(20px, 40px, 80px);
+}

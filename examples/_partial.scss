@@ -1,0 +1,9 @@
+@custom-media --small-viewport (max-width: 30em);
+
+.imported {
+  content: 'Yay, import works!';
+
+  @media (--small-viewport) {
+    content: 'Oooh, mobile mode!';
+  }
+}
