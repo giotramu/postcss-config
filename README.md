@@ -14,7 +14,7 @@ Flexible [PostCSS][postcss-doc] config with great defaults. Lets you use **Dart 
   - [Install](#install)
   - [Usage](#usage)
   - [The default configuration](#the-default-configuration)
-  - [Expand the configuration](#expand-the-configuration)
+  - [Extends the configuration](#extends-the-configuration)
   - [Browsers](#browsers)
   - [Related project](#Related-project)
   - [Thanks](#thanks)
@@ -48,13 +48,13 @@ The config bundle together the following plugins:
 
 You can inspect the source code of the [default configuration][default-config].
 
-## Expand the configuration
+## Extends the configuration
 
 Install all your favourite [PostCSS plugins][postcss-plugins] and save them to your **package.json** as `devDependencies`.
-Then expand the [default PostCSS config][default-config] with the following syntax:
+Then extends the [default PostCSS config][default-config] with the following syntax:
 
 ```js
-module.exports = require('@giotramu/postcss-config').expandDefault({
+module.exports = require('@giotramu/postcss-config').extends({
   map: true,
   plugins: {
     'postcss-import': true,
@@ -67,14 +67,14 @@ module.exports = require('@giotramu/postcss-config').expandDefault({
 });
 ```
 
-By design, the behaviour of the `expandDefault` method is overwriting the existing array values completely rather than concatenating.
+By design, the behaviour of the `extends` method is overwriting the existing array values completely rather than concatenating.
 
 ## Plugins
 
 Plugin **execution order** is top-down. You can disable and not load a single or a bunch of plugins by setting them to `false`:
 
 ```js
-module.exports = require('@giotramu/postcss-config').expandDefault({
+module.exports = require('@giotramu/postcss-config').extends({
   plugins: {
     cssnano: false
   }
@@ -99,8 +99,8 @@ You can change it when you need:
 //--- Grab default config
 module.exports = require('@giotramu/postcss-config').setBrowsers(['> 1%', 'IE 10']).getDefault();
 
-//--- Expand default config
-module.exports = require('@giotramu/postcss-config').setBrowsers(['> 1%', 'IE 10']).expandDefault({...});
+//--- Extends default config
+module.exports = require('@giotramu/postcss-config').setBrowsers(['> 1%', 'IE 10']).extends({...});
 ```
 
 ## Related project
