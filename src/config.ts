@@ -1,4 +1,4 @@
-export interface ConfigProps {
+export interface PcssConfigProps {
   to?: string;
   from?: string;
   map?: boolean;
@@ -16,7 +16,9 @@ const browsers = [
   'not < 0.5%'
 ];
 
-export function getConfig(listOfBrowsers: string[] = browsers): ConfigProps {
+export function getConfig(
+  overrideBrowserslist: string[] = browsers
+): PcssConfigProps {
   return {
     map: false,
     syntax: 'postcss-scss',
@@ -29,7 +31,7 @@ export function getConfig(listOfBrowsers: string[] = browsers): ConfigProps {
           {
             autoprefixer: {
               grid: true,
-              overrideBrowserslist: listOfBrowsers
+              overrideBrowserslist
             }
           }
         ]
