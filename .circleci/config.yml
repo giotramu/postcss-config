@@ -2,7 +2,7 @@ version: 2.1
 
 # --- define orbs (a reusable packages of CircleCI configuration)
 orbs:
-  codecov: codecov/codecov@1.0.2
+  codecov: codecov/codecov@1.0.5
 
 # --- define aliases
 aliases:
@@ -21,20 +21,22 @@ defaults: &defaults
 
 # --- define jobs
 jobs:
-  setup:
+  installing:
     <<: *defaults
     steps:
       - checkout
       - restore_cache: *restore-cache-deps
-      - run: npm install npm@latest
-      - run: npm install
+      - run:
+          command: |-
+            npm install npm@latest
+            npm install
       - save_cache: *save-cache-deps
       - persist_to_workspace:
           root: ~/postcss-config
           paths:
             - '*'
 
-  check:
+  checking:
     <<: *defaults
     steps:
       - attach_workspace:
@@ -45,20 +47,17 @@ jobs:
             npm run check:src
             npm run lint:src
 
-  test:
+  testing:
     <<: *defaults
     steps:
       - attach_workspace:
           at: ~/postcss-config
       - run: npm run test
-
-  coverage:
-    <<: *defaults
-    steps:
       - codecov/upload:
-          file: coverage/index.html
+          file: coverage/*.json
+          flags: unit-tests
 
-  build:
+  building:
     <<: *defaults
     steps:
       - attach_workspace:
@@ -70,17 +69,14 @@ workflows:
   version: 2.1
   build:
     jobs:
-      - setup
-      - check:
+      - installing
+      - checking:
           requires:
             - setup
-      - test:
+      - testing:
           requires:
             - setup
-      - coverage:
-          requires:
-            - test
-      - build:
+      - building:
           requires:
             - check
             - test
