@@ -16,14 +16,14 @@ module.exports = {
   verbose: true,
   bail: true,
   coveragePathIgnorePatterns: [
-    '<rootDir>/src/[\\w/]*test/_[a-zA-Z]+\\.ts',
-    '<rootDir>/src/testing/*',
-    '<rootDir>/src/[\\w/]*/testing/*',
-    '<rootDir>/node_modules/'
+    '<rootDir>/node_modules/',
+    '<rootDir>/[\\w/]*test/_[a-zA-Z]+\\.ts',
+    '<rootDir>/src/[\\w/]*/test/*',
+    '<rootDir>/src/test/*'
   ],
   coverageReporters,
   reporters,
-  roots: ['<rootDir>/src/'],
+  roots: ['<rootDir>/test/'],
   testEnvironment: 'node',
   testMatch: null,
   testRegex: '(\\.|/)spec\\.ts$'

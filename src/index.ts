@@ -1,21 +1,19 @@
 import merge from 'deepmerge';
-import {ConfigProps, getConfig} from './config';
+import {PcssConfigProps, getConfig} from './config';
 
-interface ApisProps {
-  getDefault: () => ConfigProps;
-  extends: (a: ConfigProps) => {};
-  setBrowsers: (a: string[]) => Omit<ApisProps, 'setBrowsers'>;
+interface ConfigProps {
+  extends: (a: {}) => PcssConfigProps;
+  getDefault: () => PcssConfigProps;
+  setBrowsers: (a: string[]) => Omit<ConfigProps, 'setBrowsers'>;
 }
 
-const apis: ApisProps = {
-  extends: (target: ConfigProps): {} => mergeConfigs(target, getConfig()),
+export = {
+  extends: (target: {}): PcssConfigProps => mergeConfigs(target, getConfig()),
   getDefault: getConfig,
   setBrowsers
 };
 
-export = apis;
-
-function mergeConfigs(target: {}, source: {}): {} {
+function mergeConfigs(target: {}, source: PcssConfigProps): PcssConfigProps {
   return isValidTarget(target)
     ? merge(source, target, {arrayMerge: overwriteArrays})
     : source;
@@ -34,23 +32,23 @@ function isValidTarget(target?: {}): boolean {
   return isValid;
 }
 
-interface SetBrowsersProps extends Omit<ApisProps, 'setBrowsers'> {}
+function setBrowsers(browsers: string[]): Omit<ConfigProps, 'setBrowsers'> {
+  const isBrowserslist = Array.isArray(browsers) && browsers.length > 0;
 
-function setBrowsers(browsers: string[]): SetBrowsersProps {
-  let sourceConfig = getConfig();
-
-  if (Array.isArray(browsers) && browsers.length > 0) {
-    sourceConfig = getConfig(browsers);
-  } else {
+  if (!isBrowserslist) {
     // eslint-disable-next-line no-console
     console.warn(
       '[@giotramu/postcss-config] You must pass a valid Browserslist query.'
     );
   }
 
+  const source: PcssConfigProps = isBrowserslist
+    ? getConfig(browsers)
+    : getConfig();
+
   return {
-    extends: (target: ConfigProps) => mergeConfigs(target, sourceConfig),
-    getDefault: () => sourceConfig
+    extends: target => mergeConfigs(target, source),
+    getDefault: () => source
   };
 }
 
@@ -61,5 +59,5 @@ function isObject(obj: {}): boolean {
 }
 
 function overwriteArrays(_: [], source: []): [] {
-  return source; // --- overwrites the existing array values completely rather than concatenating them
+  return source; // overwrites the existing array values completely rather than concatenating them
 }

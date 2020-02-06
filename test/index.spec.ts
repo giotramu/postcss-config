@@ -1,32 +1,31 @@
 /* eslint-disable @typescript-eslint/ban-ts-ignore */
-import postcssConfig from '../';
-import {ConfigProps} from '../config';
+import postcssConfig from '../src';
 import defaultConfig from './_config';
 
 test('getDefault should returns the default config object', () => {
-  const pcssConfig = postcssConfig.getDefault();
-  expect(pcssConfig).toMatchObject(defaultConfig);
+  const config = postcssConfig.getDefault();
+  expect(config).toMatchObject(defaultConfig);
 });
 
 test('extends should returns the default config if the parameter passed is not an object', () => {
   // @ts-ignore
-  const pcssConfig = postcssConfig.extends(Math.random());
-  expect(pcssConfig).toMatchObject(defaultConfig);
+  const config = postcssConfig.extends(Math.random());
+  expect(config).toMatchObject(defaultConfig);
 });
 
 test('extends should appends "postcss-fake-plugin" to the plugins object', () => {
-  const expanded = postcssConfig.extends({
+  const extended = postcssConfig.extends({
     plugins: {
       'postcss-fake-plugin': true
     }
-  }) as ConfigProps;
+  });
 
-  const plugins = Object.keys(expanded.plugins);
+  const plugins = Object.keys(extended.plugins);
   expect(plugins[plugins.length - 1]).toBe('postcss-fake-plugin');
 });
 
 test('extends standard behavior is to overwrite the default config', () => {
-  const expanded = postcssConfig.extends({
+  const extended = postcssConfig.extends({
     plugins: {
       cssnano: {
         preset: [
@@ -39,9 +38,9 @@ test('extends standard behavior is to overwrite the default config', () => {
         ]
       }
     }
-  }) as ConfigProps;
+  });
 
-  expect(expanded.plugins).toMatchObject({
+  expect(extended.plugins).toMatchObject({
     cssnano: {
       preset: [
         'default',
@@ -57,9 +56,7 @@ test('extends standard behavior is to overwrite the default config', () => {
 
 test('setBrowsers and getDefault should return the default config with browsers query updated', () => {
   const browsers = ['> 1%', 'IE 10'];
-  const updated = postcssConfig
-    .setBrowsers(browsers)
-    .getDefault() as ConfigProps;
+  const updated = postcssConfig.setBrowsers(browsers).getDefault();
 
   expect(
     // @ts-ignore
@@ -75,7 +72,7 @@ test('setBrowsers should ignore the value passed as parameter if is an empty arr
     'not dead',
     'not < 0.5%'
   ];
-  const updated = postcssConfig.setBrowsers([]).getDefault() as ConfigProps;
+  const updated = postcssConfig.setBrowsers([]).getDefault();
 
   expect(
     // @ts-ignore
@@ -89,7 +86,7 @@ test('setBrowsers and extends should return a new config with browsers query upd
     plugins: {
       'postcss-fake-plugin': true
     }
-  }) as ConfigProps;
+  });
 
   expect(
     // @ts-ignore

@@ -20,20 +20,22 @@
     "access": "public"
   },
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist",
     "*.md",
     "LICENSE"
   ],
   "scripts": {
+    "clean": "rimraf ./examples/*.css ./dist",
     "lint:src": "eslint . --ext .ts,.js",
-    "pretest:css": "rimraf ./examples/*.css",
+    "check:src": "tsc --noEmit",
     "test:css": "postcss ./examples/styles.scss --dir=examples/ --ext=min.css --verbose",
     "test:unit": "jest --ci --coverage",
     "pretest": "npm run build",
-    "test": "npm run lint:src && npm run test:css && npm run test:unit",
-    "prebuild": "rimraf ./dist",
-    "build": "tsc",
+    "test": "npm run check:src && npm run lint:src && npm run test:css && npm run test:unit",
+    "prebuild": "npm run clean",
+    "build": "tsc --declaration",
     "prepublishOnly": "npm test && npm run build"
   },
   "dependencies": {
