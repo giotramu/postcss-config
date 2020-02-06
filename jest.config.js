@@ -15,6 +15,7 @@ module.exports = {
   // --- standard config
   verbose: true,
   bail: true,
+  collectCoverage: true,
   coveragePathIgnorePatterns: [
     '<rootDir>/node_modules/',
     '<rootDir>/[\\w/]*test/_[a-zA-Z]+\\.ts',

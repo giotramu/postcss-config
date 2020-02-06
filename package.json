@@ -27,14 +27,14 @@
     "LICENSE"
   ],
   "scripts": {
-    "clean": "rimraf ./examples/*.css ./dist",
-    "lint:src": "eslint . --ext .ts,.js",
+    "precheck:config": "npm run build",
+    "check:config": "postcss ./examples/styles.scss --dir=examples/ --ext=min.css --verbose",
     "check:src": "tsc --noEmit",
-    "test:css": "postcss ./examples/styles.scss --dir=examples/ --ext=min.css --verbose",
-    "test:unit": "jest --ci --coverage",
-    "pretest": "npm run build",
-    "test": "npm run check:src && npm run lint:src && npm run test:css && npm run test:unit",
-    "prebuild": "npm run clean",
+    "lint:src": "eslint . --ext .ts,.js",
+    "pre:unit": "rimraf ./coverage",
+    "unit": "jest --coverage --ci",
+    "test": "npm run check:src && npm run lint:src && npm run unit",
+    "prebuild": "rimraf ./dist",
     "build": "tsc --declaration",
     "prepublishOnly": "npm test && npm run build"
   },
