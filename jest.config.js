@@ -1,6 +1,3 @@
-const isCi = (process.env.CI || 'false') === 'true';
-const reporters = isCi ? ['default'] : undefined;
-
 module.exports = {
   preset: 'ts-jest',
   globals: {
@@ -14,17 +11,19 @@ module.exports = {
   // --- standard config
   verbose: true,
   bail: true,
-  collectCoverage: true, // generate coverage report
+  roots: ['<rootDir>/test/'],
+  testEnvironment: 'node',
+  testMatch: null,
+  testRegex: '(\\.|/)spec\\.ts$',
+
+  // --- generate coverage report
+  collectCoverage: true,
+  reporters: ['default'],
+  coverageReporters: ['html', 'json'],
   coveragePathIgnorePatterns: [
     '<rootDir>/node_modules/',
     '<rootDir>/[\\w/]*test/_[a-zA-Z]+\\.ts',
     '<rootDir>/src/[\\w/]*/test/*',
     '<rootDir>/src/test/*'
-  ],
-  coverageReporters: ['html', 'json'],
-  reporters,
-  roots: ['<rootDir>/test/'],
-  testEnvironment: 'node',
-  testMatch: null,
-  testRegex: '(\\.|/)spec\\.ts$'
+  ]
 };
