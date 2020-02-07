@@ -21,7 +21,7 @@ module.exports = {
   testRegex: '(\\.|/)spec\\.ts$',
 
   // --- generate coverage report
-  collectCoverage: true,
+  collectCoverage: isCi,
   reporters,
   coverageReporters,
   coveragePathIgnorePatterns: [
