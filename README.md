@@ -3,14 +3,14 @@
 Flexible [PostCSS][postcss-doc] config with great defaults. Lets you use **Dart SASS/SCSS** as PostCSS plugin.
 
 [![npm package][npm-badge]][npm]
-[![Build status][circleci-badge]][circleci]
-[![Code coverage][codecov-badge]][codecov]
-[![David][david-dep-badge]][david-dep]
-[![David][david-dev-badge]][david-dev]
+[![build status][circleci-badge]][circleci]
+[![code coverage][codecov-badge]][codecov]
+[![dependencies][deps-badge]][deps]
+[![dev-dependencies][dev-deps]][david-dev]
 
 ## Table of contents
 
-- [PostCSS Config](#postcss-config)
+- [PostCSS config](#postcss-config)
   - [Table of contents](#table-of-contents)
   - [Install](#install)
   - [Usage](#usage)
@@ -23,7 +23,7 @@ Flexible [PostCSS][postcss-doc] config with great defaults. Lets you use **Dart 
 
 ## Install
 
-Install [PostCSS Config][postcss-config] and save them to your **package.json** `devDependencies`:
+Install PostCSS config and save them to your **package.json** `devDependencies`:
 
 ```sh
 $ npm i -D @giotramu/postcss-config
@@ -68,7 +68,7 @@ module.exports = require('@giotramu/postcss-config').extends({
 });
 ```
 
-By design, the behaviour of the `extends` method is overwriting the existing array values completely rather than concatenating.
+By design, the behaviour of the `extends` method is overwriting the existing array values completely rather than concatenating them.
 
 ## Plugins
 
@@ -84,9 +84,9 @@ module.exports = require('@giotramu/postcss-config').extends({
 
 ## Browsers
 
-PostCSS Config is dispatched with a specific [browserslist] query:
+PostCSS config is dispatched with a specific [browserslist] query:
 
-```yaml
+```yml
 last 2 versions
 not ie <= 11
 not op_mini all
@@ -123,15 +123,14 @@ MIT
 [circleci-badge]: https://badgen.net/circleci/github/giotramu/postcss-config?icon=circleci&label=circleci
 [codecov]: https://codecov.io/gh/giotramu/postcss-config
 [codecov-badge]: https://badgen.net/codecov/c/github/giotramu/postcss-config?icon=codecov&label=codecov
-[david-dep]: https://david-dm.org/giotramu/postcss-config
-[david-dep-badge]: https://badgen.net/david/dep/giotramu/postcss-config
+[deps]: https://david-dm.org/giotramu/postcss-config
+[deps-badge]: https://badgen.net/david/dep/giotramu/postcss-config
 [david-dev]: https://david-dm.org/giotramu/postcss-config?type=dev
-[david-dev-badge]: https://badgen.net/david/dev/giotramu/postcss-config
+[dev-deps]: https://badgen.net/david/dev/giotramu/postcss-config
 [browserslist]: https://github.com/browserslist/browserslist
 [default-config]: ./src/config.ts
 [autoprefixer]: https://github.com/postcss/autoprefixer
 [cssnano]: https://github.com/cssnano/cssnano
-[postcss-config]: https://github.com/giotramu/postcss-config
 [postcss-custom-media]: https://github.com/postcss/postcss-custom-media
 [postcss-doc]: https://postcss.org
 [postcss-load-config]: https://github.com/michael-ciniawsky/postcss-load-config
