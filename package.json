@@ -32,7 +32,7 @@
     "check:src": "tsc --noEmit",
     "lint:src": "eslint . --ext .ts,.js",
     "pre:unit": "rimraf ./coverage",
-    "unit": "jest --coverage --ci",
+    "unit": "jest --ci --coverage",
     "test": "npm run check:src && npm run lint:src && npm run unit",
     "prebuild": "rimraf ./dist",
     "build": "tsc --declaration",

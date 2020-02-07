@@ -1,6 +1,5 @@
 const isCi = (process.env.CI || 'false') === 'true';
 const reporters = isCi ? ['default'] : undefined;
-const coverageReporters = isCi ? ['text', 'cobertura', 'html'] : ['text'];
 
 module.exports = {
   preset: 'ts-jest',
@@ -22,7 +21,7 @@ module.exports = {
     '<rootDir>/src/[\\w/]*/test/*',
     '<rootDir>/src/test/*'
   ],
-  coverageReporters,
+  coverageReporters: ['html', 'json'],
   reporters,
   roots: ['<rootDir>/test/'],
   testEnvironment: 'node',
