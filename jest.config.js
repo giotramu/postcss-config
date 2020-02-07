@@ -1,3 +1,7 @@
+const isCi = (process.env.CI || 'false') === 'true';
+const reporters = isCi ? ['default'] : undefined;
+const coverageReporters = isCi ? ['text', 'cobertura', 'html'] : ['text'];
+
 module.exports = {
   preset: 'ts-jest',
   globals: {
@@ -18,8 +22,8 @@ module.exports = {
 
   // --- generate coverage report
   collectCoverage: true,
-  reporters: ['default'],
-  coverageReporters: ['html', 'json'],
+  reporters,
+  coverageReporters,
   coveragePathIgnorePatterns: [
     '<rootDir>/node_modules/',
     '<rootDir>/[\\w/]*test/_[a-zA-Z]+\\.ts',
