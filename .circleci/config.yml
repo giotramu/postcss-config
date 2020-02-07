@@ -1,8 +1,8 @@
 version: 2.1
 
 # --- define orbs (a reusable packages of CircleCI configuration)
-orbs:
-  codecov: codecov/codecov@1.0.5
+# orbs:
+#   codecov: codecov/codecov@1.0.5
 
 # --- define aliases
 aliases:
@@ -54,9 +54,10 @@ jobs:
           at: ~/postcss-config
       - run:
           command: npm run test
-      - codecov/upload:
-          file: coverage/coverage-final.json
-          flags: unit-tests
+      - run:
+          command: |-
+            export CODECOV_TOKEN=${CODECOV_TOKEN}
+            bash <(curl -s https://codecov.io/bash)
 
   building:
     <<: *defaults
