@@ -50,10 +50,10 @@ jobs:
       - attach_workspace:
           at: ~/postcss-config
       - run:
-          name: Run test on all branches
+          name: Run jest tests
           command: npm run test
       - run:
-          name: Add tests results to codecov
+          name: Upload tests coverage to codecov
           command: |-
             export CODECOV_TOKEN=${CODECOV_TOKEN}
             bash <(curl -s https://codecov.io/bash)
