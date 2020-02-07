@@ -72,11 +72,11 @@ workflows:
       - installing
       - checking:
           requires:
-            - setup
+            - installing
       - testing:
           requires:
-            - setup
+            - installing
       - building:
           requires:
-            - check
-            - test
+            - checking
+            - testing

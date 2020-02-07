@@ -4,6 +4,7 @@ Flexible [PostCSS][postcss-doc] config with great defaults. Lets you use **Dart 
 
 [![NPM Package][npm-badge]][npm]
 [![Build status][circleci-badge]][circleci]
+[![Code Coverage][codecov-badge]][codecov]
 [![David][david-dep-badge]][david-dep]
 [![David][david-dev-badge]][david-dev]
 
@@ -119,7 +120,9 @@ MIT
 [npm]: https://www.npmjs.com/package/@giotramu/postcss-config
 [npm-badge]: https://badgen.net/npm/v/@giotramu/postcss-config
 [circleci]: https://circleci.com/gh/giotramu/postcss-config
-[circleci-badge]: https://badgen.net/circleci/github/giotramu/postcss-config
+[circleci-badge]: https://badgen.net/circleci/github/giotramu/postcss-config?icon=circleci&label=status
+[codecov]: https://codecov.io/gh/giotramu/postcss-config
+[codecov-badge]: https://badgen.net/codecov/c/github/giotramu/postcss-config?icon=codecov&label=coverage
 [david-dep]: https://david-dm.org/giotramu/postcss-config
 [david-dev]: https://david-dm.org/giotramu/postcss-config?type=dev
 [david-peer]: https://david-dm.org/giotramu/postcss-config?type=peer
