@@ -25,7 +25,7 @@ Flexible [PostCSS][postcss-doc] config with great defaults. Lets you use **Dart 
 
 Install PostCSS config and save them to your **package.json** `devDependencies`:
 
-```sh
+```bash
 $ npm i -D @giotramu/postcss-config
 ```
 
