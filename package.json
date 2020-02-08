@@ -1,6 +1,6 @@
 {
   "name": "@giotramu/postcss-config",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Flexible PostCSS config with great defaults.",
   "author": "Giovanni Tramutola <gtramutola@mail.com>",
   "homepage": "https://github.com/giotramu/postcss-config#readme",
