@@ -2,7 +2,7 @@
   "name": "@giotramu/postcss-config",
   "version": "2.1.0",
   "description": "Flexible PostCSS config with great defaults.",
-  "author": "Giovanni Tramutola <gtramutola@mail.com>",
+  "author": "Giovanni Tramutola <gtramutola@engineer.com>",
   "homepage": "https://github.com/giotramu/postcss-config#readme",
   "license": "MIT",
   "repository": {
