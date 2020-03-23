@@ -3,16 +3,11 @@ update_configs:
   - package_manager: 'javascript'
     directory: '/'
     update_schedule: 'weekly'
-
-    # apply default reviewer and label to created pull requests
     default_assignees:
       - 'giotramu'
     default_labels:
-      - 'dependabot'
       - 'dependencies'
-
-    # custom commit prefix for prod and development dependencies
     commit_message:
-      prefix: 'chore(deps)'
-      prefix_development: 'chore(dev-deps)'
       include_scope: false
+      prefix: 'chore(dep)'
+      prefix_development: 'chore(dev-dep)'
