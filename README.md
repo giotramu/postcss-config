@@ -61,10 +61,10 @@ module.exports = require('@giotramu/postcss-config').extends({
     'postcss-import': true,
     'postcss-calc': true,
     'postcss-custom-selectors': {
-      preserve: true
-    }
+      preserve: true,
+    },
     // ...
-  }
+  },
 });
 ```
 
@@ -77,8 +77,8 @@ Plugin **execution order** is top-down. You can disable and not load a single or
 ```js
 module.exports = require('@giotramu/postcss-config').extends({
   plugins: {
-    cssnano: false
-  }
+    cssnano: false,
+  },
 });
 ```
 
@@ -115,7 +115,11 @@ module.exports = require('@giotramu/postcss-config').setBrowsers(['> 1%', 'IE 10
 
 ## Licence
 
-MIT
+[MIT Licence](./LICENSE)
+
+<!---
+  L I N K S
+-->
 
 [npm]: https://www.npmjs.com/package/@giotramu/postcss-config
 [npm-badge]: https://badgen.net/npm/v/@giotramu/postcss-config
