@@ -6,7 +6,7 @@ Flexible [PostCSS][postcss-doc] config with great defaults. Lets you use **Dart 
 [![build status][ci-badge]][ci]
 [![code coverage][coverage-badge]][coverage]
 [![dependencies][deps-badge]][deps]
-[![dev-dependencies][devdeps-badge]][devdeps]
+[![dev dependencies][devdeps-badge]][devdeps]
 
 ## Table of contents
 
