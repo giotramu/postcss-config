@@ -19,7 +19,7 @@ Flexible [PostCSS][postcss-doc] config with great defaults. Lets you use **Dart 
   - [Browsers](#browsers)
   - [Related project](#Related-project)
   - [Thanks](#thanks)
-  - [Licence](#licence)
+  - [License](#license)
 
 ## Install
 
