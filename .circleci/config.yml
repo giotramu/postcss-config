@@ -23,7 +23,7 @@ jobs:
           name: Install dependencies
           command: |-
             npm install npm@latest
-            npm install
+            npm ci
       - save_cache: *save-cache-deps
       - persist_to_workspace:
           root: ~/postcss-config
@@ -37,9 +37,7 @@ jobs:
           at: ~/postcss-config
       - run:
           name: Run tsc compiler and eslint for catch errors
-          command: |-
-            npm run check:src
-            npm run lint:src
+          command: npm run lint
 
   testing:
     <<: *defaults
@@ -48,7 +46,7 @@ jobs:
           at: ~/postcss-config
       - run:
           name: Run jest tests
-          command: npm run test
+          command: npm run unit
       - run:
           name: Upload tests coverage to codecov
           command: |-
