@@ -3,10 +3,13 @@ update_configs:
   - package_manager: 'javascript'
     directory: '/'
     update_schedule: 'weekly'
+
     default_assignees:
       - 'giotramu'
+
     default_labels:
       - 'dependencies'
+
     commit_message:
       include_scope: false
       prefix: 'chore(deps)'
