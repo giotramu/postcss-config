@@ -1,0 +1,43 @@
+name: package release
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  build_and_release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@v2
+
+      - name: 'Setup .npmrc file to publish to npm'
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: 'Install dependencies'
+        run: npm ci
+
+      - name: 'Build the artifacts'
+        run: npm run build
+        env:
+          CI: true
+
+      - name: 'Publish to npm'
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: 'Setup .npmrc file to publish to GitHub Packages'
+        uses: actions/setup-node@v1
+        with:
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@giotramu' # defaults to the user or organization that owns the workflow file
+
+      - name: 'Publish to GitHub Packages'
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

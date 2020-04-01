@@ -13,8 +13,8 @@
     "url": "https://github.com/giotramu/postcss-config/issues"
   },
   "engines": {
-    "node": ">=10.18",
-    "npm": ">=6.13"
+    "node": ">=10.x",
+    "npm": ">=6.x"
   },
   "publishConfig": {
     "access": "public"
@@ -22,21 +22,18 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
-    "dist",
-    "*.md",
+    "dist/",
     "LICENSE"
   ],
   "scripts": {
     "check:src": "tsc --noEmit",
     "lint:src": "eslint . --ext .ts,.js",
-    "lint": "npm run check:src && npm run lint:src",
-    "unit": "jest --ci --coverage",
-    "test": "npm run unit",
+    "lint": "npm run lint:src",
+    "test": "jest --coverage",
     "prebuild": "rimraf ./dist",
     "build": "tsc --declaration",
     "prebuild:css": "npm run build",
-    "build:css": "postcss ./examples/styles.scss --dir=examples/ --ext=min.css --verbose",
-    "prepublishOnly": "npm run lint && npm test && npm run build"
+    "build:css": "postcss ./examples/styles.scss --dir=examples/ --ext=min.css --verbose"
   },
   "dependencies": {
     "@csstools/postcss-sass": "^4.0.0",

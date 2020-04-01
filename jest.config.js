@@ -1,6 +1,6 @@
 const isCi = (process.env.CI || 'false') === 'true';
 const reporters = isCi ? ['default'] : undefined;
-const coverageReporters = isCi ? ['text', 'cobertura', 'html'] : ['text'];
+const coverageReporters = isCi ? ['text', 'lcov', 'json'] : ['text'];
 
 module.exports = {
   preset: 'ts-jest',

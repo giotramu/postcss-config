@@ -10,7 +10,7 @@ interface ConfigProps {
 export = {
   extends: (target: {}): PcssConfigProps => mergeConfigs(target, getConfig()),
   getDefault: getConfig,
-  setBrowsers,
+  setBrowsers
 };
 
 function mergeConfigs(target: {}, source: PcssConfigProps): PcssConfigProps {
@@ -47,8 +47,8 @@ function setBrowsers(browsers: string[]): Omit<ConfigProps, 'setBrowsers'> {
     : getConfig();
 
   return {
-    extends: (target) => mergeConfigs(target, source),
-    getDefault: () => source,
+    extends: target => mergeConfigs(target, source),
+    getDefault: () => source
   };
 }
 

@@ -3,10 +3,10 @@ module.exports = {
   extends: ['contactlab/typescript', 'prettier'],
 
   env: {
-    jest: true,
+    jest: true
   },
 
   rules: {
-    'import/order': 'off',
-  },
+    'import/order': 'off'
+  }
 };

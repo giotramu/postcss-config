@@ -2,11 +2,11 @@
 
 Flexible [PostCSS][postcss-doc] config with great defaults. Lets you use **Dart SASS/SCSS** as PostCSS plugin.
 
-[![npm package][npm-badge]][npm]
-[![build status][ci-badge]][ci]
-[![code coverage][coverage-badge]][coverage]
-[![dependencies][deps-badge]][deps]
-[![dev dependencies][devdeps-badge]][devdeps]
+[![NPM][npm-badge]][npm]
+[![Build Status][ci-badge]][ci]
+[![Code Coverage][coverage-badge]][coverage]
+[![Dependencies][deps-badge]][deps]
+[![Dev Dependencies][devdeps-badge]][devdeps]
 
 ## Table of contents
 
@@ -61,10 +61,10 @@ module.exports = require('@giotramu/postcss-config').extends({
     'postcss-import': true,
     'postcss-calc': true,
     'postcss-custom-selectors': {
-      preserve: true,
-    },
+      preserve: true
+    }
     // ...
-  },
+  }
 });
 ```
 
@@ -77,8 +77,8 @@ Plugin **execution order** is top-down. You can disable and not load a single or
 ```js
 module.exports = require('@giotramu/postcss-config').extends({
   plugins: {
-    cssnano: false,
-  },
+    cssnano: false
+  }
 });
 ```
 
@@ -122,15 +122,15 @@ module.exports = require('@giotramu/postcss-config').setBrowsers(['> 1%', 'IE 10
 -->
 
 [npm]: https://www.npmjs.com/package/@giotramu/postcss-config
-[npm-badge]: https://flat.badgen.net/npm/v/@giotramu/postcss-config?icon=npm&label=npm%20package
-[ci]: https://circleci.com/gh/giotramu/postcss-config
-[ci-badge]: https://flat.badgen.net/circleci/github/giotramu/postcss-config?icon=circleci&label=build
-[coverage]: https://codecov.io/gh/giotramu/postcss-config
-[coverage-badge]: https://flat.badgen.net/codecov/c/github/giotramu/postcss-config?icon=codecov&label=coverage
+[npm-badge]: https://badgen.net/npm/v/@giotramu/postcss-config?icon=npm&label=npm%20package
+[ci]: https://github.com/giotramu/postcss-config/actions
+[ci-badge]: https://github.com/giotramu/postcss-config/workflows/test%20and%20build/badge.svg?branch=master
+[coverage]: https://coveralls.io/github/giotramu/postcss-config
+[coverage-badge]: https://badgen.net/coveralls/c/github/giotramu/postcss-config/master
 [deps]: https://david-dm.org/giotramu/postcss-config
-[deps-badge]: https://flat.badgen.net/david/dep/giotramu/postcss-config
+[deps-badge]: https://badgen.net/david/dep/giotramu/postcss-config
 [devdeps]: https://david-dm.org/giotramu/postcss-config?type=dev
-[devdeps-badge]: https://flat.badgen.net/david/dev/giotramu/postcss-config
+[devdeps-badge]: https://badgen.net/david/dev/giotramu/postcss-config
 [browserslist]: https://github.com/browserslist/browserslist
 [default-config]: ./src/config.ts
 [autoprefixer]: https://github.com/postcss/autoprefixer

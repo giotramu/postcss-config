@@ -7,6 +7,9 @@
   "[json]": {
     "editor.formatOnSave": true
   },
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
   "[typescript]": {
     "editor.formatOnSave": true
   },
@@ -14,8 +17,8 @@
   "typescript.reportStyleChecksAsWarnings": false,
   "typescript.tsdk": "node_modules/typescript/lib",
   "eslint.validate": ["typescript", "javascript"],
-  "prettier.bracketSpacing": false,
-  "prettier.singleQuote": true,
-  "css.validate": false,
-  "scss.validate": false
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "css.validate": false
 }
