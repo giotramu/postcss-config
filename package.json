@@ -7,7 +7,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/giotramu/postcss-config.git"
+    "url": "git+https://github.com/giotramu/postcss-config.git"
   },
   "bugs": {
     "url": "https://github.com/giotramu/postcss-config/issues"
@@ -22,8 +22,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
-    "dist/",
-    "LICENSE"
+    "dist/"
   ],
   "scripts": {
     "check:src": "tsc --noEmit",
