@@ -31,8 +31,8 @@
     "test": "jest --coverage",
     "prebuild": "rimraf ./dist",
     "build": "tsc --declaration",
-    "prebuild:css": "npm run build",
-    "build:css": "postcss ./examples/styles.scss --dir=examples/ --ext=min.css --verbose"
+    "precompile:css": "npm run build",
+    "compile:css": "postcss ./examples/styles.scss --dir=examples/ --ext=min.css --verbose"
   },
   "dependencies": {
     "@csstools/postcss-sass": "^4.0.0",
