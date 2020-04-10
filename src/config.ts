@@ -32,7 +32,9 @@ export function getConfig(
             autoprefixer: {
               grid: true,
               overrideBrowserslist
-            }
+            },
+            minifySelectors: false,
+            reduceIdents: false
           }
         ]
       },

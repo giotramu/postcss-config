@@ -6,7 +6,15 @@ module.exports = {
     jest: true
   },
 
-  rules: {
-    'import/order': 'off'
-  }
+  overrides: [
+    // --- disable typescript rules for tests files
+    {
+      files: ['*.spec.ts*', '*.e2e.ts*'],
+      rules: {
+        '@typescript-eslint/ban-ts-ignore': 'off',
+        '@typescript-eslint/explicit-function-return-type': 'off',
+        '@typescript-eslint/no-explicit-any': 'off'
+      }
+    }
+  ]
 };

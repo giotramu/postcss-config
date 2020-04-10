@@ -17,7 +17,9 @@ export default {
               'not dead',
               'not < 0.5%'
             ]
-          }
+          },
+          minifySelectors: false,
+          reduceIdents: false
         }
       ]
     },

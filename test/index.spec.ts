@@ -3,14 +3,13 @@ import defaultConfig from './_config';
 
 test('getDefault should returns the default config object', () => {
   const config = postcssConfig.getDefault();
-  expect(config).toMatchObject(defaultConfig);
+  expect(config).toStrictEqual(defaultConfig);
 });
 
 test('extends should returns the default config if the parameter passed is not an object', () => {
-  // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
   // @ts-ignore
   const config = postcssConfig.extends(Math.random());
-  expect(config).toMatchObject(defaultConfig);
+  expect(config).toStrictEqual(defaultConfig);
 });
 
 test('extends should appends "postcss-fake-plugin" to the plugins object', () => {
@@ -76,7 +75,6 @@ test('setBrowsers should ignore the value passed as parameter if is an empty arr
   const updated = postcssConfig.setBrowsers([]).getDefault();
 
   expect(
-    // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
     // @ts-ignore
     updated.plugins.cssnano.preset[1].autoprefixer.overrideBrowserslist
   ).toStrictEqual(browsers);
@@ -91,7 +89,6 @@ test('setBrowsers and extends should return a new config with browsers query upd
   });
 
   expect(
-    // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
     // @ts-ignore
     updated.plugins.cssnano.preset[1].autoprefixer.overrideBrowserslist
   ).toBe(browsers);
