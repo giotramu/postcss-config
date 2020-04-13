@@ -4,13 +4,10 @@ update_configs:
     directory: '/'
     update_schedule: 'weekly'
 
-    default_assignees:
-      - 'giotramu'
+    default_reviewers: ['giotramu']
 
-    default_labels:
-      - 'dependencies'
+    default_labels: ['dependencies']
 
     commit_message:
-      include_scope: false
-      prefix: 'chore(deps)'
-      prefix_development: 'chore(dev-deps)'
+      prefix: 'chore'
+      include_scope: true
