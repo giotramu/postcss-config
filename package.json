@@ -1,6 +1,6 @@
 {
   "name": "@giotramu/postcss-config",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "description": "Flexible PostCSS config with great defaults.",
   "author": "giotramu <https://twitter.com/giotramu>",
   "homepage": "https://github.com/giotramu/postcss-config#readme",
