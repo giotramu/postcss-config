@@ -30,7 +30,7 @@
     "lint": "npm run lint:src",
     "test": "jest --coverage",
     "prebuild": "rimraf ./dist",
-    "build": "tsc --declaration",
+    "build": "tsc",
     "precompile:css": "npm run build",
     "compile:css": "postcss ./examples/styles.scss --dir=examples/ --ext=min.css --verbose"
   },
