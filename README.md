@@ -1,12 +1,12 @@
 # PostCSS Config
 
-Flexible [PostCSS][postcss-doc] config with great defaults. Lets you use **Dart SASS/SCSS** as PostCSS plugin.
+Flexible [PostCSS][postcss-doc-url] config with great defaults. Lets you use **Dart SASS/SCSS** as PostCSS plugin.
 
-[![NPM][npm-badge]][npm]
-[![Build Status][ci-badge]][ci]
-[![Code Coverage][coverage-badge]][coverage]
-[![Dependencies][deps-badge]][deps]
-[![Dev Dependencies][devdeps-badge]][devdeps]
+[![NPM][npm-img]][npm-url]
+[![Build Status][ci-img]][ci-url]
+[![Code Coverage][coverage-img]][coverage-url]
+[![Dependencies][deps-img]][deps-url]
+[![Dev Dependencies][devdeps-img]][devdeps-url]
 
 ## Table of contents
 
@@ -39,17 +39,17 @@ module.exports = require('@giotramu/postcss-config').getDefault();
 
 The config bundles together the following plugins:
 
-- [autoprefixer]
-- [cssnano]
-- [postcss-custom-media]
-- [postcss-reporter]
-- [postcss-sass]
+- [autoprefixer][autoprefixer-url]
+- [cssnano][cssnano-url]
+- [postcss-custom-media][postcss-custom-media-url]
+- [postcss-reporter][postcss-reporter-url]
+- [postcss-sass][postcss-sass-url]
 
-You can inspect the source code of the [default config][default-config].
+You can inspect the source code of the [default config][default-config-url].
 
 ## Extend the config
 
-Install all your favourite [PostCSS plugins][postcss-plugins] and save them to your package.json as `devDependencies`. Now you can extend the [default PostCSS config][default-config], but remember that **the plugins execution order is top-down**:
+Install all your favourite [PostCSS plugins][postcss-plugins-url] and save them to your package.json as `devDependencies`. Now you can extend the [default PostCSS config][default-config-url], but remember that **the plugins execution order is top-down**:
 
 ```js
 module.exports = require('@giotramu/postcss-config').extends({
@@ -80,7 +80,7 @@ module.exports = require('@giotramu/postcss-config').extends({
 
 ## Browsers support
 
-PostCSS config is dispatched with a specific [browserslist] query:
+PostCSS config is dispatched with a specific [browserslist][browserslist-url] query:
 
 ```yml
 last 2 versions
@@ -102,8 +102,8 @@ module.exports = require('@giotramu/postcss-config').setBrowsers(['> 1%', 'IE 10
 
 ## Thanks
 
-- [deepmerge]
-- [postcss-load-config]
+- [deepmerge][deepmerge-url]
+- [postcss-load-config][postcss-load-config-url]
 
 ## License
 
@@ -113,29 +113,29 @@ module.exports = require('@giotramu/postcss-config').setBrowsers(['> 1%', 'IE 10
   B A D G E S
 -->
 
-[ci-badge]: https://github.com/giotramu/postcss-config/workflows/test%20and%20build/badge.svg?branch=master
-[coverage-badge]: https://badgen.net/coveralls/c/github/giotramu/postcss-config/master
-[deps-badge]: https://badgen.net/david/dep/giotramu/postcss-config
-[devdeps-badge]: https://badgen.net/david/dev/giotramu/postcss-config
-[npm-badge]: https://badgen.net/npm/v/@giotramu/postcss-config?icon=npm&label=npm%20package
+[ci-img]: https://github.com/giotramu/postcss-config/workflows/test%20and%20build/badge.svg?branch=master
+[coverage-img]: https://badgen.net/coveralls/c/github/giotramu/postcss-config/master
+[deps-img]: https://badgen.net/david/dep/giotramu/postcss-config
+[devdeps-img]: https://badgen.net/david/dev/giotramu/postcss-config
+[npm-img]: https://badgen.net/npm/v/@giotramu/postcss-config?icon=npm&label=npm%20package
 
 <!---
   L I N K S
 -->
 
-[autoprefixer]: https://github.com/postcss/autoprefixer
-[browserslist]: https://github.com/browserslist/browserslist
-[ci]: https://github.com/giotramu/postcss-config/actions
-[coverage]: https://coveralls.io/github/giotramu/postcss-config
-[cssnano]: https://github.com/cssnano/cssnano
-[deepmerge]: https://github.com/TehShrike/deepmerge
-[default-config]: ./src/config.ts
-[deps]: https://david-dm.org/giotramu/postcss-config
-[devdeps]: https://david-dm.org/giotramu/postcss-config?type=dev
-[npm]: https://www.npmjs.com/package/@giotramu/postcss-config
-[postcss-custom-media]: https://github.com/postcss/postcss-custom-media
-[postcss-doc]: https://postcss.org
-[postcss-load-config]: https://github.com/michael-ciniawsky/postcss-load-config
-[postcss-plugins]: https://github.com/postcss/postcss/blob/master/docs/plugins.md
-[postcss-reporter]: https://github.com/postcss/postcss-reporter
-[postcss-sass]: https://github.com/jonathantneal/postcss-sass
+[autoprefixer-url]: https://github.com/postcss/autoprefixer
+[browserslist-url]: https://github.com/browserslist/browserslist
+[ci-url]: https://github.com/giotramu/postcss-config/actions
+[coverage-url]: https://coveralls.io/github/giotramu/postcss-config
+[cssnano-url]: https://github.com/cssnano/cssnano
+[deepmerge-url]: https://github.com/TehShrike/deepmerge
+[default-config-url]: ./src/config.ts
+[deps-url]: https://david-dm.org/giotramu/postcss-config
+[devdeps-url]: https://david-dm.org/giotramu/postcss-config?type=dev
+[npm-url]: https://www.npmjs.com/package/@giotramu/postcss-config
+[postcss-custom-media-url]: https://github.com/postcss/postcss-custom-media
+[postcss-doc-url]: https://postcss.org
+[postcss-load-config-url]: https://github.com/michael-ciniawsky/postcss-load-config
+[postcss-plugins-url]: https://github.com/postcss/postcss/blob/master/docs/plugins.md
+[postcss-reporter-url]: https://github.com/postcss/postcss-reporter
+[postcss-sass-url]: https://github.com/jonathantneal/postcss-sass
