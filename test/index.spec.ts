@@ -1,37 +1,39 @@
 import postcssConfig from '../src';
-import defaultConfig from './_config';
+import expectedConfig from './_config';
 
-test('getDefault should returns the default config object', () => {
+test('getDefault should returns the default config', () => {
   const config = postcssConfig.getDefault();
-  expect(config).toStrictEqual(defaultConfig);
+  expect(config).toStrictEqual(expectedConfig);
 });
 
-test('extends should returns the default config if the parameter passed is not an object', () => {
+test('extends should returns the default config if the parameter is invalid', () => {
   // @ts-ignore
   const config = postcssConfig.extends(Math.random());
-  expect(config).toStrictEqual(defaultConfig);
+  expect(config).toStrictEqual(expectedConfig);
 });
 
-test('extends should appends "postcss-fake-plugin" to the plugins object', () => {
-  const extended = postcssConfig.extends({
+test('extends should add "postcss-fake-plugin" to the plugins list', () => {
+  const config = postcssConfig.extends({
     plugins: {
       'postcss-fake-plugin': true
     }
   });
 
-  const plugins = Object.keys(extended.plugins);
-  expect(plugins[plugins.length - 1]).toBe('postcss-fake-plugin');
+  expect(config.plugins).toStrictEqual({
+    ...expectedConfig.plugins,
+    'postcss-fake-plugin': true
+  });
 });
 
-test('extends standard behavior is to overwrite the default config', () => {
-  const extended = postcssConfig.extends({
+test(`extends's standard behavior is overwriting the default config`, () => {
+  const config = postcssConfig.extends({
     plugins: {
       cssnano: {
         preset: [
           'default',
           {
             discardComments: {
-              removeAll: true
+              removeAll: false
             }
           }
         ]
@@ -39,13 +41,13 @@ test('extends standard behavior is to overwrite the default config', () => {
     }
   });
 
-  expect(extended.plugins).toMatchObject({
+  expect(config.plugins).toMatchObject({
     cssnano: {
       preset: [
         'default',
         {
           discardComments: {
-            removeAll: true
+            removeAll: false
           }
         }
       ]
@@ -55,12 +57,11 @@ test('extends standard behavior is to overwrite the default config', () => {
 
 test('setBrowsers and getDefault should return the default config with browsers query updated', () => {
   const browsers = ['> 1%', 'IE 10'];
-  const updated = postcssConfig.setBrowsers(browsers).getDefault();
+  const config = postcssConfig.setBrowsers(browsers).getDefault();
 
   expect(
-    // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
     // @ts-ignore
-    updated.plugins.cssnano.preset[1].autoprefixer.overrideBrowserslist
+    config.plugins.cssnano.preset[1].autoprefixer.overrideBrowserslist
   ).toBe(browsers);
 });
 
@@ -72,17 +73,17 @@ test('setBrowsers should ignore the value passed as parameter if is an empty arr
     'not dead',
     'not < 0.5%'
   ];
-  const updated = postcssConfig.setBrowsers([]).getDefault();
+  const config = postcssConfig.setBrowsers([]).getDefault();
 
   expect(
     // @ts-ignore
-    updated.plugins.cssnano.preset[1].autoprefixer.overrideBrowserslist
+    config.plugins.cssnano.preset[1].autoprefixer.overrideBrowserslist
   ).toStrictEqual(browsers);
 });
 
-test('setBrowsers and extends should return a new config with browsers query updated', () => {
+test('setBrowsers combined with extends should return an updated config with new browsers list', () => {
   const browsers = ['> 1%', 'IE 10'];
-  const updated = postcssConfig.setBrowsers(browsers).extends({
+  const config = postcssConfig.setBrowsers(browsers).extends({
     plugins: {
       'postcss-fake-plugin': true
     }
@@ -90,9 +91,10 @@ test('setBrowsers and extends should return a new config with browsers query upd
 
   expect(
     // @ts-ignore
-    updated.plugins.cssnano.preset[1].autoprefixer.overrideBrowserslist
+    config.plugins.cssnano.preset[1].autoprefixer.overrideBrowserslist
   ).toBe(browsers);
 
-  const plugins = Object.keys(updated.plugins);
-  expect(plugins[plugins.length - 1]).toStrictEqual('postcss-fake-plugin');
+  expect(
+    Object.hasOwnProperty.call(config.plugins, 'postcss-fake-plugin')
+  ).toBe(true);
 });

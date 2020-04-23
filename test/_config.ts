@@ -18,8 +18,14 @@ export default {
               'not < 0.5%'
             ]
           },
+          discardComments: {
+            removeAll: true
+          },
+          discardUnused: false,
+          mergeIdents: false,
           minifySelectors: false,
-          reduceIdents: false
+          reduceIdents: false,
+          zindex: false
         }
       ]
     },
