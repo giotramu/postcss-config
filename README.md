@@ -4,7 +4,7 @@ Flexible [PostCSS][postcss-doc-url] config with great defaults. Lets you use **D
 
 [![NPM][npm-img]][npm-url]
 [![Build Status][ci-img]][ci-url]
-[![Code Coverage][coverage-img]][coverage-url]
+[![Coverage Status][coverage-img]][coverage-url]
 [![Dependencies][deps-img]][deps-url]
 [![Dev Dependencies][devdeps-img]][devdeps-url]
 
@@ -114,7 +114,7 @@ module.exports = require('@giotramu/postcss-config').setBrowsers(['> 1%', 'IE 10
 -->
 
 [ci-img]: https://github.com/giotramu/postcss-config/workflows/test%20and%20build/badge.svg?branch=master
-[coverage-img]: https://badgen.net/coveralls/c/github/giotramu/postcss-config/master
+[coverage-img]: https://coveralls.io/repos/github/giotramu/postcss-config/badge.svg?branch=master
 [deps-img]: https://badgen.net/david/dep/giotramu/postcss-config
 [devdeps-img]: https://badgen.net/david/dev/giotramu/postcss-config
 [npm-img]: https://badgen.net/npm/v/@giotramu/postcss-config?icon=npm&label=npm%20package
