@@ -9,7 +9,7 @@ module.exports = {
   overrides: [
     // --- disable typescript rules for tests files
     {
-      files: ['*.spec.ts*', '*.e2e.ts*'],
+      files: ['*.spec.ts*'],
       rules: {
         '@typescript-eslint/ban-ts-ignore': 'off',
         '@typescript-eslint/explicit-function-return-type': 'off',
