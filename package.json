@@ -1,7 +1,7 @@
 {
   "name": "@giotramu/postcss-config",
   "version": "2.4.0",
-  "description": "Flexible PostCSS config with great defaults.",
+  "description": "Flexible PostCSS config with great defaults. Combine Dart SCSS with your favorite PostCSS plugins.",
   "author": "giotramu <https://twitter.com/giotramu>",
   "homepage": "https://github.com/giotramu/postcss-config#readme",
   "license": "MIT",
@@ -42,7 +42,8 @@
     "postcss": "^7.0.27",
     "postcss-custom-media": "^7.0.8",
     "postcss-reporter": "^6.0.1",
-    "postcss-scss": "^2.0.0"
+    "postcss-scss": "^2.0.0",
+    "postcss-selector-not": "^4.0.0"
   },
   "devDependencies": {
     "@types/jest": "^25.1.4",
