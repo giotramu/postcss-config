@@ -1,8 +1,9 @@
 export default {
-  map: false,
+  map: {inline: false},
   syntax: 'postcss-scss',
   plugins: {
-    '@csstools/postcss-sass': true,
+    '@csstools/postcss-sass': {outputStyle: 'expanded'},
+    'postcss-selector-not': true,
     'postcss-custom-media': true,
     cssnano: {
       preset: [
@@ -30,7 +31,9 @@ export default {
       ]
     },
     'postcss-reporter': {
-      clearReportedMessages: true
+      clearReportedMessages: true,
+      positionless: 'last',
+      throwError: true
     }
   }
 };
