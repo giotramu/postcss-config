@@ -1,23 +1,19 @@
-import {isObject, mergeObjects} from './_helpers';
-import {Options, PostcssConfig} from './_types';
+import {mergeObjects} from './_helpers';
+import {Options, PostcssConfig, Plugins} from './_types';
 import {getPostcssConfig} from './config';
 import {debugConfig} from './debug';
 import {checkOptions} from './options';
+import {pluginEncoder} from './plugins';
 
 export = extendsConfig;
 
-function extendsConfig(plugins: object, options?: Options): PostcssConfig {
+function extendsConfig(plugins: Plugins, options?: Options): PostcssConfig {
   const {debug, sourceMap, browsers} = checkOptions(options);
   const source = getPostcssConfig({browsers, sourceMap});
-  let config = source;
 
-  if (isObject(plugins)) {
-    const extendedPlugins = mergeObjects(source.plugins, plugins);
-    config = {...source, plugins: extendedPlugins};
-  } else {
-    // eslint-disable-next-line no-console
-    console.log('[postcss-config] pass an object parameter.');
-  }
+  const parsedPlugins = pluginEncoder(plugins);
+  const extendedPlugins = mergeObjects(source.plugins, parsedPlugins);
+  const config = {...source, plugins: extendedPlugins};
 
   if (debug) {
     debugConfig({browsers, sourceMap, config});

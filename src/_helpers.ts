@@ -1,16 +1,30 @@
 import merge from 'deepmerge';
 
-export function isBrowserslist(arg?: unknown): arg is string[] {
-  return Array.isArray(arg) && arg.length > 0;
+export function isBoolean(a?: unknown): a is boolean {
+  return typeof a === 'boolean';
 }
 
-export function isBoolean(arg?: unknown): arg is boolean {
-  return typeof arg === 'boolean';
+export function isString(a?: unknown): a is string {
+  return typeof a === 'string';
 }
 
-export function isObject(arg?: unknown): arg is object {
-  const type = typeof arg;
-  return type === 'function' || (type === 'object' && Boolean(arg));
+export function isObject(a?: unknown): a is object {
+  const type = typeof a;
+  return type === 'function' || (type === 'object' && Boolean(a));
+}
+
+export function printLog(
+  a: {docHook: string; message: string} | string,
+  ...args: unknown[]
+): void {
+  const doc = 'https://github.com/giotramu/postcss-config';
+  const prefix = '[postcss-config] ';
+
+  /* eslint-disable no-console */
+  return isObject(a)
+    ? console.log(prefix, a.message, `Read the docs: ${doc}/${a.docHook}`)
+    : console.log(prefix, a, ...args);
+  /* eslint-enable no-console */
 }
 
 export function mergeObjects<T1, T2>(

@@ -8,7 +8,7 @@ const postcssConfig: PostcssConfig = {
     'postcss-selector-not': true,
     'postcss-custom-media': true,
     autoprefixer: {
-      grid: 'autoplace',
+      grid: 'no-autoplace',
       overrideBrowserslist: [
         'last 2 versions',
         'not ie <= 11',

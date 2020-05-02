@@ -15,8 +15,9 @@ Flexible [PostCSS][postcss-doc-url] config with great defaults. Combine **Dart S
   - [Usage](#usage)
   - [Standard config](#standard-config)
   - [Extend the config](#extend-the-config)
-  - [Browsers support](#browsers-support)
+    - [Disable plugins](#disable-plugins)
   - [Options](#options)
+  - [Browsers support](#browsers-support)
   - [Thanks](#thanks)
   - [License](#license)
 
@@ -54,44 +55,59 @@ You can inspect the source code of the [standard config][standard-config-url].
 Install all your favourite [PostCSS plugins][postcss-plugins-url] and save them to your package.json as `devDependencies`. Now you can extend the [standard PostCSS config][standard-config-url], but remember that **the plugins execution order is top-down**:
 
 ```js
-module.exports = require('@giotramu/postcss-config/extends')({
-  'postcss-calc': true,
-  'postcss-custom-selectors': {
-    preserve: false
-  }
-});
+module.exports = require('@giotramu/postcss-config/extends')([
+  'postcss-utilities',
+  'postcss-autoreset',
+  'postcss-calc',
+  [
+    'postcss-custom-media',
+    {
+      importFrom: 'path/to/file.css'
+    }
+  ],
+  ['autoprefixer', false],
+  [
+    'cssnano',
+    {
+      preset: [
+        'advanced',
+        {
+          autoprefixer: {
+            grid: 'autoplace'
+          },
+          discardComments: {
+            removeAll: true
+          },
+          discardUnused: true,
+          mergeIdents: true,
+          minifySelectors: true,
+          reduceIdents: true,
+          zindex: true
+        }
+      ]
+    }
+  ]
+]);
 ```
 
 By design, the behaviour of the `extends` api is overwriting the existing array values completely rather than concatenating them.
 
-#### Disable the plugins
+#### Disable plugins
 
 You can disable and not load a single or a bunch of plugins by setting them to `false`:
 
 ```js
-module.exports = require('@giotramu/postcss-config/extends')({
-  cssnano: false
-});
-```
+// disable one plugin
+module.exports = require('@giotramu/postcss-config/extends')([
+  ['autoprefixer', false]
+]);
 
-## Browsers support
-
-PostCSS config is dispatched with a default [browserslist query][browserslist-url], used by the [cssnano][cssnano-url] and [autoprefixer][autoprefixer-url] plugins:
-
-```yml
-last 2 versions
-not ie <= 11
-not op_mini all
-not dead
-not < 0.5%
-```
-
-You can change the query when you need. An example:
-
-```js
-module.exports = require('@giotramu/postcss-config')({
-  browsers: ['> 1%', 'IE 10']
-});
+// turn off multiple plugins
+module.exports = require('@giotramu/postcss-config/extends')([
+  ['postcss-custom-media', false],
+  ['autoprefixer', false],
+  ['cssnano', false]
+]);
 ```
 
 ## Options
@@ -115,7 +131,32 @@ const options = {
 module.exports = require('@giotramu/postcss-config')(options);
 
 // with extends api
-module.exports = require('@giotramu/postcss-config/extends')({...}, options);
+module.exports = require('@giotramu/postcss-config/extends')([...], options);
+```
+
+## Browsers support
+
+PostCSS config is dispatched with a default [browserslist query][browserslist-url], used by the [cssnano][cssnano-url] and [autoprefixer][autoprefixer-url] plugins:
+
+```yml
+last 2 versions
+not ie <= 11
+not op_mini all
+not dead
+not < 0.5%
+```
+
+You can change the query when you need. An example:
+
+```js
+const browsers = ['> 1%', 'IE 10'];
+
+// the standard way
+module.exports = require('@giotramu/postcss-config')({browsers});
+
+// with extends api
+module.exports = require('@giotramu/postcss-config/extends')([...], {browsers});
+
 ```
 
 ## Thanks

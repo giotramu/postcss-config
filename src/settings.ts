@@ -12,7 +12,7 @@ export function postsass(): object {
 
 export function autoprefixer(browsers: BrowsersOption): object {
   return {
-    grid: 'autoplace',
+    grid: 'no-autoplace',
     overrideBrowserslist: browsers
   };
 }
