@@ -36,8 +36,8 @@
   },
   "dependencies": {
     "@csstools/postcss-sass": "^4.0.0",
+    "autoprefixer": "^9.7.6",
     "cssnano": "^4.1.10",
-    "cssnano-preset-advanced": "^4.0.7",
     "deepmerge": "^4.2.2",
     "postcss": "^7.0.27",
     "postcss-custom-media": "^7.0.8",
@@ -59,7 +59,8 @@
     "pretty-quick": "^2.0.1",
     "rimraf": "^3.0.2",
     "ts-jest": "^25.3.0",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "utility-types": "^3.10.0"
   },
   "keywords": [
     "css",
