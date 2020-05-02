@@ -1,12 +1,12 @@
 import {Options, PostcssConfig} from './_types';
 import {getPostcssConfig} from './config';
 import {debugConfig} from './debug';
-import {checkOptions} from './options';
+import {optionsParser} from './options';
 
 export = getConfig;
 
 function getConfig(options?: Options): PostcssConfig {
-  const {debug, sourceMap, browsers} = checkOptions(options);
+  const {debug, sourceMap, browsers} = optionsParser(options);
   const config = getPostcssConfig({browsers, sourceMap});
 
   if (debug) {

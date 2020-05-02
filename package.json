@@ -19,16 +19,18 @@
   "publishConfig": {
     "access": "public"
   },
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/",
+  "types": "dist/",
   "files": [
     "dist/"
   ],
   "scripts": {
     "check:src": "tsc --noEmit",
-    "lint:src": "eslint . --ext .ts,.js",
+    "lint:src": "eslint . --ext .ts,.js --ignore-path .gitignore",
     "lint": "npm run lint:src",
-    "test": "jest --coverage",
+    "unit": "jest --coverage",
+    "pretest": "npm run check:src && npm run lint",
+    "test": "npm run unit",
     "prebuild": "rimraf ./dist",
     "build": "tsc",
     "precompile:css": "npm run build",

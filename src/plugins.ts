@@ -1,7 +1,7 @@
 import {isObject, isString, printLog} from './_helpers';
 import {Plugin, Plugins} from './_types';
 
-export function pluginEncoder(plugins: Plugins): object {
+export function pluginsParser(plugins: Plugins): object {
   if (Array.isArray(plugins) && plugins.length > 0) {
     return plugins.reduce((result, item) => checkPlugin(result, item), {});
   }

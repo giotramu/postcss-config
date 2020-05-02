@@ -2,7 +2,7 @@ import {isBoolean} from './_helpers';
 import {Options} from './_types';
 import {supportedBrowsers} from './browsers';
 
-export function checkOptions(options?: Options): Required<Options> {
+export function optionsParser(options?: Options): Required<Options> {
   const debug = false;
   const browsers = supportedBrowsers;
   const sourceMap = {inline: false};
