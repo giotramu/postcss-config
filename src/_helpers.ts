@@ -1,29 +1,26 @@
 import merge from 'deepmerge';
 
-export function isBrowserslist(a: unknown): boolean {
-  return Array.isArray(a) && a.length > 0;
+export function isBrowserslist(arg?: unknown): arg is string[] {
+  return Array.isArray(arg) && arg.length > 0;
 }
 
-export function isBoolean(a: unknown): boolean {
-  return typeof a === 'boolean';
+export function isBoolean(arg?: unknown): arg is boolean {
+  return typeof arg === 'boolean';
 }
 
-export function isObject(a: unknown): boolean {
-  const type = typeof a;
-  return type === 'function' || (type === 'object' && Boolean(a));
+export function isObject(arg?: unknown): arg is object {
+  const type = typeof arg;
+  return type === 'function' || (type === 'object' && Boolean(arg));
 }
 
-export function mergeObjects(source: object, target: object): object {
-  if (!isObject(target)) {
-    // eslint-disable-next-line no-console
-    console.warn('[postcss-config] pass an object parameter.');
-    return source;
-  }
-
+export function mergeObjects<T1, T2>(
+  source: Partial<T1>,
+  target: Partial<T2>
+): T1 & T2 {
   return merge(source, target, {arrayMerge: overwriteArrays});
 }
 
-// overwrites the existing array values completely rather than concatenating them
+// Overwrites the existing array values completely rather than concatenating them
 export function overwriteArrays(_: [], source: []): [] {
   return source;
 }

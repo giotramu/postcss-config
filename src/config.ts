@@ -1,10 +1,10 @@
-import {Options, PostcssConfig} from './_types';
+import {ConfigOptions, PostcssConfig} from './_types';
 import * as settings from './settings';
 
 export function getPostcssConfig({
   browsers,
   sourceMap
-}: Options): PostcssConfig {
+}: ConfigOptions): PostcssConfig {
   return {
     map: sourceMap,
     syntax: 'postcss-scss',
@@ -13,7 +13,8 @@ export function getPostcssConfig({
       '@csstools/postcss-sass': settings.postsass(),
       'postcss-selector-not': true,
       'postcss-custom-media': true,
-      cssnano: settings.cssnano(browsers),
+      autoprefixer: settings.autoprefixer(browsers),
+      cssnano: settings.cssnano(),
       'postcss-reporter': settings.reporter()
     }
   };

@@ -1,10 +1,12 @@
 import {isBoolean, isBrowserslist} from './_helpers';
-import {ExtendedOptions} from './_types';
+import {Options} from './_types';
 import {supportedBrowsers} from './browsers';
 
-export function checkOptions(options?: ExtendedOptions): ExtendedOptions {
-  const browsers = supportedBrowsers;
+type CheckedOptions = Required<Options>;
+
+export function checkOptions(options?: Options): CheckedOptions {
   const debug = false;
+  const browsers = supportedBrowsers;
   const sourceMap = {inline: false};
 
   if (typeof options === 'undefined') {
