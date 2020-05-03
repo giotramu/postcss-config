@@ -34,7 +34,10 @@ export function mergeObjects<T1, T2>(
   return merge(source, target, {arrayMerge: overwriteArrays});
 }
 
-// Overwrites the existing array values completely rather than concatenating them
+/**
+ * Overwrites the existing array values completely
+ * rather than concatenating them
+ */
 export function overwriteArrays(_: [], source: []): [] {
   return source;
 }

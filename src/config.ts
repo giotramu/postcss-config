@@ -13,6 +13,7 @@ export function getPostcssConfig({
       '@csstools/postcss-sass': settings.postsass(),
       'postcss-selector-not': true,
       'postcss-custom-media': true,
+      'postcss-inline-svg': settings.inlinesvg(),
       autoprefixer: settings.autoprefixer(browsers),
       cssnano: settings.cssnano(),
       'postcss-reporter': settings.reporter()

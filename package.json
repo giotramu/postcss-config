@@ -43,6 +43,7 @@
     "deepmerge": "^4.2.2",
     "postcss": "^7.0.27",
     "postcss-custom-media": "^7.0.8",
+    "postcss-inline-svg": "^4.1.0",
     "postcss-reporter": "^6.0.1",
     "postcss-scss": "^2.0.0",
     "postcss-selector-not": "^4.0.0"
