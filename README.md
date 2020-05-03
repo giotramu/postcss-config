@@ -23,7 +23,7 @@ Flexible [PostCSS][postcss-doc-url] config with great defaults. Combine **Dart S
 
 ## Install
 
-> Work only with Node >= 10.x
+> Tested on Node >= 10.x and LTS version.
 
 Install PostCSS config and save them to your package.json `devDependencies`:
 
