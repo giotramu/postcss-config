@@ -26,7 +26,7 @@ jobs:
       - name: 'Install dependencies'
         run: npm ci
 
-      - name: 'Run TypeScript compiler, ESLint and Unit tests'
+      - name: 'Run TSC compiler, ESLint and launch the unit tests'
         run: npm run test
         env:
           CI: true
