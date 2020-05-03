@@ -23,6 +23,8 @@ Flexible [PostCSS][postcss-doc-url] config with great defaults. Combine **Dart S
 
 ## Install
 
+> Work only with Node >= 10.x
+
 Install PostCSS config and save them to your package.json `devDependencies`:
 
 ```sh
@@ -44,9 +46,11 @@ The config bundles together the following plugins:
 - [autoprefixer][autoprefixer-url]
 - [cssnano][cssnano-url]
 - [postcss-custom-media][postcss-custom-media-url]
+- [postcss-inline-svg][postcss-inline-svg-url]
 - [postcss-reporter][postcss-reporter-url]
 - [postcss-sass][postcss-sass-url]
 - [postcss-selector-not][postcss-selector-not-url]
+- [svgo][svgo-url]
 
 You can inspect the source code of the [standard config][standard-config-url].
 
@@ -149,6 +153,10 @@ module.exports = require('@giotramu/postcss-config/extends')([...], {browsers});
 
 ```
 
+## PostCSS Preset Env. Why not?
+
+[PostCSS Preset Env][postcss-preset-env-url] is fantastic, but I want more control over CSS output. Furthermore, I appreciate both the SASS (Dart SASS is awesome) and PostCSS ecosystems. I prefer to merge them... 🧪
+
 ## Thanks
 
 - [deepmerge][deepmerge-url]
@@ -177,13 +185,16 @@ module.exports = require('@giotramu/postcss-config/extends')([...], {browsers});
 [coverage-url]: https://coveralls.io/github/giotramu/postcss-config
 [cssnano-url]: https://github.com/cssnano/cssnano
 [deepmerge-url]: https://github.com/TehShrike/deepmerge
-[standard-config-url]: ./test/_config.ts
 [deps-url]: https://david-dm.org/giotramu/postcss-config
 [devdeps-url]: https://david-dm.org/giotramu/postcss-config?type=dev
 [npm-url]: https://www.npmjs.com/package/@giotramu/postcss-config
 [postcss-custom-media-url]: https://github.com/postcss/postcss-custom-media
 [postcss-doc-url]: https://postcss.org
+[postcss-inline-svg-url]: https://github.com/TrySound/postcss-inline-svg
 [postcss-plugins-url]: https://github.com/postcss/postcss/blob/master/docs/plugins.md
+[postcss-preset-env-url]: https://github.com/csstools/postcss-preset-env
 [postcss-reporter-url]: https://github.com/postcss/postcss-reporter
 [postcss-sass-url]: https://github.com/jonathantneal/postcss-sass
 [postcss-selector-not-url]: https://github.com/postcss/postcss-selector-not
+[standard-config-url]: ./test/_config.ts
+[svgo-url]: https://github.com/svg/svgo
