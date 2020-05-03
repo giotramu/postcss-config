@@ -70,19 +70,9 @@ module.exports = require('@giotramu/postcss-config/extends')([
     'cssnano',
     {
       preset: [
-        'advanced',
+        'default',
         {
-          autoprefixer: {
-            grid: 'autoplace'
-          },
-          discardComments: {
-            removeAll: true
-          },
-          discardUnused: true,
-          mergeIdents: true,
-          minifySelectors: true,
-          reduceIdents: true,
-          zindex: true
+          svgo: false
         }
       ]
     }

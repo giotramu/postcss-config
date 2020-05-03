@@ -2,4 +2,4 @@ const options = {
   debug: true
 };
 
-module.exports = require('./dist')(options);
+module.exports = require('./dist/extends')([['cssnano', false]], options);

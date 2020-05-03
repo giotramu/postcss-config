@@ -7,6 +7,9 @@ const postcssConfig: PostcssConfig = {
     '@csstools/postcss-sass': {outputStyle: 'expanded'},
     'postcss-selector-not': true,
     'postcss-custom-media': true,
+    'postcss-inline-svg': {
+      xmlns: false
+    },
     autoprefixer: {
       grid: 'no-autoplace',
       overrideBrowserslist: [
@@ -18,7 +21,19 @@ const postcssConfig: PostcssConfig = {
       ]
     },
     cssnano: {
-      preset: ['default', {discardComments: {removeAll: true}}]
+      preset: [
+        'default',
+        {
+          discardComments: {removeAll: true},
+          svgo: {
+            plugins: [
+              {removeDimensions: true},
+              {removeScriptElement: true},
+              {sortAttrs: true}
+            ]
+          }
+        }
+      ]
     },
     'postcss-reporter': {
       clearReportedMessages: true,

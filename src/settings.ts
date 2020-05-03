@@ -10,6 +10,12 @@ export function postsass(): object {
   };
 }
 
+export function inlinesvg(): object {
+  return {
+    xmlns: false
+  };
+}
+
 export function autoprefixer(browsers: BrowsersOption): object {
   return {
     grid: 'no-autoplace',
@@ -19,7 +25,23 @@ export function autoprefixer(browsers: BrowsersOption): object {
 
 export function cssnano(): object {
   return {
-    preset: ['default', {discardComments: {removeAll: true}}]
+    preset: [
+      'default',
+      {
+        discardComments: {removeAll: true},
+        svgo: {
+          /**
+           * SVGO plugins:
+           * https://github.com/svg/svgo/tree/master/plugins
+           */
+          plugins: [
+            {removeDimensions: true},
+            {removeScriptElement: true},
+            {sortAttrs: true}
+          ]
+        }
+      }
+    ]
   };
 }
 
