@@ -1,6 +1,6 @@
 # PostCSS Config
 
-Flexible [PostCSS][postcss-doc-url] config with great defaults. Combine **Dart SCSS** with your favorite PostCSS plugins.
+Flexible [PostCSS][postcss-doc-url] config with great defaults. It combines **Dart SCSS** with your favorite PostCSS plugins.
 
 [![NPM][npm-img]][npm-url]
 [![Build Status][ci-img]][ci-url]
