@@ -1,4 +1,4 @@
-import extendsConfig from '../src/extends';
+import extendsConfig from '../extends';
 import expectedConfig from './_config';
 
 describe('extendsConfig', () => {

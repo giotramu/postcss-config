@@ -1,4 +1,4 @@
-import getConfig from '../src';
+import getConfig from '..';
 import expectedConfig from './_config';
 
 describe('getConfig', () => {

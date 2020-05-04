@@ -155,7 +155,7 @@ module.exports = require('@giotramu/postcss-config/extends')([...], {browsers});
 
 ## PostCSS Preset Env. Why not?
 
-[PostCSS Preset Env][postcss-preset-env-url] is fantastic, but I want more control over CSS output. Furthermore, I appreciate both the SASS (Dart SASS is awesome) and PostCSS ecosystems. I prefer to merge them... 🧪
+[PostCSS Preset Env][postcss-preset-env-url] is fantastic, but if you want more control over CSS output and appreciate both the SASS and PostCSS ecosystems, merge them through this config.
 
 ## Thanks
 
@@ -196,5 +196,5 @@ module.exports = require('@giotramu/postcss-config/extends')([...], {browsers});
 [postcss-reporter-url]: https://github.com/postcss/postcss-reporter
 [postcss-sass-url]: https://github.com/jonathantneal/postcss-sass
 [postcss-selector-not-url]: https://github.com/postcss/postcss-selector-not
-[standard-config-url]: ./test/_config.ts
+[standard-config-url]: ./src/test/_config.ts
 [svgo-url]: https://github.com/svg/svgo

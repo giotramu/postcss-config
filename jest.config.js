@@ -1,5 +1,5 @@
 const isCi = (process.env.CI || 'false') === 'true';
-const reporters = isCi ? ['default'] : undefined;
+const reporters = isCi ? ['default', 'jest-junit'] : undefined;
 const coverageReporters = isCi ? ['text', 'lcov', 'json'] : ['text'];
 
 module.exports = {
@@ -13,21 +13,19 @@ module.exports = {
   },
 
   // --- standard config
-  verbose: true,
   bail: true,
-  roots: ['<rootDir>/test/'],
-  testEnvironment: 'node',
-  testMatch: null,
-  testRegex: '(\\.|/)spec\\.ts$',
+  roots: ['<rootDir>/src/'],
+  testMatch: undefined,
+  testRegex: '(\\.|/)spec\\.(js?|ts?)$',
 
   // --- generate coverage report
-  collectCoverage: isCi,
+  collectCoverage: true,
   reporters,
   coverageReporters,
   coveragePathIgnorePatterns: [
-    '<rootDir>/node_modules/',
     '<rootDir>/[\\w/]*test/_[a-zA-Z]+\\.ts',
-    '<rootDir>/src/[\\w/]*/test/*',
-    '<rootDir>/src/test/*'
+    '<rootDir>/src/testing/*',
+    '<rootDir>/src/[\\w/]*/testing/*',
+    '<rootDir>/node_modules/'
   ]
 };
