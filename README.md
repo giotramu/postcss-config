@@ -84,7 +84,7 @@ module.exports = require('@giotramu/postcss-config/extends')([
 ]);
 ```
 
-By design, the behaviour of the `extends` api is overwriting the existing array values completely rather than concatenating them.
+By design, the behaviour of the `extends` API is overwriting the existing array values completely rather than concatenating them.
 
 #### Disable plugins
 
@@ -124,7 +124,7 @@ const options = {
 // the standard way
 module.exports = require('@giotramu/postcss-config')(options);
 
-// with extends api
+// with extends API
 module.exports = require('@giotramu/postcss-config/extends')([...], options);
 ```
 
@@ -148,7 +148,7 @@ const browsers = ['> 1%', 'IE 10'];
 // the standard way
 module.exports = require('@giotramu/postcss-config')({browsers});
 
-// with extends api
+// with extends API
 module.exports = require('@giotramu/postcss-config/extends')([...], {browsers});
 
 ```
