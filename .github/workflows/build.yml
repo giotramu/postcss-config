@@ -26,8 +26,11 @@ jobs:
       - name: 'Install dependencies'
         run: npm ci
 
-      - name: 'Run TSC compiler, ESLint and launch the unit tests'
-        run: npm run test
+      - name: 'Run TSC compiler, Linters and unit tests'
+        run: |
+          npm run check:src --if-present
+          npm run lint --if-present
+          npm run test
         env:
           CI: true
 
