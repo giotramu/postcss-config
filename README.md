@@ -108,11 +108,11 @@ module.exports = require('@giotramu/postcss-config/lib/extends')([
 
 You can pass the following options:
 
-| Option    |          Type          |                                 Default |
-| --------- | :--------------------: | --------------------------------------: |
-| browsers  |       `string[]`       | [\#browsers-support](#browsers-support) |
-| debug     |       `boolean`        |                                 `false` |
-| sourceMap | `boolean | 'external'` |                                 `false` |
+| Option    |                      Type |                           Default |
+| --------- | ------------------------: | --------------------------------: |
+| browsers  |                `string[]` | [Browserslist](#browsers-support) |
+| debug     |                 `boolean` |                           `false` |
+| sourceMap | `boolean` or `'external'` |                           `false` |
 
 ```js
 const options = {
