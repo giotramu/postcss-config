@@ -13,7 +13,7 @@ describe('extendsConfig', () => {
 
   it(`returns the extended config with options`, () => {
     const browsers = ['> 1%', 'IE 10'];
-    const sourceMap = false;
+    const sourceMap = 'external';
     const config = extendsConfig(['postcss-fake-plugin'], {
       browsers,
       sourceMap
@@ -21,7 +21,7 @@ describe('extendsConfig', () => {
 
     expect(config.plugins).toMatchObject({'postcss-fake-plugin': true});
 
-    expect(config.map).toBe(false);
+    expect(config.map).toStrictEqual({inline: false});
 
     expect(config.plugins.autoprefixer.overrideBrowserslist).toBe(browsers);
   });
@@ -34,9 +34,7 @@ describe('extendsConfig', () => {
     expect(console.log).toHaveBeenCalledWith(
       '[postcss-config] ',
       'CSS Source-Map: ',
-      {
-        inline: false
-      }
+      false
     );
 
     expect(console.log).toHaveBeenCalledWith(

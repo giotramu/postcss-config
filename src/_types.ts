@@ -1,7 +1,7 @@
 import {ProcessOptions} from 'postcss';
-import {Optional, Unionize} from 'utility-types';
+import {Unionize} from 'utility-types';
 
-export type MapOption = ProcessOptions['map'];
+export type SourceMapOption = ProcessOptions['map'];
 
 export type BrowsersOption = string[];
 
@@ -31,18 +31,20 @@ export interface PostcssConfig {
   parser?: string | ProcessOptions['parser'];
   stringifier?: string | ProcessOptions['stringifier'];
   syntax?: string | ProcessOptions['syntax'];
-  map?: MapOption;
+  map?: SourceMapOption;
   to?: ProcessOptions['to'];
   from?: ProcessOptions['from'];
   plugins: PostcssPlugins;
 }
 
 export interface ConfigOptions {
-  browsers: string[];
-  sourceMap: MapOption;
+  browsers: BrowsersOption;
+  sourceMap: SourceMapOption;
 }
 
-export interface Options extends Optional<ConfigOptions> {
+export interface ExtOptions {
+  browsers?: ConfigOptions['browsers'];
+  sourceMap?: boolean | 'external';
   debug?: boolean;
 }
 

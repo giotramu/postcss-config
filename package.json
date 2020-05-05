@@ -19,10 +19,10 @@
   "publishConfig": {
     "access": "public"
   },
-  "main": "dist/",
-  "types": "dist/",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "files": [
-    "dist/"
+    "lib/"
   ],
   "scripts": {
     "check:src": "tsc --noEmit",

@@ -15,8 +15,9 @@
     "strict": true,
     "target": "es5",
     "baseUrl": ".",
-    "outDir": "./dist",
+    "outDir": "./lib",
     "types": ["node", "jest"]
   },
-  "include": ["./src"]
+  "include": ["./src"],
+  "exclude": ["./src/test"]
 }

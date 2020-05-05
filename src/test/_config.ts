@@ -1,7 +1,7 @@
 import {PostcssConfig} from '../_types';
 
 const postcssConfig: PostcssConfig = {
-  map: {inline: false},
+  map: false,
   syntax: 'postcss-scss',
   plugins: {
     '@csstools/postcss-sass': {outputStyle: 'expanded'},

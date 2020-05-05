@@ -59,7 +59,7 @@ You can inspect the source code of the [standard config][standard-config-url].
 Install all your favourite [PostCSS plugins][postcss-plugins-url] and save them to your package.json as `devDependencies`. Now you can extend the [standard PostCSS config][standard-config-url], but remember that **the plugins execution order is top-down**:
 
 ```js
-module.exports = require('@giotramu/postcss-config/extends')([
+module.exports = require('@giotramu/postcss-config/lib/extends')([
   'postcss-utilities',
   'postcss-autoreset',
   'postcss-calc',
@@ -92,12 +92,12 @@ You can disable and not load a single or a bunch of plugins by setting them to `
 
 ```js
 // disable one plugin
-module.exports = require('@giotramu/postcss-config/extends')([
+module.exports = require('@giotramu/postcss-config/lib/extends')([
   ['autoprefixer', false]
 ]);
 
 // turn off multiple plugins
-module.exports = require('@giotramu/postcss-config/extends')([
+module.exports = require('@giotramu/postcss-config/lib/extends')([
   ['postcss-custom-media', false],
   ['autoprefixer', false],
   ['cssnano', false]
@@ -108,24 +108,24 @@ module.exports = require('@giotramu/postcss-config/extends')([
 
 You can pass the following options:
 
-| Option    |    Type    |                                 Default |
-| --------- | :--------: | --------------------------------------: |
-| browsers  | `string[]` | [\#browsers-support](#browsers-support) |
-| debug     | `boolean`  |                                 `false` |
-| sourceMap | `boolean`  |                       `{inline: false}` |
+| Option    |          Type          |                                 Default |
+| --------- | :--------------------: | --------------------------------------: |
+| browsers  |       `string[]`       | [\#browsers-support](#browsers-support) |
+| debug     |       `boolean`        |                                 `false` |
+| sourceMap | `boolean | 'external'` |                                 `false` |
 
 ```js
 const options = {
   debug: true,
   browsers: ['> 1%', 'IE 10'],
-  sourceMap: false
+  sourceMap: 'external'
 };
 
 // the standard way
 module.exports = require('@giotramu/postcss-config')(options);
 
 // with extends API
-module.exports = require('@giotramu/postcss-config/extends')([...], options);
+module.exports = require('@giotramu/postcss-config/lib/extends')([...], options);
 ```
 
 ## Browsers support
@@ -149,7 +149,7 @@ const browsers = ['> 1%', 'IE 10'];
 module.exports = require('@giotramu/postcss-config')({browsers});
 
 // with extends API
-module.exports = require('@giotramu/postcss-config/extends')([...], {browsers});
+module.exports = require('@giotramu/postcss-config/lib/extends')([...], {browsers});
 
 ```
 

@@ -8,11 +8,11 @@ describe('getConfig', () => {
 
   it('returns the standard config with options', () => {
     const browsers = ['> 1%', 'IE 10'];
-    const sourceMap = false;
+    const sourceMap = true;
     const config = getConfig({browsers, sourceMap});
     const autoprefixer = config.plugins.autoprefixer;
 
-    expect(config.map).toBe(false);
+    expect(config.map).toBe(true);
 
     expect(autoprefixer.overrideBrowserslist).toBe(browsers);
   });
@@ -25,9 +25,7 @@ describe('getConfig', () => {
     expect(console.log).toHaveBeenCalledWith(
       '[postcss-config] ',
       'CSS Source-Map: ',
-      {
-        inline: false
-      }
+      false
     );
 
     expect(console.log).toHaveBeenCalledWith(
