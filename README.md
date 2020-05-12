@@ -3,7 +3,7 @@
 Flexible [PostCSS][postcss-doc-url] config with great defaults. It combines **Dart SCSS** with your favorite PostCSS plugins.
 
 [![NPM][npm-img]][npm-url]
-[![Build Status][ci-img]][ci-url]
+[![CI Status][ci-img]][ci-url]
 [![Coverage Status][coverage-img]][coverage-url]
 [![Dependencies][deps-img]][deps-url]
 [![Dev Dependencies][devdeps-img]][devdeps-url]
@@ -169,7 +169,7 @@ module.exports = require('@giotramu/postcss-config/lib/extends')([...], {browser
   B A D G E S
 -->
 
-[ci-img]: https://github.com/giotramu/postcss-config/workflows/test%20and%20build/badge.svg?branch=master
+[ci-img]: https://github.com/giotramu/postcss-config/workflows/test%20+%20build/badge.svg?branch=master
 [coverage-img]: https://coveralls.io/repos/github/giotramu/postcss-config/badge.svg?branch=master
 [deps-img]: https://badgen.net/david/dep/giotramu/postcss-config
 [devdeps-img]: https://badgen.net/david/dev/giotramu/postcss-config
