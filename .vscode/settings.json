@@ -20,5 +20,6 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "css.validate": false
+  "css.validate": false,
+  "scss.validate": false
 }

@@ -173,7 +173,7 @@ module.exports = require('@giotramu/postcss-config/lib/extends')([...], {browser
 [coverage-img]: https://coveralls.io/repos/github/giotramu/postcss-config/badge.svg?branch=master
 [deps-img]: https://badgen.net/david/dep/giotramu/postcss-config
 [devdeps-img]: https://badgen.net/david/dev/giotramu/postcss-config
-[npm-img]: https://badgen.net/npm/v/@giotramu/postcss-config?icon=npm&label=npm%20package
+[npm-img]: https://badgen.net/npm/v/@giotramu/postcss-config?label=npm%20package
 
 <!---
   L I N K S

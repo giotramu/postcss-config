@@ -14,6 +14,7 @@ describe('getConfig', () => {
 
     expect(config.map).toBe(true);
 
+    // @ts-ignore
     expect(autoprefixer.overrideBrowserslist).toBe(browsers);
   });
 
@@ -31,6 +32,7 @@ describe('getConfig', () => {
     expect(console.log).toHaveBeenCalledWith(
       '[postcss-config] ',
       'Supported Browsers: ',
+      // @ts-ignore
       expectedConfig.plugins.autoprefixer.overrideBrowserslist?.join(', ')
     );
 

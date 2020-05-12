@@ -7,25 +7,24 @@ export type BrowsersOption = string[];
 
 export type DebugOption = boolean;
 
-/* eslint-disable @typescript-eslint/no-explicit-any */
-export type Plugin =
-  | string
-  | [string, boolean]
-  | [string, {[key: string]: any}];
+export interface PluginOption {
+  [key: string]: unknown;
+}
+
+export type Plugin = string | [string, boolean] | [string, PluginOption];
 
 export type Plugins = Plugin[];
 
 export interface StandardPlugins {
-  '@csstools/postcss-sass': any;
-  'postcss-selector-not': any;
-  'postcss-custom-media': any;
-  autoprefixer: any;
-  cssnano: any;
-  'postcss-reporter': any;
+  '@csstools/postcss-sass': unknown;
+  'postcss-selector-not': unknown;
+  'postcss-custom-media': unknown;
+  autoprefixer: unknown;
+  cssnano: unknown;
+  'postcss-reporter': unknown;
 }
 
-export type PostcssPlugins = {[key: string]: any} & Unionize<StandardPlugins>;
-/* eslint-enable @typescript-eslint/no-explicit-any */
+export type PostcssPlugins = PluginOption & Unionize<StandardPlugins>;
 
 export interface PostcssConfig {
   parser?: string | ProcessOptions['parser'];
