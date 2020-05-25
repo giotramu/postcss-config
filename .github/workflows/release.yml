@@ -5,7 +5,7 @@ on:
     types: [created]
 
 jobs:
-  build_and_release:
+  build_release:
     runs-on: ubuntu-latest
 
     steps:
@@ -21,7 +21,7 @@ jobs:
       - name: 'Install dependencies'
         run: npm ci
 
-      - name: 'Build the artifacts'
+      - name: 'Build the artifact'
         run: npm run build
         env:
           CI: true

@@ -23,7 +23,7 @@ Flexible [PostCSS][postcss-doc-url] config with great defaults. It combines **Da
 
 ## Install
 
-> Tested on Node.js >= 10.x and LTS.
+> Tested on Node.js >= 12.x.
 
 Install PostCSS config and save them to your package.json `devDependencies`:
 
