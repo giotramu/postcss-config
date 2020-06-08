@@ -1,17 +1,15 @@
-coverage/
-lib/
-typings/
+/coverage/
+/lib/
+/typings/
 
 .cache
 .DS_Store
-.env
-.env.*
+.env*
 .versions/
 *.lock
 *.log
 *.sw[mnpcod]
-*.tmp
-*.tmp.*
+*.tmp*
 *~
 $RECYCLE.BIN/
 log.txt

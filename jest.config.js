@@ -5,20 +5,17 @@ const coverageReporters = isCi ? ['text', 'lcov', 'json'] : ['text'];
 module.exports = {
   preset: 'ts-jest',
   globals: {
-    // --- ts-jest config
     'ts-jest': {
       diagnostic: true,
       babelConfig: true
     }
   },
-
-  // --- standard config
   bail: true,
   roots: ['<rootDir>/src/'],
   testMatch: undefined,
   testRegex: '(\\.|/)spec\\.(js?|ts?)$',
 
-  // --- generate coverage report
+  // --- Generate coverage report
   collectCoverage: true,
   reporters,
   coverageReporters,

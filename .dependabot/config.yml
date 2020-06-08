@@ -7,7 +7,3 @@ update_configs:
     default_reviewers: ['giotramu']
 
     default_labels: ['dependencies']
-
-    commit_message:
-      prefix: 'chore'
-      include_scope: true
