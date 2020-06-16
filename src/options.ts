@@ -1,8 +1,8 @@
 import {isBoolean} from './_helpers';
-import {ConfigOptions, ExtOptions} from './_types';
+import {ConfigOptions, ExternalOptions} from './_types';
 import {supportedBrowsers} from './browsers';
 
-export function optionsParser(options?: ExtOptions): ConfigOptions {
+export function optionsParser(options?: ExternalOptions): ConfigOptions {
   const browsers: ConfigOptions['browsers'] = supportedBrowsers;
   let sourceMap: ConfigOptions['sourceMap'] = false;
 

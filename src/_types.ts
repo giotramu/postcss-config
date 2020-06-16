@@ -7,11 +7,11 @@ export type BrowsersOption = string[];
 
 export type DebugOption = boolean;
 
-export interface PluginOption {
+export interface PluginOptions {
   [key: string]: unknown;
 }
 
-export type Plugin = string | [string, boolean] | [string, PluginOption];
+export type Plugin = string | [string, boolean] | [string, PluginOptions];
 
 export type Plugins = Plugin[];
 
@@ -24,7 +24,7 @@ export interface StandardPlugins {
   'postcss-reporter': unknown;
 }
 
-export type PostcssPlugins = PluginOption & Unionize<StandardPlugins>;
+export type PostcssPlugins = PluginOptions & Unionize<StandardPlugins>;
 
 export interface PostcssConfig {
   parser?: string | ProcessOptions['parser'];
@@ -41,7 +41,7 @@ export interface ConfigOptions {
   sourceMap: SourceMapOption;
 }
 
-export interface ExtOptions {
+export interface ExternalOptions {
   browsers?: ConfigOptions['browsers'];
   sourceMap?: boolean | 'external';
   debug?: boolean;

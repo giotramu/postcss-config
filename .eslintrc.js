@@ -9,16 +9,15 @@ module.exports = {
 
   rules: {
     // --- TypeScript
-    '@typescript-eslint/ban-types': 'off' // FIXME: https://github.com/microsoft/TypeScript/issues/21732
-    // '@typescript-eslint/ban-types': [
-    //   'error',
-    //   {
-    //     types: {
-    //       '{}': false
-    //     },
-    //     extendDefaults: true
-    //   }
-    // ]
+    '@typescript-eslint/ban-types': [
+      'error',
+      {
+        types: {
+          '{}': false
+        },
+        extendDefaults: true
+      }
+    ]
   },
 
   overrides: [

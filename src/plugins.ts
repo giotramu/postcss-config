@@ -1,7 +1,7 @@
-import {isObject, isString, printLog} from './_helpers';
+import {isNonEmptyObject, isString, printLog} from './_helpers';
 import {Plugin, Plugins} from './_types';
 
-export function pluginsParser(plugins: Plugins): object {
+export function pluginsParser(plugins: Plugins): {} {
   if (Array.isArray(plugins) && plugins.length > 0) {
     return plugins.reduce((result, item) => checkPlugin(result, item), {});
   }
@@ -14,7 +14,7 @@ export function pluginsParser(plugins: Plugins): object {
   return {};
 }
 
-function checkPlugin(o: {[key: string]: unknown}, item: Plugin): object {
+function checkPlugin(o: {[key: string]: unknown}, item: Plugin): {} {
   if (isString(item)) {
     o[item] = true;
   }
@@ -35,5 +35,5 @@ function checkPlugin(o: {[key: string]: unknown}, item: Plugin): object {
 }
 
 function isSettings(a: unknown): boolean {
-  return typeof a === 'boolean' || isObject(a);
+  return typeof a === 'boolean' || isNonEmptyObject(a);
 }

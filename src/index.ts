@@ -1,11 +1,11 @@
-import {ExtOptions, PostcssConfig} from './_types';
+import {ExternalOptions, PostcssConfig} from './_types';
 import {getPostcssConfig} from './config';
 import {debugConfig} from './debug';
 import {optionsParser} from './options';
 
 export = getConfig;
 
-function getConfig(options?: ExtOptions): PostcssConfig {
+function getConfig(options?: ExternalOptions): PostcssConfig {
   const {sourceMap, browsers} = optionsParser(options);
   const config = getPostcssConfig({browsers, sourceMap});
 

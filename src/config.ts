@@ -9,7 +9,7 @@ export function getPostcssConfig({
     map: sourceMap,
     syntax: 'postcss-scss',
     plugins: {
-      // Plugin execution order is top-down
+      // --- The plugins execution order is top-down
       '@csstools/postcss-sass': settings.postsass(),
       'postcss-selector-not': true,
       'postcss-custom-media': true,

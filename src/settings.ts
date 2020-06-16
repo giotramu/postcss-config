@@ -1,6 +1,6 @@
-import {BrowsersOption} from './_types';
+import {BrowsersOption, PluginOptions} from './_types';
 
-export function postsass(): object {
+export function postsass(): PluginOptions {
   /**
    * Dart Sass options:
    * https://github.com/sass/dart-sass/blob/master/README.md#javascript-api
@@ -10,20 +10,20 @@ export function postsass(): object {
   };
 }
 
-export function inlinesvg(): object {
+export function inlinesvg(): PluginOptions {
   return {
     xmlns: false
   };
 }
 
-export function autoprefixer(browsers: BrowsersOption): object {
+export function autoprefixer(browsers: BrowsersOption): PluginOptions {
   return {
     grid: 'no-autoplace',
     overrideBrowserslist: browsers
   };
 }
 
-export function cssnano(): object {
+export function cssnano(): PluginOptions {
   return {
     preset: [
       'default',
@@ -45,7 +45,7 @@ export function cssnano(): object {
   };
 }
 
-export function reporter(): object {
+export function reporter(): PluginOptions {
   return {
     clearReportedMessages: true,
     positionless: 'last',
