@@ -6,4 +6,4 @@ update_configs:
 
     default_reviewers: ['giotramu']
 
-    default_labels: ['dependencies']
+    default_labels: ['update: packages 📦']
