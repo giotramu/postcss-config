@@ -3,6 +3,7 @@ name: package release
 on:
   release:
     types: [created]
+    branches: [stable]
 
 jobs:
   build_release:
