@@ -11,6 +11,7 @@ Flexible [PostCSS][postcss-doc-url] config with great defaults. It combines **Da
 ## Table of contents
 
 - [PostCSS Config](#postcss-config)
+  - [Table of contents](#table-of-contents)
   - [Install](#install)
   - [Usage](#usage)
   - [Standard config](#standard-config)
@@ -18,6 +19,7 @@ Flexible [PostCSS][postcss-doc-url] config with great defaults. It combines **Da
     - [Disable plugins](#disable-plugins)
   - [Options](#options)
   - [Browsers support](#browsers-support)
+  - [PostCSS Preset Env. Why not?](#postcss-preset-env-why-not)
   - [Thanks](#thanks)
   - [License](#license)
 
@@ -169,8 +171,8 @@ module.exports = require('@giotramu/postcss-config/lib/extends')([...], {browser
   B A D G E S
 -->
 
-[ci-img]: https://github.com/giotramu/postcss-config/workflows/test%20+%20build/badge.svg?branch=master
-[coverage-img]: https://coveralls.io/repos/github/giotramu/postcss-config/badge.svg?branch=master
+[ci-img]: https://github.com/giotramu/postcss-config/workflows/test%20+%20build/badge.svg?branch=stable
+[coverage-img]: https://coveralls.io/repos/github/giotramu/postcss-config/badge.svg?branch=stable
 [deps-img]: https://badgen.net/david/dep/giotramu/postcss-config
 [devdeps-img]: https://badgen.net/david/dev/giotramu/postcss-config
 [npm-img]: https://badgen.net/npm/v/@giotramu/postcss-config?label=npm%20package
