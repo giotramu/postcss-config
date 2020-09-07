@@ -2,7 +2,6 @@ version: 2
 updates:
   - package-ecosystem: 'npm'
     directory: '/'
-    target-branch: 'next'
     labels: ['update: packages 📦']
     reviewers: ['giotramu']
     schedule:
