@@ -22,11 +22,11 @@ function checkPlugin(o: {[key: string]: unknown}, item: Plugin): {} {
   if (Array.isArray(item) && item.length >= 2) {
     const [identifier, settings] = item;
 
-    if (isString(identifier) && !isSettings(settings)) {
+    if (isString(identifier) && !hasSettings(settings)) {
       o[identifier] = true;
     }
 
-    if (isString(identifier) && isSettings(settings)) {
+    if (isString(identifier) && hasSettings(settings)) {
       o[identifier] = settings;
     }
   }
@@ -34,6 +34,6 @@ function checkPlugin(o: {[key: string]: unknown}, item: Plugin): {} {
   return o;
 }
 
-function isSettings(a: unknown): boolean {
+function hasSettings(a: unknown): boolean {
   return typeof a === 'boolean' || isNonEmptyObject(a);
 }

@@ -11,7 +11,7 @@ describe('extendsConfig', () => {
     });
   });
 
-  it(`returns the extended config with options`, () => {
+  it('returns the extended config with options', () => {
     const browsers = ['> 1%', 'IE 10'];
     const sourceMap = 'external';
     const config = extendsConfig(['postcss-fake-plugin'], {
@@ -59,7 +59,7 @@ describe('extendsConfig', () => {
     /* eslint-enable no-console */
   });
 
-  it(`turns off a plugin`, () => {
+  it('turns off a plugin', () => {
     expect(extendsConfig([]).plugins.autoprefixer).toStrictEqual(
       expectedConfig.plugins.autoprefixer
     );
@@ -69,7 +69,7 @@ describe('extendsConfig', () => {
     expect(config.plugins.autoprefixer).toBe(false);
   });
 
-  it(`turns off multiple plugins`, () => {
+  it('turns off multiple plugins', () => {
     expect(extendsConfig([]).plugins.cssnano).toStrictEqual(
       expectedConfig.plugins.cssnano
     );
@@ -118,9 +118,17 @@ describe('extendsConfig', () => {
   });
 
   it(`returns the extended config on a plugin's invalid settings`, () => {
-    // @ts-ignore
-    const config = extendsConfig([['postcss-fake-plugin', Math.random()]]);
+    const invalidSettings_1 = extendsConfig([
+      // @ts-ignore
+      ['postcss-fake-plugin', Math.random()]
+    ]);
+    const invalidSettings_2 = extendsConfig([['postcss-fake-plugin', {}]]);
 
-    expect(config.plugins).toMatchObject({'postcss-fake-plugin': true});
+    expect(invalidSettings_1.plugins).toMatchObject({
+      'postcss-fake-plugin': true
+    });
+    expect(invalidSettings_2.plugins).toMatchObject({
+      'postcss-fake-plugin': true
+    });
   });
 });
