@@ -118,16 +118,16 @@ describe('extendsConfig', () => {
   });
 
   it(`returns the extended config on a plugin's invalid settings`, () => {
-    const invalidSettings_1 = extendsConfig([
+    const invalidSettings1 = extendsConfig([
       // @ts-ignore
       ['postcss-fake-plugin', Math.random()]
     ]);
-    const invalidSettings_2 = extendsConfig([['postcss-fake-plugin', {}]]);
+    const invalidSettings2 = extendsConfig([['postcss-fake-plugin', {}]]);
 
-    expect(invalidSettings_1.plugins).toMatchObject({
+    expect(invalidSettings1.plugins).toMatchObject({
       'postcss-fake-plugin': true
     });
-    expect(invalidSettings_2.plugins).toMatchObject({
+    expect(invalidSettings2.plugins).toMatchObject({
       'postcss-fake-plugin': true
     });
   });
