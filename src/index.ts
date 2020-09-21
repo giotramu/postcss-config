@@ -1,7 +1,7 @@
-import {ExternalOptions, PostcssConfig} from './_types';
-import {getPostcssConfig} from './config';
-import {debugConfig} from './debug';
-import {optionsParser} from './options';
+import {ExternalOptions, PostcssConfig} from './common/_types';
+import {getPostcssConfig} from './common/config';
+import {debugConfig} from './common/debug';
+import {optionsParser} from './common/options';
 
 export = getConfig;
 
