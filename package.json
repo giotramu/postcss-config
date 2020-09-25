@@ -28,7 +28,7 @@
   ],
   "scripts": {
     "check": "tsc --noEmit",
-    "lint:src": "eslint . --ext .js,.ts --ignore-path .gitignore",
+    "lint:src": "eslint . --ext .js,.ts",
     "lint": "npm run lint:src",
     "pretest": "npm run check & npm run lint",
     "test": "jest --coverage",
