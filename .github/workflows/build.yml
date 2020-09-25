@@ -2,9 +2,9 @@ name: test + build
 
 on:
   push:
-    branches: [stable, next]
+    branches: [stable]
   pull_request:
-    branches: [stable, next]
+    branches: [stable]
 
 jobs:
   test_build:
@@ -34,13 +34,16 @@ jobs:
         env:
           CI: true
 
+      - name: 'Build the artifact'
+        run: npm run build
+        env:
+          CI: true
+
+      - name: 'Compile CSS and SCSS with postcss-cli'
+        run: npm run compile:css
+
       - name: 'Upload test coverage to Coveralls'
         uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           path-to-lcov: ./coverage/lcov.info
-
-      - name: 'Build the artifact'
-        run: npm run build
-        env:
-          CI: true
