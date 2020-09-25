@@ -37,8 +37,7 @@ const postcssConfig: PostcssConfig = {
     },
     'postcss-reporter': {
       clearReportedMessages: true,
-      positionless: 'last',
-      throwError: true
+      positionless: 'last'
     }
   }
 };
