@@ -1,3 +1,4 @@
+// --- Plugin: @csstools/postcss-sass
 @use './partial';
 
 $brandColor: rebeccapurple;
@@ -8,7 +9,7 @@ $size: 4em;
   --size: calc(#{$size} + 4px);
 }
 
-// nesting & operators
+// SASS nesting & operators
 .selector {
   margin: $size;
   background-color: $brandColor;
@@ -18,7 +19,7 @@ $size: 4em;
   }
 }
 
-// mixins
+// SASS mixins
 @mixin reset-list {
   margin: 0;
   padding: 0;
@@ -41,7 +42,7 @@ nav > ul {
   @include horizontal-list;
 }
 
-// extends
+// SASS extends
 .error {
   display: flex;
   border-width: 2px;
@@ -53,7 +54,7 @@ nav > ul {
   background-color: $brandColor;
 }
 
-// functions
+// SASS functions
 @function sum($numbers...) {
   $sum: 0;
   @each $number in $numbers {
@@ -64,4 +65,16 @@ nav > ul {
 
 .sum {
   width: sum(20px, 40px, 80px);
+}
+
+// --- Plugin: postcss-selector-not
+p:not(:first-child, .special) {
+  color: red;
+}
+
+// --- Plugin: postcss-custom-media
+@custom-media --small-viewport (max-width: 30em);
+
+@media (--small-viewport) {
+  width: 100%;
 }

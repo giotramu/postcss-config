@@ -10,12 +10,13 @@ export function getPostcssConfig({
     syntax: 'postcss-scss',
     plugins: {
       // --- The plugins execution order is top-down
-      '@csstools/postcss-sass': settings.postsass(),
+      // TODO: restore the plugins when they will be updated
+      // '@csstools/postcss-sass': settings.postsass(),
       'postcss-selector-not': true,
       'postcss-custom-media': true,
-      'postcss-inline-svg': settings.inlinesvg(),
+      // 'postcss-inline-svg': settings.inlinesvg(),
       autoprefixer: settings.autoprefixer(browsers),
-      cssnano: settings.cssnano(),
+      // cssnano: settings.cssnano(),
       'postcss-reporter': settings.reporter()
     }
   };

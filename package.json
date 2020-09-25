@@ -36,14 +36,16 @@
     "prebuild": "npm run clean",
     "build": "tsc",
     "precompile:css": "npm run build",
-    "compile:css": "postcss ./examples/styles.scss --dir=examples/ --ext=min.css --verbose"
+    "compile:css": "postcss ./examples/styles.scss --dir=examples/ --ext=min.css"
+  },
+  "peerDependencies": {
+    "postcss": "^8.0.9"
   },
   "dependencies": {
     "@csstools/postcss-sass": "^4.0.0",
     "autoprefixer": "^10.0.0",
     "cssnano": "^4.1.10",
     "deepmerge": "^4.2.2",
-    "postcss": "^8.0.9",
     "postcss-custom-media": "^7.0.8",
     "postcss-inline-svg": "^4.1.0",
     "postcss-reporter": "^7.0.0",
@@ -59,6 +61,7 @@
     "eslint-config-prettier": "^6.11.0",
     "husky": "^4.3.0",
     "jest": "^26.4.2",
+    "postcss": "^8.0.9",
     "postcss-cli": "^8.0.0",
     "prettier": "^2.1.2",
     "pretty-quick": "^3.0.2",

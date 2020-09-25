@@ -48,7 +48,6 @@ export function cssnano(): PluginOptions {
 export function reporter(): PluginOptions {
   return {
     clearReportedMessages: true,
-    positionless: 'last',
-    throwError: true
+    positionless: 'last'
   };
 }
