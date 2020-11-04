@@ -7,7 +7,7 @@ on:
 
 jobs:
   build_release:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
 
     steps:
       - name: 'Checkout'
@@ -16,7 +16,7 @@ jobs:
       - name: 'Setup .npmrc file to publish to npm'
         uses: actions/setup-node@v1
         with:
-          node-version: '12.x'
+          node-version: '14.x'
           registry-url: 'https://registry.npmjs.org'
 
       - name: 'Install dependencies'

@@ -1,18 +1,13 @@
+/common/
 /coverage/
-/lib/
+/extends.js
+/index.js
 /typings/
 
 .cache
 .DS_Store
 .env*
-.versions/
-*.lock
-*.log
-*.sw[mnpcod]
-*.tmp*
-*~
-$RECYCLE.BIN/
-log.txt
+*lock
+*log
 node_modules/
 Thumbs.db
-UserInterfaceState.xcuserstate

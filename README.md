@@ -25,17 +25,17 @@ Flexible [PostCSS][postcss-doc-url] config with great defaults. It combines **Da
 
 ## Install
 
-> Tested on Node.js >= 12.x.
+> Tested on Node.js >= 14.x.
 
 Install PostCSS config and save them to your package.json `devDependencies`:
 
 ```sh
-npm install @giotramu/postcss-config --save-dev
+npm install --save-dev postcss @giotramu/postcss-config
 ```
 
 ## Usage
 
-Create a `.postcssrc.js` or `postcss.config.js` file in the project root and grab the standard config from node_modules folder:
+Create a `postcss.config.js` file in the root of your project and grab the configuration from the `node_modules` folder like so:
 
 ```js
 module.exports = require('@giotramu/postcss-config');
@@ -61,7 +61,7 @@ You can inspect the source code of the [standard config][standard-config-url].
 Install all your favourite [PostCSS plugins][postcss-plugins-url] and save them to your package.json as `devDependencies`. Now you can extend the [standard PostCSS config][standard-config-url], but remember that **the plugins execution order is top-down**:
 
 ```js
-module.exports = require('@giotramu/postcss-config/lib/extends')([
+module.exports = require('@giotramu/postcss-config/extends')([
   'postcss-utilities',
   'postcss-autoreset',
   'postcss-calc',
@@ -93,13 +93,13 @@ By design, the behaviour of the `extends` API is overwriting the existing array 
 You can disable and not load a single or a bunch of plugins by setting them to `false`:
 
 ```js
-// disable one plugin
-module.exports = require('@giotramu/postcss-config/lib/extends')([
+// Disable one plugin
+module.exports = require('@giotramu/postcss-config/extends')([
   ['autoprefixer', false]
 ]);
 
-// turn off multiple plugins
-module.exports = require('@giotramu/postcss-config/lib/extends')([
+// Turn off multiple plugins
+module.exports = require('@giotramu/postcss-config/extends')([
   ['postcss-custom-media', false],
   ['autoprefixer', false],
   ['cssnano', false]
@@ -123,11 +123,11 @@ const options = {
   sourceMap: 'external'
 };
 
-// the standard way
+// The standard way
 module.exports = require('@giotramu/postcss-config')(options);
 
-// with extends API
-module.exports = require('@giotramu/postcss-config/lib/extends')([...], options);
+// With extends API
+module.exports = require('@giotramu/postcss-config/extends')([...], options);
 ```
 
 ## Browsers support
@@ -147,10 +147,10 @@ You can change the query when you need. An example:
 ```js
 const browsers = ['> 1%', 'IE 10'];
 
-// the standard way
+// The standard way
 module.exports = require('@giotramu/postcss-config')({browsers});
 
-// with extends API
+// With extends API
 module.exports = require('@giotramu/postcss-config/lib/extends')([...], {browsers});
 
 ```

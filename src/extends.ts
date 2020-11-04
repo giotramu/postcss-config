@@ -1,9 +1,9 @@
-import {mergeObjects} from './_helpers';
-import {ExternalOptions, PostcssConfig, Plugins} from './_types';
-import {getPostcssConfig} from './config';
-import {debugConfig} from './debug';
-import {optionsParser} from './options';
-import {pluginsParser} from './plugins';
+import {getPostcssConfig} from './common/config';
+import {debugConfig} from './common/debug';
+import {mergeObjects} from './common/helpers';
+import {optionsParser} from './common/options';
+import {pluginsParser} from './common/plugins';
+import {ExternalOptions, PostcssConfig, Plugins} from './common/types';
 
 export = extendsConfig;
 

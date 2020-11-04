@@ -2,17 +2,17 @@ name: test + build
 
 on:
   push:
-    branches: [stable, next]
+    branches: [stable]
   pull_request:
-    branches: [stable, next]
+    branches: [stable]
 
 jobs:
   test_build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x]
+        node-version: [14.x, 15.x]
 
     steps:
       - name: 'Checkout'
@@ -33,6 +33,14 @@ jobs:
           npm run test
         env:
           CI: true
+
+      - name: 'Build the artifact'
+        run: npm run build
+        env:
+          CI: true
+
+      - name: 'Compile CSS and SCSS with postcss-cli'
+        run: npm run compile:css
 
       - name: 'Upload test coverage to Coveralls'
         uses: coverallsapp/github-action@master

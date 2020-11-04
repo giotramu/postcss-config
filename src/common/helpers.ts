@@ -8,7 +8,7 @@ export function isString(a?: unknown): a is string {
   return typeof a === 'string';
 }
 
-export function isNonEmptyObject(a?: unknown): a is {[key: string]: unknown} {
+export function isNotEmptyObject(a?: unknown): a is {[key: string]: unknown} {
   if (Object.prototype.toString.call(a) !== '[object Object]') {
     return false;
   }

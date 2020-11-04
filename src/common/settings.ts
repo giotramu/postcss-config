@@ -1,4 +1,4 @@
-import {BrowsersOption, PluginOptions} from './_types';
+import {BrowsersOption, PluginOptions} from './types';
 
 export function postsass(): PluginOptions {
   /**
@@ -48,7 +48,6 @@ export function cssnano(): PluginOptions {
 export function reporter(): PluginOptions {
   return {
     clearReportedMessages: true,
-    positionless: 'last',
-    throwError: true
+    positionless: 'last'
   };
 }

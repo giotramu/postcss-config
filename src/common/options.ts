@@ -1,6 +1,6 @@
-import {isBoolean} from './_helpers';
-import {ConfigOptions, ExternalOptions} from './_types';
 import {supportedBrowsers} from './browsers';
+import {isBoolean} from './helpers';
+import {ConfigOptions, ExternalOptions} from './types';
 
 export function optionsParser(options?: ExternalOptions): ConfigOptions {
   const browsers: ConfigOptions['browsers'] = supportedBrowsers;

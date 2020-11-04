@@ -1,4 +1,4 @@
-import {PostcssConfig} from '../_types';
+import {PostcssConfig} from '../common/types';
 
 const postcssConfig: PostcssConfig = {
   map: false,
@@ -37,8 +37,7 @@ const postcssConfig: PostcssConfig = {
     },
     'postcss-reporter': {
       clearReportedMessages: true,
-      positionless: 'last',
-      throwError: true
+      positionless: 'last'
     }
   }
 };

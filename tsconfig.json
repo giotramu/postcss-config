@@ -16,12 +16,13 @@
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "outDir": "./lib",
+    "outDir": ".",
     "strict": true,
-    "target": "es5",
+    "target": "esnext",
     "typeRoots": ["./typings", "./node_modules/@types"],
     "types": ["node", "jest"]
   },
-  "include": ["./src/**/*"],
+  "files": ["./src/index.ts", "./src/extends.ts"],
+  "include": ["./src/common/**/*"],
   "exclude": ["node_modules"]
 }
