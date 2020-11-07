@@ -36,7 +36,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           registry-url: 'https://npm.pkg.github.com'
-          scope: '@giotramu' # defaults to the user or organization that owns the workflow file
+          scope: '@giotramu'
 
       - name: 'Publish to GitHub Packages'
         run: npm publish
