@@ -28,7 +28,7 @@ jobs:
 
       - name: 'Run TSC compiler, linters and tests'
         run: |
-          npm run check:src --if-present
+          npm run typecheck --if-present
           npm run lint --if-present
           npm run test
         env:

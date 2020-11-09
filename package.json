@@ -27,10 +27,9 @@
     "typings/"
   ],
   "scripts": {
-    "check": "tsc --noEmit",
+    "typecheck": "tsc --noEmit",
     "lint:src": "eslint . --ext .js,.ts",
     "lint": "npm run lint:src",
-    "pretest": "npm run check & npm run lint",
     "test": "jest --coverage",
     "clean": "rimraf ./{index,extends}.js ./common ./typings",
     "prebuild": "npm run clean",
