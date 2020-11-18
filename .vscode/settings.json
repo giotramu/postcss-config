@@ -1,25 +1,13 @@
 {
-  "[markdown]": {
-    "editor.wordWrap": "wordWrapColumn",
-    "editor.quickSuggestions": true,
-    "editor.formatOnSave": true
-  },
-  "[json]": {
-    "editor.formatOnSave": true
-  },
-  "[javascript]": {
-    "editor.formatOnSave": true
-  },
-  "[typescript]": {
-    "editor.formatOnSave": true
-  },
-  "typescript.validate.enable": true,
-  "typescript.reportStyleChecksAsWarnings": false,
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "eslint.validate": ["typescript", "javascript"],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
   "css.validate": false,
-  "scss.validate": false
+  "scss.validate": false,
+  "eslint.validate": ["javascript", "typescript"],
+  "typescript.validate.enable": true,
+  "typescript.reportStyleChecksAsWarnings": false,
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

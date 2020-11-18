@@ -1,12 +1,10 @@
 # PostCSS Config
 
-Flexible [PostCSS][postcss-doc-url] config with great defaults. It combines **Dart SCSS** with your favorite PostCSS plugins.
+Flexible [PostCSS][postcss-doc-url] config that combines **Dart** SASS with other useful PostCSS plugins, like Autoprefixer. It offers granular control instead of postcss-preset-env.
 
 [![NPM][npm-img]][npm-url]
 [![CI Status][ci-img]][ci-url]
 [![Coverage Status][coverage-img]][coverage-url]
-[![Dependencies][deps-img]][deps-url]
-[![Dev Dependencies][devdeps-img]][devdeps-url]
 
 ## Table of contents
 
@@ -171,11 +169,10 @@ module.exports = require('@giotramu/postcss-config/lib/extends')([...], {browser
   B A D G E S
 -->
 
-[ci-img]: https://github.com/giotramu/postcss-config/workflows/test%20+%20build/badge.svg?branch=stable
-[coverage-img]: https://coveralls.io/repos/github/giotramu/postcss-config/badge.svg?branch=stable
-[deps-img]: https://badgen.net/david/dep/giotramu/postcss-config
-[devdeps-img]: https://badgen.net/david/dev/giotramu/postcss-config
-[npm-img]: https://badgen.net/npm/v/@giotramu/postcss-config?label=npm%20package
+[bundlephobia-img]: https://img.shields.io/bundlephobia/min/@giotramu/postcss-config?label=bundle%20size&style=flat&colorA=0c57fb&colorB=0c57fb
+[ci-img]: https://img.shields.io/github/workflow/status/giotramu/postcss-config/test%20+%20build?style=flat&colorA=0c57fb&colorB=0c57fb
+[coverage-img]: https://img.shields.io/coveralls/github/giotramu/postcss-config/stable?style=flat&colorA=0c57fb&colorB=0c57fb
+[npm-img]: https://img.shields.io/npm/v/@giotramu/postcss-config?style=flat&colorA=0c57fb&colorB=0c57fb
 
 <!---
   L I N K S
