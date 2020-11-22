@@ -2,6 +2,22 @@
 
 All notable changes to the project will be documented in this file.
 
+## 3.4.1 (2020-11-22)
+
+### Added
+
+- Distribute the `CHANGELOG.md` (this file) with NPM and GitHub packages
+
+### Changed
+
+- Update dependencies
+
+### Fixed
+
+--
+
+---
+
 ## 3.4.0 (2020-09-10)
 
 ### Added
