@@ -15,20 +15,20 @@ const config: Config.InitialOptions = {
   preset: 'ts-jest',
   globals: {
     'ts-jest': {
-      diagnostic: true
+      diagnostics: true
     }
   },
   bail: true,
+  verbose: !isCi,
   roots: ['<rootDir>/src/'],
   testMatch: undefined,
   testRegex: '(\\.|/)spec\\.(js?|ts?)$',
   collectCoverage: true,
   reporters,
   coverageReporters,
+  coverageDirectory: './coverage',
   coveragePathIgnorePatterns: [
-    '<rootDir>/[\\w/]*test/_[a-zA-Z]+\\.ts',
-    '<rootDir>/src/testing/*',
-    '<rootDir>/src/[\\w/]*/testing/*',
+    '<rootDir>/src/[\\w/]*test/_[a-zA-Z]+\\.ts',
     '<rootDir>/node_modules/'
   ]
 };
