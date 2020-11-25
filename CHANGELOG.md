@@ -2,6 +2,22 @@
 
 All notable changes to the project will be documented in this file.
 
+## 3.4.3 (2020-11-25)
+
+### Added
+
+--
+
+### Changed
+
+- Compile the TypeScript code to support the ECMAScript 2015 syntax
+
+### Fixed
+
+--
+
+---
+
 ## 3.4.2 (2020-11-24)
 
 ### Added

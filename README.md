@@ -91,7 +91,7 @@ By design, the behaviour of the `extends` API is overwriting the existing array 
 You can disable and not load a single or a bunch of plugins by setting them to `false`:
 
 ```js
-// Disable one plugin
+// Disable a single plugin
 module.exports = require('@giotramu/postcss-config/extends')([
   ['autoprefixer', false]
 ]);

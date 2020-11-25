@@ -18,7 +18,7 @@
     "noUnusedParameters": true,
     "outDir": ".",
     "strict": true,
-    "target": "es2020",
+    "target": "es6",
     "typeRoots": ["./typings", "./node_modules/@types"],
     "types": ["node", "jest"]
   },
