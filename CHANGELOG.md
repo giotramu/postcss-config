@@ -10,7 +10,7 @@ All notable changes to the project will be documented in this file.
 
 ### Changed
 
-- Compile the TypeScript code to support the ECMAScript 2015 syntax
+- Compile the TypeScript code to support the ECMAScript 2015 syntax. Support for Node version 12.x is guaranteed
 
 ### Fixed
 
