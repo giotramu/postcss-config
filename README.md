@@ -162,7 +162,7 @@ module.exports = require('@giotramu/postcss-config/lib/extends')([...], {browser
 
 [MIT License](./LICENSE)
 
-<!---
+<!--
   B A D G E S
 -->
 
@@ -171,7 +171,7 @@ module.exports = require('@giotramu/postcss-config/lib/extends')([...], {browser
 [coverage-img]: https://img.shields.io/coveralls/github/giotramu/postcss-config/stable?style=flat-square&colorA=202d3a&colorB=0c57fb
 [npm-img]: https://img.shields.io/npm/v/@giotramu/postcss-config?style=flat-square&colorA=202d3a&colorB=0c57fb
 
-<!---
+<!--
   L I N K S
 -->
 
