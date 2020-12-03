@@ -6,10 +6,7 @@ Flexible [PostCSS][postcss-doc-url] config that combines **Dart SASS** with othe
 [![CI Status][ci-img]][ci-url]
 [![Coverage Status][coverage-img]][coverage-url]
 
-## Table of contents
-
 - [PostCSS Config](#postcss-config)
-  - [Table of contents](#table-of-contents)
   - [Install](#install)
   - [Usage](#usage)
   - [Standard config](#standard-config)
