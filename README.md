@@ -169,10 +169,10 @@ module.exports = require('@giotramu/postcss-config/lib/extends')([...], {browser
   B A D G E S
 -->
 
-[bundlephobia-img]: https://img.shields.io/bundlephobia/min/@giotramu/postcss-config?label=bundle%20size&style=flat-square&colorA=0c57fb&colorB=0c57fb
-[ci-img]: https://img.shields.io/github/workflow/status/giotramu/postcss-config/test%20+%20build?style=flat-square&colorA=0c57fb&colorB=0c57fb
-[coverage-img]: https://img.shields.io/coveralls/github/giotramu/postcss-config/stable?style=flat-square&colorA=0c57fb&colorB=0c57fb
-[npm-img]: https://img.shields.io/npm/v/@giotramu/postcss-config?style=flat-square&colorA=0c57fb&colorB=0c57fb
+[bundlephobia-img]: https://img.shields.io/bundlephobia/min/@giotramu/postcss-config?label=bundle%20size&style=flat-square&colorA=202d3a&colorB=0c57fb
+[ci-img]: https://img.shields.io/github/workflow/status/giotramu/postcss-config/test%20+%20build?style=flat-square&colorA=202d3a&colorB=0c57fb
+[coverage-img]: https://img.shields.io/coveralls/github/giotramu/postcss-config/stable?style=flat-square&colorA=202d3a&colorB=0c57fb
+[npm-img]: https://img.shields.io/npm/v/@giotramu/postcss-config?style=flat-square&colorA=202d3a&colorB=0c57fb
 
 <!---
   L I N K S
