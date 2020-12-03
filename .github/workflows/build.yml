@@ -47,8 +47,3 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           path-to-lcov: ./coverage/lcov.info
-
-      - name: 'Build the artifact'
-        run: npm run build
-        env:
-          CI: true
