@@ -2,6 +2,12 @@
 
 All notable changes to the project will be documented in this file.
 
+## 3.4.4 (2020-12-12)
+
+- Update dependencies
+
+---
+
 ## 3.4.3 (2020-11-25)
 
 - Compile the TypeScript code to support the ECMAScript 2015 syntax. Support for Node version 12.x is guaranteed
