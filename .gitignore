@@ -1,9 +1,3 @@
-/common/
-/coverage/
-/extends.js
-/index.js
-/typings/
-
 .cache
 .DS_Store
 .env*
