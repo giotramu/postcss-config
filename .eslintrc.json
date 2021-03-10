@@ -1,6 +1,9 @@
 {
   "root": true,
-  "extends": ["contactlab/typescript", "prettier/@typescript-eslint"],
+  "extends": [
+    "contactlab/typescript",
+    "prettier"
+  ],
   "env": {
     "jest": true,
     "node": true
