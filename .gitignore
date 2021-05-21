@@ -2,7 +2,7 @@
 /coverage/
 /extends.js
 /index.js
-/typings/
+/types/
 
 .cache
 .DS_Store

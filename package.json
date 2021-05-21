@@ -13,18 +13,18 @@
     "url": "https://github.com/giotramu/postcss-config/issues"
   },
   "engines": {
-    "node": ">=12.x",
+    "node": ">=14.x",
     "npm": ">=6.x"
   },
   "publishConfig": {
     "access": "public"
   },
   "main": "index.js",
-  "types": "typings/index.d.ts",
+  "types": "types/index.d.ts",
   "files": [
     "{index,extends}.js",
     "common/",
-    "typings/",
+    "types/",
     "CHANGELOG.md"
   ],
   "scripts": {
@@ -32,22 +32,12 @@
     "lint:src": "eslint . --ext .js,.ts",
     "lint": "npm run lint:src",
     "test": "jest",
-    "clean": "rimraf ./{index,extends}.js ./common ./typings",
-    "prebuild": "npm run clean",
-    "build": "tsc",
+    "clean": "del ./{index,extends}.js ./common ./types",
+    "build": "npm run clean && tsc",
     "precompile:css": "npm run build",
     "compile:css": "postcss ./examples/styles.scss --dir=examples/ --ext=min.css"
   },
   "prettier": "@giotramu/prettier-config",
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*": "prettier --write",
-    "*.{ts,tsx}": "eslint --fix"
-  },
   "peerDependencies": {
     "postcss": "^7.0.32"
   },
@@ -63,22 +53,21 @@
     "postcss-selector-not": "^4.0.0"
   },
   "devDependencies": {
+    "@arkweid/lefthook": "^0.7.5",
     "@giotramu/prettier-config": "^1.1.2",
-    "@types/jest": "^26.0.20",
-    "@types/node": "^15.0.1",
-    "eslint": "^7.21.0",
-    "eslint-config-contactlab": "^6.1.0",
-    "eslint-config-prettier": "^8.1.0",
-    "husky": "^6.0.0",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.6.0",
+    "del-cli": "^3.0.1",
+    "eslint": "^7.27.0",
+    "eslint-config-contactlab": "^6.2.1",
+    "eslint-config-prettier": "^8.3.0",
     "jest": "^26.6.3",
     "jest-junit": "^12.0.0",
-    "lint-staged": "^10.5.4",
     "postcss-cli": "^7.1.2",
-    "prettier": "^2.2.1",
-    "rimraf": "^3.0.2",
-    "ts-jest": "^26.5.3",
-    "ts-node": "^9.1.1",
-    "typescript": "^4.2.3",
+    "prettier": "^2.3.0",
+    "ts-jest": "^26.5.6",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.2.4",
     "utility-types": "^3.10.0"
   },
   "keywords": [

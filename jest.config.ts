@@ -15,14 +15,12 @@ const config: Config.InitialOptions = {
   preset: 'ts-jest',
   globals: {
     'ts-jest': {
-      diagnostics: true
+      diagnostics: true,
+      tsconfig: 'tsconfig.test.json'
     }
   },
   bail: true,
-  verbose: !isCi,
   roots: ['<rootDir>/src/'],
-  testMatch: undefined,
-  testRegex: '(\\.|/)spec\\.(js?|ts?)$',
   collectCoverage: true,
   reporters,
   coverageReporters,

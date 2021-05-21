@@ -1,0 +1,12 @@
+pre-commit:
+  parallel: true
+  commands:
+    typecheck:
+      glob: '*.ts'
+      run: npm run typecheck
+    eslint:
+      glob: '*.{js,ts}'
+      run: npm run lint:src
+    prettier:
+      glob: '*'
+      run: npx --no-install prettier {staged_files} --write --ignore-unknown && git add {staged_files}

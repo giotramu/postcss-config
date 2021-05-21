@@ -23,7 +23,7 @@ describe('extendsConfig', () => {
 
     expect(config.map).toStrictEqual({inline: false});
 
-    // @ts-ignore
+    // @ts-expect-error
     expect(config.plugins.autoprefixer.overrideBrowserslist).toBe(browsers);
   });
 
@@ -41,7 +41,7 @@ describe('extendsConfig', () => {
     expect(console.log).toHaveBeenCalledWith(
       '[postcss-config] ',
       'Supported Browsers: ',
-      // @ts-ignore
+      // @ts-expect-error
       expectedConfig.plugins.autoprefixer.overrideBrowserslist?.join(', ')
     );
 
@@ -97,7 +97,7 @@ describe('extendsConfig', () => {
     /* eslint-disable no-console */
     console.log = jest.fn();
 
-    // @ts-ignore
+    // @ts-expect-error
     const config = extendsConfig(Math.random());
 
     expect(console.log).toHaveBeenCalledWith(
@@ -111,7 +111,7 @@ describe('extendsConfig', () => {
   });
 
   it(`returns the standard config on a plugin's invalid identifier`, () => {
-    // @ts-ignore
+    // @ts-expect-error
     const config = extendsConfig([[Math.random(), false]]);
 
     expect(config).toStrictEqual(expectedConfig);
@@ -119,7 +119,7 @@ describe('extendsConfig', () => {
 
   it(`returns the extended config on a plugin's invalid settings`, () => {
     const invalidSettings1 = extendsConfig([
-      // @ts-ignore
+      // @ts-expect-error
       ['postcss-fake-plugin', Math.random()]
     ]);
     const invalidSettings2 = extendsConfig([['postcss-fake-plugin', {}]]);

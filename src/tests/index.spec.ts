@@ -14,7 +14,7 @@ describe('getConfig', () => {
 
     expect(config.map).toBe(true);
 
-    // @ts-ignore
+    // @ts-expect-error
     expect(autoprefixer.overrideBrowserslist).toBe(browsers);
   });
 
@@ -32,7 +32,7 @@ describe('getConfig', () => {
     expect(console.log).toHaveBeenCalledWith(
       '[postcss-config] ',
       'Supported Browsers: ',
-      // @ts-ignore
+      // @ts-expect-error
       expectedConfig.plugins.autoprefixer.overrideBrowserslist?.join(', ')
     );
 
@@ -45,7 +45,7 @@ describe('getConfig', () => {
   });
 
   it('returns the standard config on an invalid argument', () => {
-    // @ts-ignore
+    // @ts-expect-error
     const config = getConfig(Math.random());
 
     expect(config).toStrictEqual(expectedConfig);
