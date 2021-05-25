@@ -6,7 +6,7 @@ pre-commit:
       run: npm run typecheck
     eslint:
       glob: '*.{js,ts}'
-      run: npm run lint:src
+      run: npm run lint:src -- --fix
     prettier:
       glob: '*'
       run: npx --no-install prettier {staged_files} --write --ignore-unknown && git add {staged_files}
