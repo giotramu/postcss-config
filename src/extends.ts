@@ -3,7 +3,7 @@ import {debugConfig} from './common/debug';
 import {mergeObjects} from './common/helpers';
 import {optionsParser} from './common/options';
 import {pluginsParser} from './common/plugins';
-import {ExternalOptions, PostcssConfig, Plugins} from './common/types';
+import type {ExternalOptions, PostcssConfig, Plugins} from './common/types';
 
 export = extendsConfig;
 

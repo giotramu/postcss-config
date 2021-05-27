@@ -1,5 +1,5 @@
 import {ProcessOptions} from 'postcss';
-import {Unionize} from 'utility-types';
+import type {Unionize} from 'utility-types';
 
 export type SourceMapOption = ProcessOptions['map'];
 

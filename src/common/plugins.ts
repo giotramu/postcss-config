@@ -1,5 +1,5 @@
 import {isNotEmptyObject, isString, printLog} from './helpers';
-import {Plugin, Plugins} from './types';
+import type {Plugin, Plugins} from './types';
 
 export function pluginsParser(plugins: Plugins): {} {
   if (Array.isArray(plugins) && plugins.length > 0) {

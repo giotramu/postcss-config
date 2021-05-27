@@ -1,4 +1,4 @@
-import {BrowsersOption, PluginOptions} from './types';
+import type {BrowsersOption, PluginOptions} from './types';
 
 export function postsass(): PluginOptions {
   /**

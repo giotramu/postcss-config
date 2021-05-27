@@ -1,5 +1,5 @@
 import {printLog} from './helpers';
-import {DebugConfig} from './types';
+import type {DebugConfig} from './types';
 
 export function debugConfig({browsers, sourceMap, config}: DebugConfig): void {
   printLog('CSS Source-Map: ', sourceMap);

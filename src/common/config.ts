@@ -1,5 +1,5 @@
 import * as settings from './settings';
-import {ConfigOptions, PostcssConfig} from './types';
+import type {ConfigOptions, PostcssConfig} from './types';
 
 export function getPostcssConfig({
   browsers,
