@@ -1,12 +1,12 @@
 {
   "root": true,
-  "extends": [
-    "contactlab/typescript",
-    "prettier"
-  ],
+  "extends": ["contactlab/typescript", "prettier"],
   "env": {
     "jest": true,
     "node": true
+  },
+  "parserOptions": {
+    "project": "./tsconfig.test.json"
   },
   "rules": {
     "@typescript-eslint/ban-types": [

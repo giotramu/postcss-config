@@ -21,7 +21,6 @@
     "typeRoots": ["./types", "./node_modules/@types"],
     "types": ["node"]
   },
-  "files": ["./src/index.ts", "./src/extends.ts"],
-  "include": ["./src/common/**/*"],
-  "exclude": ["node_modules"]
+  "include": ["./src/**/*"],
+  "exclude": ["./src/tests/*", "node_modules"]
 }
