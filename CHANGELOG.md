@@ -1,61 +1,96 @@
-# Change Log
+# Changelog
 
 All notable changes to the project will be documented in this file.
 
-## 3.4.4 (2020-12-12)
+## [3.4.5](https://github.com/giotramu/postcss-config/releases/tag/3.4.5)
+
+**Dependencies:**
 
 - Update dependencies
 
 ---
 
-## 3.4.3 (2020-11-25)
+## [3.4.4](https://github.com/giotramu/postcss-config/releases/tag/3.4.4)
+
+**Dependencies:**
+
+- Update dependencies
+
+---
+
+## [3.4.3](https://github.com/giotramu/postcss-config/releases/tag/3.4.3)
+
+**Fixes:**
 
 - Compile the TypeScript code to support the ECMAScript 2015 syntax. Support for Node version 12.x is guaranteed
 
 ---
 
-## 3.4.2 (2020-11-24)
+## [3.4.2](https://github.com/giotramu/postcss-config/releases/tag/3.4.2)
+
+**Features:**
 
 - Compile the TypeScript code to support the ECMAScript 2020 syntax
 
 ---
 
-## 3.4.1 (2020-11-22)
+## [3.4.1](https://github.com/giotramu/postcss-config/releases/tag/3.4.1)
+
+**Dependencies:**
+
+- Update dependencies
+
+**Internals:**
 
 - Distribute the `CHANGELOG.md` (this file) with NPM and GitHub packages
-- Update dependencies
 
 ---
 
-## 3.4.0 (2020-09-10)
+## [3.4.0](https://github.com/giotramu/postcss-config/releases/tag/3.4.0)
+
+**Internals:**
 
 - Fix some internal APIs
-- Update dependencies
 - Increase the test coverage to 100%
 
----
-
-## 3.3.0 (2020-05-25)
+**Dependencies:**
 
 - Update dependencies
 
 ---
 
-## 3.2.0 (2020-05-12)
+## [3.3.0](https://github.com/giotramu/postcss-config/releases/tag/3.3.0)
+
+**Dependencies:**
 
 - Update dependencies
 
 ---
 
-## 3.1.0 (2020-05-05)
+## [3.2.0](https://github.com/giotramu/postcss-config/releases/tag/3.2.0)
+
+**Dependencies:**
+
+- Update dependencies
+
+---
+
+## [3.1.0](https://github.com/giotramu/postcss-config/releases/tag/3.1.0)
+
+**Features:**
 
 - Source Map option accept `true`, `false` and `'external'` values
 - Source Map option is disabled by default
+
+**Fixes:**
+
 - Fix files publishing into the package.json
 
 ---
 
-## 3.0.0 (2020-05-04)
+## [3.0.0](https://github.com/giotramu/postcss-config/releases/tag/3.0.0)
+
+**Features:**
 
 - Inject useful options when grabbing or extending the standard configuration
 - Add new PostCSS plugins:
@@ -72,55 +107,84 @@ All notable changes to the project will be documented in this file.
   - `removeScriptElement`
   - `sortAttrs`
 - Update documentation
+
+**Internals:**
+
 - Fix CI configuration
 
 ---
 
-## 2.4.0 (2020-04-23)
+## [2.4.0](https://github.com/giotramu/postcss-config/releases/tag/2.4.0)
+
+**Features:**
 
 - Disable dangerous cssnano optimizations [#39](https://github.com/giotramu/postcss-config/pull/39)
 
 ---
 
-## 2.3.1 (2020-04-14)
+## [2.3.1](https://github.com/giotramu/postcss-config/releases/tag/2.3.1)
+
+**Dependencies:**
 
 - Update dependencies
 
 ---
 
-## 2.3.0 (2020-04-10)
+## [2.3.0](https://github.com/giotramu/postcss-config/releases/tag/2.3.0)
+
+**Features:**
 
 - Disable the cssnano [minifySelectors](https://cssnano.co/optimisations/minifyselectors) and [reduceIdents](https://cssnano.co/optimisations/reduceidents) properties
 
 ---
 
-## 2.2.2 (2020-04-02)
+## [2.2.2](https://github.com/giotramu/postcss-config/releases/tag/2.2.2)
+
+**Features:**
 
 - Publish the package to the GitHub registry
+
+**Internals:**
+
 - Remove `README.md` from distributed files
 - Fix some minor stuff, such `README.md`, `.gitignore`, `.prettierignore` and `.eslintignore`
 
 ---
 
-## 2.2.1 (2020-03-24)
+## [2.2.1](https://github.com/giotramu/postcss-config/releases/tag/2.2.1)
+
+**Dependencies:**
 
 - Update dependencies
 
 ---
 
-## 2.1.0 (2020-02-08)
+## [2.1.0](https://github.com/giotramu/postcss-config/releases/tag/2.1.0)
+
+**Features:**
 
 - Add entry point for types
-- Improve test coverage
+
+**Fixes:**
+
 - Fix the module's main entry point
+
+**Internals:**
+
+- Improve test coverage
 
 ---
 
-## 2.0.0 (2020-02-03)
+## [2.0.0](https://github.com/giotramu/postcss-config/releases/tag/2.0.0)
+
+**Features:**
 
 - ![breaking] Deprecate expandDefault function and replace with extends
 - ![breaking] Rewrite source code in TypeScript
-- Update dependencies
 - Update documentation
+
+**Dependencies:**
+
+- Update dependencies
 
 [breaking]: https://shields.io/badge/-breaking-202d3a?style=flat-square
