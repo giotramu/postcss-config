@@ -8,15 +8,11 @@ All notable changes to the project will be documented in this file.
 
 - Update dependencies
 
----
-
 ## [3.4.4](https://github.com/giotramu/postcss-config/releases/tag/3.4.4)
 
 **Dependencies:**
 
 - Update dependencies
-
----
 
 ## [3.4.3](https://github.com/giotramu/postcss-config/releases/tag/3.4.3)
 
@@ -24,15 +20,11 @@ All notable changes to the project will be documented in this file.
 
 - Compile the TypeScript code to support the ECMAScript 2015 syntax. Support for Node version 12.x is guaranteed
 
----
-
 ## [3.4.2](https://github.com/giotramu/postcss-config/releases/tag/3.4.2)
 
 **Features:**
 
 - Compile the TypeScript code to support the ECMAScript 2020 syntax
-
----
 
 ## [3.4.1](https://github.com/giotramu/postcss-config/releases/tag/3.4.1)
 
@@ -43,8 +35,6 @@ All notable changes to the project will be documented in this file.
 **Internals:**
 
 - Distribute the `CHANGELOG.md` (this file) with NPM and GitHub packages
-
----
 
 ## [3.4.0](https://github.com/giotramu/postcss-config/releases/tag/3.4.0)
 
@@ -57,23 +47,17 @@ All notable changes to the project will be documented in this file.
 
 - Update dependencies
 
----
-
 ## [3.3.0](https://github.com/giotramu/postcss-config/releases/tag/3.3.0)
 
 **Dependencies:**
 
 - Update dependencies
 
----
-
 ## [3.2.0](https://github.com/giotramu/postcss-config/releases/tag/3.2.0)
 
 **Dependencies:**
 
 - Update dependencies
-
----
 
 ## [3.1.0](https://github.com/giotramu/postcss-config/releases/tag/3.1.0)
 
@@ -85,8 +69,6 @@ All notable changes to the project will be documented in this file.
 **Fixes:**
 
 - Fix files publishing into the package.json
-
----
 
 ## [3.0.0](https://github.com/giotramu/postcss-config/releases/tag/3.0.0)
 
@@ -112,15 +94,11 @@ All notable changes to the project will be documented in this file.
 
 - Fix CI configuration
 
----
-
 ## [2.4.0](https://github.com/giotramu/postcss-config/releases/tag/2.4.0)
 
 **Features:**
 
 - Disable dangerous cssnano optimizations [#39](https://github.com/giotramu/postcss-config/pull/39)
-
----
 
 ## [2.3.1](https://github.com/giotramu/postcss-config/releases/tag/2.3.1)
 
@@ -128,15 +106,11 @@ All notable changes to the project will be documented in this file.
 
 - Update dependencies
 
----
-
 ## [2.3.0](https://github.com/giotramu/postcss-config/releases/tag/2.3.0)
 
 **Features:**
 
 - Disable the cssnano [minifySelectors](https://cssnano.co/optimisations/minifyselectors) and [reduceIdents](https://cssnano.co/optimisations/reduceidents) properties
-
----
 
 ## [2.2.2](https://github.com/giotramu/postcss-config/releases/tag/2.2.2)
 
@@ -149,15 +123,11 @@ All notable changes to the project will be documented in this file.
 - Remove `README.md` from distributed files
 - Fix some minor stuff, such `README.md`, `.gitignore`, `.prettierignore` and `.eslintignore`
 
----
-
 ## [2.2.1](https://github.com/giotramu/postcss-config/releases/tag/2.2.1)
 
 **Dependencies:**
 
 - Update dependencies
-
----
 
 ## [2.1.0](https://github.com/giotramu/postcss-config/releases/tag/2.1.0)
 
@@ -172,8 +142,6 @@ All notable changes to the project will be documented in this file.
 **Internals:**
 
 - Improve test coverage
-
----
 
 ## [2.0.0](https://github.com/giotramu/postcss-config/releases/tag/2.0.0)
 
