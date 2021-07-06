@@ -57,7 +57,7 @@
     "@giotramu/prettier-config": "^1.1.2",
     "@types/jest": "^26.0.23",
     "@types/node": "^15.6.0",
-    "del-cli": "^3.0.1",
+    "del-cli": "^4.0.0",
     "eslint": "^7.27.0",
     "eslint-config-contactlab": "^6.3.0",
     "eslint-config-prettier": "^8.3.0",
