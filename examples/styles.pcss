@@ -1,0 +1,18 @@
+/* Plugin: postcss-custom-media */
+@custom-media --small-viewport (max-width: 30em);
+
+.foo {
+  width: 240px;
+}
+
+@media (--small-viewport) {
+  width: 100%;
+  .foo {
+    width: 100%;
+  }
+}
+
+/* Plugin: postcss-selector-not */
+p:not(:first-child, .special) {
+  color: $brandColor;
+}

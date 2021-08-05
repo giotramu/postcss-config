@@ -1,6 +1,6 @@
 # PostCSS Config
 
-Flexible [PostCSS][postcss-doc-url] config that combines **Dart SASS** with other useful PostCSS plugins, like Autoprefixer. It offers granular control instead of postcss-preset-env.
+Flexible [PostCSS][postcss-doc-url] config that combines useful plugins like Autoprefixer, CSSNano, SVGO, Inline SVG, Custom Media, etc. It offers granular control instead of postcss-preset-env.
 
 [![NPM][npm-img]][npm-url]
 [![CI Status][ci-img]][ci-url]
@@ -25,7 +25,7 @@ Flexible [PostCSS][postcss-doc-url] config that combines **Dart SASS** with othe
 Install PostCSS config and save them to your package.json `devDependencies`:
 
 ```sh
-npm install --save-dev postcss @giotramu/postcss-config
+npm install --save-dev @giotramu/postcss-config
 ```
 
 ## Usage
@@ -45,8 +45,6 @@ The config bundles together the following plugins:
 - [postcss-custom-media][postcss-custom-media-url]
 - [postcss-inline-svg][postcss-inline-svg-url]
 - [postcss-reporter][postcss-reporter-url]
-- [postcss-sass][postcss-sass-url]
-- [postcss-selector-not][postcss-selector-not-url]
 - [svgo][svgo-url]
 
 You can inspect the source code of the [standard config][standard-config-url].
@@ -105,11 +103,12 @@ module.exports = require('@giotramu/postcss-config/extends')([
 
 You can pass the following options:
 
-| Option    |                      Type |                           Default |
-| --------- | ------------------------: | --------------------------------: |
-| browsers  |                `string[]` | [Browserslist](#browsers-support) |
-| debug     |                 `boolean` |                           `false` |
-| sourceMap | `boolean` or `'external'` |                           `false` |
+| Option    |                       Type |                           Default |
+| --------- | -------------------------: | --------------------------------: |
+| browsers  |                 `string[]` | [Browserslist](#browsers-support) |
+| debug     |                  `boolean` |                           `false` |
+| sourceMap |  `boolean` or `'external'` |                       `undefined` |
+| syntax    | PostCSS `syntax` interface |                       `undefined` |
 
 ```js
 const options = {
@@ -146,7 +145,7 @@ const browsers = ['> 1%', 'IE 10'];
 module.exports = require('@giotramu/postcss-config')({browsers});
 
 // With extends API
-module.exports = require('@giotramu/postcss-config/lib/extends')([...], {browsers});
+module.exports = require('@giotramu/postcss-config/extends')([...], {browsers});
 
 ```
 
@@ -190,7 +189,5 @@ module.exports = require('@giotramu/postcss-config/lib/extends')([...], {browser
 [postcss-plugins-url]: https://github.com/postcss/postcss/blob/master/docs/plugins.md
 [postcss-preset-env-url]: https://github.com/csstools/postcss-preset-env
 [postcss-reporter-url]: https://github.com/postcss/postcss-reporter
-[postcss-sass-url]: https://github.com/jonathantneal/postcss-sass
-[postcss-selector-not-url]: https://github.com/postcss/postcss-selector-not
-[standard-config-url]: ./src/test/_config.ts
+[standard-config-url]: ./src/tests/_config.ts
 [svgo-url]: https://github.com/svg/svgo

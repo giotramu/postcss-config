@@ -14,14 +14,25 @@ describe('extendsConfig', () => {
   it('returns the extended config with options', () => {
     const browsers = ['> 1%', 'IE 10'];
     const sourceMap = 'external';
+    const syntax = {
+      parse: undefined,
+      stringify: undefined
+    };
+
     const config = extendsConfig(['postcss-fake-plugin'], {
       browsers,
-      sourceMap
+      sourceMap,
+      syntax
     });
 
     expect(config.plugins).toMatchObject({'postcss-fake-plugin': true});
 
     expect(config.map).toStrictEqual({inline: false});
+
+    expect(config.syntax).toStrictEqual({
+      parse: undefined,
+      stringify: undefined
+    });
 
     // @ts-expect-error
     expect(config.plugins.autoprefixer.overrideBrowserslist).toBe(browsers);
@@ -35,7 +46,13 @@ describe('extendsConfig', () => {
     expect(console.log).toHaveBeenCalledWith(
       '[postcss-config] ',
       'CSS Source-Map: ',
-      false
+      undefined
+    );
+
+    expect(console.log).toHaveBeenCalledWith(
+      '[postcss-config] ',
+      'Syntax: ',
+      undefined
     );
 
     expect(console.log).toHaveBeenCalledWith(

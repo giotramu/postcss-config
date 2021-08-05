@@ -3,15 +3,14 @@ import type {ConfigOptions, PostcssConfig} from './types';
 
 export function getPostcssConfig({
   browsers,
-  sourceMap
+  sourceMap,
+  syntax
 }: ConfigOptions): PostcssConfig {
   return {
     map: sourceMap,
-    syntax: 'postcss-scss',
+    syntax,
     plugins: {
       // --- The plugins execution order is top-down
-      '@csstools/postcss-sass': settings.postsass(),
-      'postcss-selector-not': true,
       'postcss-custom-media': true,
       'postcss-inline-svg': settings.inlinesvg(),
       autoprefixer: settings.autoprefixer(browsers),

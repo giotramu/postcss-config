@@ -1,15 +1,5 @@
 import type {BrowsersOption, PluginOptions} from './types';
 
-export function postsass(): PluginOptions {
-  /**
-   * Dart Sass options:
-   * https://github.com/sass/dart-sass/blob/master/README.md#javascript-api
-   */
-  return {
-    outputStyle: 'expanded'
-  };
-}
-
 export function inlinesvg(): PluginOptions {
   return {
     xmlns: false
@@ -29,7 +19,7 @@ export function cssnano(): PluginOptions {
       'default',
       {
         discardComments: {removeAll: true},
-        svgo: {
+        'postcss-svgo': {
           /**
            * SVGO plugins:
            * https://github.com/svg/svgo/tree/master/plugins

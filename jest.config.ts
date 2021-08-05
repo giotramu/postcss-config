@@ -16,7 +16,7 @@ const config: Config.InitialOptions = {
   globals: {
     'ts-jest': {
       diagnostics: true,
-      tsconfig: 'tsconfig.test.json'
+      tsconfig: 'tsconfig.eslint.json'
     }
   },
   bail: true,
@@ -24,7 +24,7 @@ const config: Config.InitialOptions = {
   collectCoverage: true,
   reporters,
   coverageReporters,
-  coverageDirectory: './coverage',
+  coverageDirectory: 'coverage',
   coveragePathIgnorePatterns: [
     '<rootDir>/src/[\\w/]*test/_[a-zA-Z]+\\.ts',
     '<rootDir>/node_modules/'

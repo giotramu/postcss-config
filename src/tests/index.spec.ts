@@ -9,10 +9,14 @@ describe('getConfig', () => {
   it('returns the standard config with options', () => {
     const browsers = ['> 1%', 'IE 10'];
     const sourceMap = true;
+
     const config = getConfig({browsers, sourceMap});
-    const autoprefixer = config.plugins.autoprefixer;
 
     expect(config.map).toBe(true);
+
+    expect(config.syntax).toBeUndefined();
+
+    const autoprefixer = config.plugins.autoprefixer;
 
     // @ts-expect-error
     expect(autoprefixer.overrideBrowserslist).toBe(browsers);
@@ -26,7 +30,13 @@ describe('getConfig', () => {
     expect(console.log).toHaveBeenCalledWith(
       '[postcss-config] ',
       'CSS Source-Map: ',
-      false
+      undefined
+    );
+
+    expect(console.log).toHaveBeenCalledWith(
+      '[postcss-config] ',
+      'Syntax: ',
+      undefined
     );
 
     expect(console.log).toHaveBeenCalledWith(

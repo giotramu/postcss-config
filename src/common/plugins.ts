@@ -14,7 +14,7 @@ export function pluginsParser(plugins: Plugins): {} {
   return {};
 }
 
-function checkPlugin(o: {[key: string]: unknown}, item: Plugin): {} {
+function checkPlugin(o: Record<string, unknown>, item: Plugin): {} {
   if (isString(item)) {
     o[item] = true;
   }

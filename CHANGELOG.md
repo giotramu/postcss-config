@@ -2,6 +2,28 @@
 
 All notable changes to the project will be documented in this file.
 
+## [4.0.0](https://github.com/giotramu/postcss-config/releases/tag/4.0.0)
+
+**Fixes:**
+
+- ![breaking] Remove `postcss-scss` and `@csstools/postcss-sass` plugins. `@csstools/postcss-sass` is unmantained. Check out the [related issue](https://github.com/csstools/postcss-sass/issues/24). If you need to support the SASS compilation, use the [forked versions](https://www.npmjs.com/package/@mozaic-ds/postcss-sass)
+- ![breaking] Remove `postcss-selector-not` plugin for historical [issue](https://github.com/postcss/postcss-selector-not/pull/18) with PostCSS v8
+
+**Features:**
+
+- ![breaking] Support PostCSS v8
+- ![breaking] PostCSS is no more a `peerDependency`
+- A new option, `syntax`, is available in the configuration. [Read more](https://github.com/postcss/postcss#syntaxes) on the PostCSS documentation.
+
+**Dependencies:**
+
+- Bump the version of `postcss` from `7.0.32` to `8.3.x`
+- Bump the version of `autoprefixer` from `9.8.6` to `10.3.1`
+- Bump the version of `cssnano` from `4.1.10` to `10.3.1`
+- Bump the version of `postcss-custom-media` from `7.0.8` to `8.0.0`
+- Bump the version of `postcss-inline-svg` from `4.1.0` to `5.0.0`
+- Bump the version of `postcss-reporter` from `6.0.1` to `7.0.2`
+
 ## [3.4.5](https://github.com/giotramu/postcss-config/releases/tag/3.4.5)
 
 **Dependencies:**

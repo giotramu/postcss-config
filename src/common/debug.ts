@@ -1,8 +1,14 @@
 import {printLog} from './helpers';
 import type {DebugConfig} from './types';
 
-export function debugConfig({browsers, sourceMap, config}: DebugConfig): void {
-  printLog('CSS Source-Map: ', sourceMap);
+export function debugConfig({
+  browsers,
+  sourceMap,
+  syntax,
+  config
+}: DebugConfig): void {
   printLog('Supported Browsers: ', browsers.join(', '));
+  printLog('CSS Source-Map: ', sourceMap);
+  printLog('Syntax: ', syntax);
   printLog('Generated PostCSS Config: ', JSON.stringify(config));
 }

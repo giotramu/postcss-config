@@ -1,6 +1,6 @@
+import merge from 'deepmerge';
 import {getPostcssConfig} from './common/config';
 import {debugConfig} from './common/debug';
-import {mergeObjects} from './common/helpers';
 import {optionsParser} from './common/options';
 import {pluginsParser} from './common/plugins';
 import type {ExternalOptions, PostcssConfig, Plugins} from './common/types';
@@ -11,16 +11,26 @@ function extendsConfig(
   plugins: Plugins,
   options?: ExternalOptions
 ): PostcssConfig {
-  const {sourceMap, browsers} = optionsParser(options);
-  const source = getPostcssConfig({browsers, sourceMap});
+  const {browsers, sourceMap, syntax} = optionsParser(options);
+  const source = getPostcssConfig({browsers, sourceMap, syntax});
 
   const parsedPlugins = pluginsParser(plugins);
   const extendedPlugins = mergeObjects(source.plugins, parsedPlugins);
   const config = {...source, plugins: extendedPlugins};
 
-  if (options?.debug) {
-    debugConfig({browsers, sourceMap, config});
-  }
+  if (options?.debug) debugConfig({browsers, sourceMap, syntax, config});
 
   return config;
+}
+
+// --- Helpers
+function mergeObjects<T1, T2>(
+  source: Partial<T1>,
+  target: Partial<T2>
+): T1 & T2 {
+  return merge(source, target, {arrayMerge: overwriteArrays});
+}
+
+function overwriteArrays(_: [], source: []): [] {
+  return source;
 }

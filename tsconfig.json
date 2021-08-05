@@ -1,12 +1,14 @@
 {
   "compilerOptions": {
+    "alwaysStrict": true,
     "baseUrl": ".",
     "declaration": true,
     "declarationDir": "./types",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "lib": ["esnext"],
-    "module": "commonjs",
+    "importHelpers": true,
+    "lib": ["ESNext"],
+    "module": "CommonJS",
     "moduleResolution": "Node",
     "noEmitOnError": true,
     "noFallthroughCasesInSwitch": true,
@@ -15,12 +17,14 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "outDir": ".",
+    "removeComments": true,
+    "skipLibCheck": true,
     "strict": true,
     "stripInternal": true,
     "target": "ES6",
     "typeRoots": ["./types", "./node_modules/@types"],
-    "types": ["node"]
+    "types": ["node", "jest"]
   },
-  "include": ["./src/**/*"],
-  "exclude": ["./src/tests/*", "node_modules"]
+  "include": ["./src"],
+  "exclude": ["./src/tests"]
 }

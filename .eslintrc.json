@@ -5,8 +5,9 @@
     "jest": true,
     "node": true
   },
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": "./tsconfig.test.json"
+    "project": "tsconfig.eslint.json"
   },
   "rules": {
     "@typescript-eslint/ban-types": [

@@ -1,5 +1,3 @@
-import merge from 'deepmerge';
-
 export function isBoolean(a?: unknown): a is boolean {
   return typeof a === 'boolean';
 }
@@ -28,19 +26,4 @@ export function printLog(
     ? console.log(prefix, a, ...args)
     : console.log(prefix, a.message, `Read the docs: ${doc}/${a.docHook}`);
   /* eslint-enable no-console */
-}
-
-export function mergeObjects<T1, T2>(
-  source: Partial<T1>,
-  target: Partial<T2>
-): T1 & T2 {
-  return merge(source, target, {arrayMerge: overwriteArrays});
-}
-
-/**
- * Overwrites the existing array values completely
- * rather than concatenating them
- */
-export function overwriteArrays(_: [], source: []): [] {
-  return source;
 }

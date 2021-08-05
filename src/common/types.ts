@@ -1,23 +1,21 @@
-import {ProcessOptions} from 'postcss';
+import type {ProcessOptions} from 'postcss';
 import type {Unionize} from 'utility-types';
 
 export type SourceMapOption = ProcessOptions['map'];
+
+export type SyntaxOption = ProcessOptions['syntax'];
 
 export type BrowsersOption = string[];
 
 export type DebugOption = boolean;
 
-export interface PluginOptions {
-  [key: string]: unknown;
-}
+export type PluginOptions = Record<string, unknown>;
 
 export type Plugin = string | [string, boolean] | [string, PluginOptions];
 
 export type Plugins = Plugin[];
 
 export interface StandardPlugins {
-  '@csstools/postcss-sass': unknown;
-  'postcss-selector-not': unknown;
   'postcss-custom-media': unknown;
   autoprefixer: unknown;
   cssnano: unknown;
@@ -27,24 +25,26 @@ export interface StandardPlugins {
 export type PostcssPlugins = PluginOptions & Unionize<StandardPlugins>;
 
 export interface PostcssConfig {
-  parser?: string | ProcessOptions['parser'];
-  stringifier?: string | ProcessOptions['stringifier'];
-  syntax?: string | ProcessOptions['syntax'];
-  map?: SourceMapOption;
-  to?: ProcessOptions['to'];
-  from?: ProcessOptions['from'];
+  map: SourceMapOption;
+  syntax?: ProcessOptions['syntax'];
+  parser?: ProcessOptions['parser'];
+  stringifier?: ProcessOptions['stringifier'];
+  to?: string;
+  from?: string;
   plugins: PostcssPlugins;
 }
 
 export interface ConfigOptions {
   browsers: BrowsersOption;
   sourceMap: SourceMapOption;
+  syntax?: SyntaxOption;
 }
 
 export interface ExternalOptions {
   browsers?: ConfigOptions['browsers'];
-  sourceMap?: boolean | 'external';
   debug?: boolean;
+  sourceMap?: boolean | 'external';
+  syntax?: ConfigOptions['syntax'];
 }
 
 export interface DebugConfig extends ConfigOptions {

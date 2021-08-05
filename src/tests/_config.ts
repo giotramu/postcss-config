@@ -1,11 +1,9 @@
 import type {PostcssConfig} from '../common/types';
 
 const postcssConfig: PostcssConfig = {
-  map: false,
-  syntax: 'postcss-scss',
+  map: undefined,
+  syntax: undefined,
   plugins: {
-    '@csstools/postcss-sass': {outputStyle: 'expanded'},
-    'postcss-selector-not': true,
     'postcss-custom-media': true,
     'postcss-inline-svg': {
       xmlns: false
@@ -25,7 +23,7 @@ const postcssConfig: PostcssConfig = {
         'default',
         {
           discardComments: {removeAll: true},
-          svgo: {
+          'postcss-svgo': {
             plugins: [
               {removeDimensions: true},
               {removeScriptElement: true},

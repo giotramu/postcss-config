@@ -6,11 +6,11 @@ import type {ExternalOptions, PostcssConfig} from './common/types';
 export = getConfig;
 
 function getConfig(options?: ExternalOptions): PostcssConfig {
-  const {sourceMap, browsers} = optionsParser(options);
-  const config = getPostcssConfig({browsers, sourceMap});
+  const {browsers, sourceMap, syntax} = optionsParser(options);
+  const config = getPostcssConfig({browsers, sourceMap, syntax});
 
   if (options?.debug) {
-    debugConfig({browsers, sourceMap, config});
+    debugConfig({browsers, sourceMap, syntax, config});
   }
 
   return config;
