@@ -21,8 +21,6 @@ Flexible [PostCSS][postcss-doc-url] config that combines useful plugins like Aut
 
 ## Install
 
-> Tested on Node.js >= 14.x.
-
 Install PostCSS config and save them to your package.json `devDependencies`:
 
 ```sh
