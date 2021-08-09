@@ -13,7 +13,9 @@ describe('extendsConfig', () => {
 
   it('returns the extended config with options', () => {
     const browsers = ['> 1%', 'IE 10'];
-    const sourceMap = 'external';
+
+    const sourceMap = 'inline';
+
     const syntax = {
       parse: undefined,
       stringify: undefined

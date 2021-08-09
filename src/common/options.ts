@@ -24,8 +24,8 @@ export function optionsParser(options?: ExternalOptions): ConfigOptions {
     return {browsers, sourceMap, syntax};
   }
 
-  if (options.sourceMap === 'external') {
-    sourceMap = {inline: false};
+  if (options.sourceMap === 'inline') {
+    sourceMap = {inline: true};
   }
 
   return {

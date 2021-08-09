@@ -107,14 +107,14 @@ You can pass the following options:
 | --------- | -------------------------: | --------------------------------: |
 | browsers  |                 `string[]` | [Browserslist](#browsers-support) |
 | debug     |                  `boolean` |                           `false` |
-| sourceMap |  `boolean` or `'external'` |                       `undefined` |
+| sourceMap |    `boolean` or `'inline'` |                       `undefined` |
 | syntax    | PostCSS `syntax` interface |                       `undefined` |
 
 ```js
 const options = {
   debug: true,
   browsers: ['> 1%', 'IE 10'],
-  sourceMap: 'external'
+  sourceMap: 'inline'
 };
 
 // The standard way

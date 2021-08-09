@@ -8,6 +8,7 @@ describe('getConfig', () => {
 
   it('returns the standard config with options', () => {
     const browsers = ['> 1%', 'IE 10'];
+
     const sourceMap = true;
 
     const config = getConfig({browsers, sourceMap});

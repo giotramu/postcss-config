@@ -43,7 +43,7 @@ export interface ConfigOptions {
 export interface ExternalOptions {
   browsers?: ConfigOptions['browsers'];
   debug?: boolean;
-  sourceMap?: boolean | 'external';
+  sourceMap?: boolean | 'inline';
   syntax?: ConfigOptions['syntax'];
 }
 
