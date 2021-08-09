@@ -7,16 +7,16 @@ on:
 
 jobs:
   build_release:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     steps:
       - name: 'Checkout'
         uses: actions/checkout@v2
 
       - name: 'Setup .npmrc file to publish to npm'
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
-          node-version: '14.x'
+          node-version: 'lts/fermium'
           registry-url: 'https://registry.npmjs.org'
 
       - name: 'Install dependencies'
@@ -33,7 +33,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: 'Setup .npmrc file to publish to GitHub Packages'
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
           registry-url: 'https://npm.pkg.github.com'
           scope: '@giotramu'
