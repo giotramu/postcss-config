@@ -6,12 +6,35 @@ describe('getConfig', () => {
     expect(getConfig()).toStrictEqual(expectedConfig);
   });
 
-  it('returns the standard config with options', () => {
+  it('returns the standard config with default options', () => {
+    const config = getConfig();
+
+    expect(getConfig()).toStrictEqual(expectedConfig);
+
+    expect(config.map).toBeUndefined();
+
+    expect(config.syntax).toBeUndefined();
+
+    const autoprefixer = config.plugins.autoprefixer;
+
+    // @ts-expect-error
+    expect(autoprefixer.overrideBrowserslist).toStrictEqual([
+      'last 2 versions',
+      'not ie <= 11',
+      'not op_mini all',
+      'not dead',
+      'not < 0.5%'
+    ]);
+  });
+
+  it('returns the standard config with custom options', () => {
     const browsers = ['> 1%', 'IE 10'];
 
     const sourceMap = true;
 
     const config = getConfig({browsers, sourceMap});
+
+    expect(getConfig()).toStrictEqual(expectedConfig);
 
     expect(config.map).toBe(true);
 

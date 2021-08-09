@@ -11,7 +11,26 @@ describe('extendsConfig', () => {
     });
   });
 
-  it('returns the extended config with options', () => {
+  it('returns the extended config with default options', () => {
+    const config = extendsConfig(['postcss-fake-plugin']);
+
+    expect(config.plugins).toMatchObject({'postcss-fake-plugin': true});
+
+    expect(config.map).toBeUndefined();
+
+    expect(config.syntax).toBeUndefined();
+
+    // @ts-expect-error
+    expect(config.plugins.autoprefixer.overrideBrowserslist).toStrictEqual([
+      'last 2 versions',
+      'not ie <= 11',
+      'not op_mini all',
+      'not dead',
+      'not < 0.5%'
+    ]);
+  });
+
+  it('returns the extended config with custom options', () => {
     const browsers = ['> 1%', 'IE 10'];
 
     const sourceMap = 'inline';
@@ -29,7 +48,7 @@ describe('extendsConfig', () => {
 
     expect(config.plugins).toMatchObject({'postcss-fake-plugin': true});
 
-    expect(config.map).toStrictEqual({inline: false});
+    expect(config.map).toStrictEqual({inline: true});
 
     expect(config.syntax).toStrictEqual({
       parse: undefined,
