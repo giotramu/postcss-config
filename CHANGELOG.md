@@ -14,7 +14,7 @@ All notable changes to the project will be documented in this file.
 - ![breaking] Support PostCSS v8
 - ![breaking] PostCSS is no more a `peerDependency`
 - ![breaking] Source Map accept the following option: `true`, `false` and `'inline'` values
-- A new option, `syntax`, is available in the configuration. [Read more](https://github.com/postcss/postcss#syntaxes) on the PostCSS documentation.
+- A new option, `syntax`, is available in the configuration. [Read more](https://github.com/postcss/postcss#syntaxes) on the PostCSS documentation
 
 **Dependencies:**
 
