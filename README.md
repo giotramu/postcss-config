@@ -2,7 +2,8 @@
 
 Flexible [PostCSS][postcss-doc-url] config that combines useful plugins like Autoprefixer, CSSNano, SVGO, Inline SVG, Custom Media, etc. It offers granular control instead of postcss-preset-env.
 
-[![NPM][npm-img]][npm-url]
+[![NPM][npm-version-img]][npm-url]
+[![NPM][npm-download-img]][npm-url]
 [![CI Status][ci-img]][ci-url]
 [![Coverage Status][coverage-img]][coverage-url]
 
@@ -199,7 +200,8 @@ module.exports = ctx =>
 [bundlephobia-img]: https://img.shields.io/bundlephobia/min/@giotramu/postcss-config?label=bundle%20size&style=flat-square&colorA=202d3a&colorB=0c57fb
 [ci-img]: https://img.shields.io/github/workflow/status/giotramu/postcss-config/test%20+%20build?style=flat-square&colorA=202d3a&colorB=0c57fb
 [coverage-img]: https://img.shields.io/coveralls/github/giotramu/postcss-config/stable?style=flat-square&colorA=202d3a&colorB=0c57fb
-[npm-img]: https://img.shields.io/npm/v/@giotramu/postcss-config?style=flat-square&colorA=202d3a&colorB=0c57fb
+[npm-download-img]: https://img.shields.io/npm/dm/@giotramu/postcss-config?style=flat-square&colorA=202d3a&colorB=0c57fb
+[npm-version-img]: https://img.shields.io/npm/v/@giotramu/postcss-config?style=flat-square&colorA=202d3a&colorB=0c57fb
 
 <!--
   L I N K S
