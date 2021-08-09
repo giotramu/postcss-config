@@ -1,7 +1,8 @@
-.cache
-/*.config.js
 /common/
 /coverage/
 /extends.js
 /index.js
+/types/
+
+.cache
 node_modules

@@ -1,6 +1,6 @@
 {
   "name": "@giotramu/postcss-config",
-  "version": "3.4.5",
+  "version": "4.0.0",
   "description": "Flexible PostCSS config with great defaults. It combines Dart SCSS with your favorite PostCSS plugins.",
   "author": "giotramu <https://twitter.com/giotramu>",
   "homepage": "https://github.com/giotramu/postcss-config#readme",
@@ -29,7 +29,7 @@
   ],
   "scripts": {
     "typecheck": "tsc --noEmit",
-    "lint:src": "eslint . --ext .js,.ts --ignore-path .gitignore",
+    "lint:src": "eslint . --ext .js,.ts",
     "lint": "npm run lint:src",
     "test": "jest",
     "clean": "del ./{index,extends}.js ./common ./types",

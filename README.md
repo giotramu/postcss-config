@@ -14,6 +14,7 @@ Flexible [PostCSS][postcss-doc-url] config that combines useful plugins like Aut
     - [Disable plugins](#disable-plugins)
   - [Options](#options)
   - [Browsers support](#browsers-support)
+  - [Advanced usage](#advanced-usage)
   - [PostCSS Preset Env. Why not?](#postcss-preset-env-why-not)
   - [Thanks](#thanks)
   - [License](#license)
@@ -54,6 +55,8 @@ You can inspect the source code of the [standard config][standard-config-url].
 Install all your favourite [PostCSS plugins][postcss-plugins-url] and save them to your package.json as `devDependencies`. Now you can extend the [standard PostCSS config][standard-config-url], but remember that **the plugins execution order is top-down**:
 
 ```js
+// postcss.config.js
+
 module.exports = require('@giotramu/postcss-config/extends')([
   'postcss-utilities',
   'postcss-autoreset',
@@ -86,6 +89,8 @@ By design, the behaviour of the `extends` API is overwriting the existing array 
 You can disable and not load a single or a bunch of plugins by setting them to `false`:
 
 ```js
+// postcss.config.js
+
 // Disable a single plugin
 module.exports = require('@giotramu/postcss-config/extends')([
   ['autoprefixer', false]
@@ -111,6 +116,8 @@ You can pass the following options:
 | syntax    | PostCSS `syntax` interface |                       `undefined` |
 
 ```js
+// postcss.config.js
+
 const options = {
   debug: true,
   browsers: ['> 1%', 'IE 10'],
@@ -139,14 +146,40 @@ not < 0.5%
 You can change the query when you need. An example:
 
 ```js
+// postcss.config.js
+
 const browsers = ['> 1%', 'IE 10'];
 
 // The standard way
 module.exports = require('@giotramu/postcss-config')({browsers});
 
 // With extends API
-module.exports = require('@giotramu/postcss-config/extends')([...], {browsers});
+module.exports = require('@giotramu/postcss-config/extends')(['Your plugin'], {
+  browsers
+});
+```
 
+## Advanced usage
+
+It's possible to pass a context and decide which configuration to load:
+
+```sh
+NODE_ENV=development npm run dev
+```
+
+```js
+// postcss.config.js
+
+module.exports = ctx =>
+  ctx.env === 'development'
+    ? require('@giotramu/postcss-config/extends')(
+        [
+          ['autoprefixer', false],
+          ['cssnano', false]
+        ],
+        {sourceMap: 'inline'}
+      )
+    : require('@giotramu/postcss-config')({sourceMap: false});
 ```
 
 ## PostCSS Preset Env. Why not?
@@ -189,5 +222,5 @@ module.exports = require('@giotramu/postcss-config/extends')([...], {browsers});
 [postcss-plugins-url]: https://github.com/postcss/postcss/blob/master/docs/plugins.md
 [postcss-preset-env-url]: https://github.com/csstools/postcss-preset-env
 [postcss-reporter-url]: https://github.com/postcss/postcss-reporter
-[standard-config-url]: ./src/tests/_config.ts
+[standard-config-url]: https://github.com/giotramu/postcss-config/blob/stable/src/tests/_config.ts
 [svgo-url]: https://github.com/svg/svgo

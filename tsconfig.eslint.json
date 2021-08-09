@@ -3,6 +3,6 @@
   "compilerOptions": {
     "noEmit": true
   },
-  "include": ["./src", "./postcss.config.js", "./jest.config.ts"],
+  "include": ["./src", "./jest.config.ts"],
   "exclude": []
 }
