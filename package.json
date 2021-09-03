@@ -40,7 +40,7 @@
   "prettier": "@giotramu/prettier-config",
   "dependencies": {
     "postcss": "8.3.6",
-    "autoprefixer": "10.3.1",
+    "autoprefixer": "10.3.4",
     "cssnano": "5.0.8",
     "deepmerge": "4.2.2",
     "postcss-custom-media": "8.0.0",
