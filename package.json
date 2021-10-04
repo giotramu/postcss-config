@@ -45,7 +45,7 @@
     "deepmerge": "4.2.2",
     "postcss-custom-media": "8.0.0",
     "postcss-inline-svg": "5.0.0",
-    "postcss-reporter": "7.0.2"
+    "postcss-reporter": "7.0.3"
   },
   "devDependencies": {
     "@arkweid/lefthook": "^0.7.6",
