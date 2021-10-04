@@ -1,6 +1,6 @@
 {
   "name": "@giotramu/postcss-config",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Flexible PostCSS config with great defaults. It combines Dart SCSS with your favorite PostCSS plugins.",
   "author": "giotramu <https://twitter.com/giotramu>",
   "homepage": "https://github.com/giotramu/postcss-config#readme",

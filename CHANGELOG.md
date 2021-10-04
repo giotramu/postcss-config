@@ -2,6 +2,13 @@
 
 All notable changes to the project will be documented in this file.
 
+## [4.0.1](https://github.com/giotramu/postcss-config/releases/tag/4.0.1)
+
+**Dependencies:**
+
+- Bump the version of `autoprefixer` from `10.3.4` to `10.3.6`
+- Bump the version of `postcss-reporter` from `7.0.2` to `7.0.3`
+
 ## [4.0.0](https://github.com/giotramu/postcss-config/releases/tag/4.0.0)
 
 **Fixes:**
