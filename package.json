@@ -45,7 +45,7 @@
     "postcss": "8.3.8",
     "postcss-custom-media": "8.0.0",
     "postcss-inline-svg": "5.0.0",
-    "postcss-reporter": "7.0.3"
+    "postcss-reporter": "7.0.4"
   },
   "devDependencies": {
     "@arkweid/lefthook": "^0.7.7",
@@ -57,7 +57,7 @@
     "eslint-config-contactlab": "^7.0.0",
     "eslint-config-prettier": "^8.3.0",
     "jest": "^27.2.4",
-    "jest-junit": "^12.3.0",
+    "jest-junit": "^13.0.0",
     "postcss-cli": "^9.0.1",
     "prettier": "^2.4.1",
     "ts-jest": "^27.0.5",
