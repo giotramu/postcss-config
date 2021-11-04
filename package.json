@@ -45,7 +45,7 @@
     "postcss": "8.3.8",
     "postcss-custom-media": "8.0.0",
     "postcss-inline-svg": "5.0.0",
-    "postcss-reporter": "7.0.3"
+    "postcss-reporter": "7.0.4"
   },
   "devDependencies": {
     "@arkweid/lefthook": "^0.7.7",
