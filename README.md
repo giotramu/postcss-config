@@ -197,11 +197,11 @@ module.exports = ctx =>
   B A D G E S
 -->
 
-[bundlephobia-img]: https://img.shields.io/bundlephobia/min/@giotramu/postcss-config?label=bundle%20size&style=flat-square&colorA=202d3a&colorB=0c57fb
-[ci-img]: https://img.shields.io/github/workflow/status/giotramu/postcss-config/test%20+%20build?style=flat-square&colorA=202d3a&colorB=0c57fb
-[coverage-img]: https://img.shields.io/coveralls/github/giotramu/postcss-config/stable?style=flat-square&colorA=202d3a&colorB=0c57fb
-[npm-download-img]: https://img.shields.io/npm/dm/@giotramu/postcss-config?style=flat-square&colorA=202d3a&colorB=0c57fb
-[npm-version-img]: https://img.shields.io/npm/v/@giotramu/postcss-config?style=flat-square&colorA=202d3a&colorB=0c57fb
+[bundlephobia-img]: https://img.shields.io/bundlephobia/min/@giotramu/postcss-config?label=bundle%20size&style=flat-square&colorA=001133&colorB=0055FF
+[ci-img]: https://img.shields.io/github/workflow/status/giotramu/postcss-config/test%20+%20build?style=flat-square&colorA=001133&colorB=0055FF
+[coverage-img]: https://img.shields.io/coveralls/github/giotramu/postcss-config/stable?style=flat-square&colorA=001133&colorB=0055FF
+[npm-download-img]: https://img.shields.io/npm/dm/@giotramu/postcss-config?style=flat-square&colorA=001133&colorB=0055FF
+[npm-version-img]: https://img.shields.io/npm/v/@giotramu/postcss-config?style=flat-square&colorA=001133&colorB=0055FF
 
 <!--
   L I N K S
