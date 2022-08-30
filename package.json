@@ -1,6 +1,6 @@
 {
   "name": "@giotramu/postcss-config",
-  "version": "4.1.0",
+  "version": "4.1.1",
   "description": "Flexible PostCSS config with great defaults. It combines Dart SCSS with your favorite PostCSS plugins.",
   "author": "giotramu <https://github.com/giotramu>",
   "homepage": "https://github.com/giotramu/postcss-config#readme",
@@ -51,7 +51,7 @@
     "@evilmartians/lefthook": "^1.1.1",
     "@giotramu/prettier-config": "^1.4.0",
     "@types/jest": "^28.1.7",
-    "@types/node": "^16.11.54",
+    "@types/node": "^18.7.14",
     "del-cli": "^5.0.0",
     "eslint": "^8.23.0",
     "eslint-config-contactlab": "^9.0.0",
@@ -68,8 +68,6 @@
   "keywords": [
     "css",
     "postcss",
-    "postcss-config",
-    "sass",
-    "scss"
+    "postcss-config"
   ]
 }
