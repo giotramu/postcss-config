@@ -2,19 +2,18 @@ name: Release package
 
 on:
   release:
-    types: [created]
-    branches: [stable]
+    types:
+      - 'created'
+    branches:
+      - 'stable'
 
 jobs:
-  build_release:
+  release:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 'Checkout'
-        uses: actions/checkout@v2
-
-      - name: 'Setup .npmrc file to publish to npm'
-        uses: actions/setup-node@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: 'lts/fermium'
           registry-url: 'https://registry.npmjs.org'
@@ -27,19 +26,14 @@ jobs:
         env:
           CI: true
 
-      - name: 'Publish to npm'
-        run: npm publish --access public
+      - name: 'Publish to NPM with next tag'
+        if: 'github.event.release.prerelease'
+        run: npm publish --access public --tag next
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: 'Setup .npmrc file to publish to GitHub Packages'
-        uses: actions/setup-node@v2
-        with:
-          node-version: 'lts/fermium'
-          registry-url: 'https://npm.pkg.github.com'
-          scope: '@giotramu'
-
-      - name: 'Publish to GitHub Packages'
-        run: npm publish
+      - name: 'Publish to NPM with latest tag'
+        if: '!github.event.release.prerelease'
+        run: npm publish --access public
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -2,7 +2,17 @@
 
 All notable changes to the project will be documented in this file.
 
-## [4.1.0](https://github.com/giotramu/postcss-config/releases/tag/4.0.1)
+## [4.1.1](https://github.com/giotramu/postcss-config/releases/tag/4.1.1)
+
+**Dependencies:**
+
+- Bump the version of `autoprefixer` from `10.4.2` to `10.4.8`
+- Bump the version of `cssnano` from `5.0.14` to `5.1.13`
+- Bump the version of `postcss` from `8.4.5` to `8.4.16`
+- Bump the version of `postcss-custom-media` from `8.0.0` to `8.0.2`
+- Drop the support of Node.js v12 and NPM v6 in favor of Node.js v14 and NPM v8
+
+## [4.1.0](https://github.com/giotramu/postcss-config/releases/tag/4.1.0)
 
 **Dependencies:**
 
@@ -10,7 +20,6 @@ All notable changes to the project will be documented in this file.
 - Bump the version of `cssnano` from `5.0.12` to `5.0.14`
 - Bump the version of `postcss` from `8.3.11` to `8.4.5`
 - Bump the version of `postcss-reporter` from `7.0.4` to `7.0.5`
-- Drop the support of Node.js v12 and NPM v6 in favor of Node.js v16 and NPM v8
 
 ## [4.0.1](https://github.com/giotramu/postcss-config/releases/tag/4.0.1)
 

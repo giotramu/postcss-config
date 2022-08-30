@@ -2,9 +2,11 @@ name: Test & Build
 
 on:
   push:
-    branches: [stable]
+    branches:
+      - 'stable'
   pull_request:
-    branches: [stable]
+    branches:
+      - 'stable'
 
 jobs:
   test_build:
@@ -12,14 +14,11 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.x, 17.x]
+        node-version: ['14.x', '16.x']
 
     steps:
-      - name: 'Checkout'
-        uses: actions/checkout@v2
-
-      - name: 'Setup Node.js ${{ matrix.node-version }}'
-        uses: actions/setup-node@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
 
@@ -28,9 +27,8 @@ jobs:
 
       - name: 'Run TSC compiler, linters and tests'
         run: |
-          npm run typecheck --if-present
-          npm run lint --if-present
-          npm run test
+          npm run check
+          npm test
         env:
           CI: true
 
