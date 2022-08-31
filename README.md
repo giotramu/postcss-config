@@ -12,7 +12,7 @@ Flexible [PostCSS][postcss-doc-url] config that combines useful plugins like Aut
   - [Usage](#usage)
   - [Standard config](#standard-config)
   - [Extend the config](#extend-the-config)
-    - [Disable plugins](#disable-plugins)
+      - [Disable plugins](#disable-plugins)
   - [Options](#options)
   - [Browsers support](#browsers-support)
   - [Advanced usage](#advanced-usage)
@@ -193,20 +193,14 @@ module.exports = ctx =>
 
 [MIT License](./LICENSE)
 
-<!--
-  B A D G E S
--->
+<!-- Badges -->
+[bundlephobia-img]: https://img.shields.io/bundlephobia/min/@giotramu/postcss-config?label=bundle%20size&style=flat-square&colorA=141414&colorB=0055FF
+[ci-img]: https://img.shields.io/github/workflow/status/giotramu/postcss-config/test%20+%20build?style=flat-square&colorA=141414&colorB=0055FF
+[coverage-img]: https://img.shields.io/coveralls/github/giotramu/postcss-config/stable?style=flat-square&colorA=141414&colorB=0055FF
+[npm-download-img]: https://img.shields.io/npm/dm/@giotramu/postcss-config?style=flat-square&colorA=141414&colorB=0055FF
+[npm-version-img]: https://img.shields.io/npm/v/@giotramu/postcss-config?style=flat-square&colorA=141414&colorB=0055FF
 
-[bundlephobia-img]: https://img.shields.io/bundlephobia/min/@giotramu/postcss-config?label=bundle%20size&style=flat-square&colorA=001133&colorB=0055FF
-[ci-img]: https://img.shields.io/github/workflow/status/giotramu/postcss-config/test%20+%20build?style=flat-square&colorA=001133&colorB=0055FF
-[coverage-img]: https://img.shields.io/coveralls/github/giotramu/postcss-config/stable?style=flat-square&colorA=001133&colorB=0055FF
-[npm-download-img]: https://img.shields.io/npm/dm/@giotramu/postcss-config?style=flat-square&colorA=001133&colorB=0055FF
-[npm-version-img]: https://img.shields.io/npm/v/@giotramu/postcss-config?style=flat-square&colorA=001133&colorB=0055FF
-
-<!--
-  L I N K S
--->
-
+<!-- Links -->
 [autoprefixer-url]: https://github.com/postcss/autoprefixer
 [browserslist-url]: https://browserl.ist/?q=last+2+versions%2C+not+ie+%3C%3D+11%2C+not+op_mini+all%2C+not+dead%2C+not+%3C+0.5%25
 [ci-url]: https://github.com/giotramu/postcss-config/actions
