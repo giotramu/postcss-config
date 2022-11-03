@@ -51,7 +51,7 @@
     "@evilmartians/lefthook": "^1.1.4",
     "@giotramu/prettier-config": "^1.4.0",
     "@types/jest": "^29.2.1",
-    "@types/node": "^16.11.54",
+    "@types/node": "^18.11.9",
     "del-cli": "^5.0.0",
     "eslint": "^8.26.0",
     "eslint-config-contactlab": "^9.0.0",
