@@ -1,34 +1,26 @@
-import {Config} from '@jest/types';
+import type {Config} from 'jest';
 
 const isCi = (process.env.CI ?? 'false') === 'true';
 
-/**
- * `jest-junit` emit an .xml file containing all our test results in a well known, exportable format.
- * CI systems can display this nicely.
- */
 const reporters = isCi ? ['default', 'jest-junit'] : undefined;
-const coverageReporters: Config.CoverageReporters = isCi
+
+const coverageReporters: Config['coverageReporters'] = isCi
   ? ['text', 'lcov', 'json']
   : ['text'];
 
-const config: Config.InitialOptions = {
+const config: Config = {
   preset: 'ts-jest',
-  globals: {
-    'ts-jest': {
-      diagnostics: true,
-      tsconfig: 'tsconfig.eslint.json'
-    }
-  },
   bail: true,
-  roots: ['<rootDir>/src/'],
+  clearMocks: true,
   collectCoverage: true,
-  reporters,
   coverageReporters,
   coverageDirectory: 'coverage',
   coveragePathIgnorePatterns: [
-    '<rootDir>/src/[\\w/]*test/_[a-zA-Z]+\\.ts',
+    '<rootDir>/[\\w/]*test/_[a-zA-Z]+\\.ts',
     '<rootDir>/node_modules/'
-  ]
+  ],
+  reporters,
+  roots: ['<rootDir>/src/']
 };
 
 export default config;
