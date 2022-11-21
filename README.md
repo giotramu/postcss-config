@@ -1,18 +1,18 @@
 # PostCSS Config
 
-Flexible [PostCSS][postcss-doc-url] config that combines useful plugins like Autoprefixer, CSSNano, SVGO, Inline SVG, Custom Media, etc. It offers granular control instead of postcss-preset-env.
+Flexible [PostCSS][postcss-doc_url] config that combines useful plugins like Autoprefixer, CSSNano, SVGO, Inline SVG, Custom Media, etc. It offers granular control instead of postcss-preset-env.
 
-[![NPM][npm-version-img]][npm-url]
-[![NPM][npm-download-img]][npm-url]
-[![CI Status][ci-img]][ci-url]
-[![Coverage Status][coverage-img]][coverage-url]
+[![NPM][version_badge]][npm_url]
+[![NPM][download_badge]][npm_url]
+[![CI Status][ci_badge]][ci_url]
+[![Coverage Status][coverage_badge]][coverage_url]
 
 - [PostCSS Config](#postcss-config)
   - [Install](#install)
   - [Usage](#usage)
   - [Standard config](#standard-config)
   - [Extend the config](#extend-the-config)
-      - [Disable plugins](#disable-plugins)
+    - [Disable plugins](#disable-plugins)
   - [Options](#options)
   - [Browsers support](#browsers-support)
   - [Advanced usage](#advanced-usage)
@@ -40,18 +40,18 @@ module.exports = require('@giotramu/postcss-config');
 
 The config bundles together the following plugins:
 
-- [autoprefixer][autoprefixer-url]
-- [cssnano][cssnano-url]
-- [postcss-custom-media][postcss-custom-media-url]
-- [postcss-inline-svg][postcss-inline-svg-url]
-- [postcss-reporter][postcss-reporter-url]
-- [svgo][svgo-url]
+- [autoprefixer][autoprefixer_url]
+- [cssnano][cssnano_url]
+- [postcss-custom-media][postcss-custom-media_url]
+- [postcss-inline-svg][postcss-inline-svg_url]
+- [postcss-reporter][postcss-reporter_url]
+- [svgo][svgo_url]
 
-You can inspect the source code of the [standard config][standard-config-url].
+You can inspect the source code of the [standard config][standard-config_url].
 
 ## Extend the config
 
-Install all your favourite [PostCSS plugins][postcss-plugins-url] and save them to your package.json as `devDependencies`. Now you can extend the [standard PostCSS config][standard-config-url], but remember that **the plugins execution order is top-down**:
+Install all your favourite [PostCSS plugins][postcss-plugins_url] and save them to your package.json as `devDependencies`. Now you can extend the [standard PostCSS config][standard-config_url], but remember that **the plugins execution order is top-down**:
 
 ```js
 // postcss.config.js
@@ -132,7 +132,7 @@ module.exports = require('@giotramu/postcss-config/extends')([...], options);
 
 ## Browsers support
 
-PostCSS config is dispatched with a default [browserslist query][browserslist-url], used by the [cssnano][cssnano-url] and [autoprefixer][autoprefixer-url] plugins:
+PostCSS config is dispatched with a default [browserslist query][browserslist_url], used by the [cssnano][cssnano_url] and [autoprefixer][autoprefixer_url] plugins:
 
 ```yml
 last 2 versions
@@ -183,38 +183,39 @@ module.exports = ctx =>
 
 ## PostCSS Preset Env. Why not?
 
-[PostCSS Preset Env][postcss-preset-env-url] is fantastic, but if you want more control over CSS output and appreciate both the SASS and PostCSS ecosystems, merge them through this config.
+[PostCSS Preset Env][postcss-preset-env_url] is fantastic, but if you want more control over CSS output and appreciate both the SASS and PostCSS ecosystems, merge them through this config.
 
 ## Thanks
 
-- [deepmerge][deepmerge-url]
+- [deepmerge][deepmerge_url]
 
 ## License
 
 [MIT License](./LICENSE)
 
 <!-- Badges -->
-[bundlephobia-img]: https://img.shields.io/bundlephobia/min/@giotramu/postcss-config?label=bundle%20size&style=flat-square&colorA=141414&colorB=0055FF
-[ci-img]: https://img.shields.io/github/workflow/status/giotramu/postcss-config/test%20+%20build?style=flat-square&colorA=141414&colorB=0055FF
-[coverage-img]: https://img.shields.io/coveralls/github/giotramu/postcss-config/stable?style=flat-square&colorA=141414&colorB=0055FF
-[npm-download-img]: https://img.shields.io/npm/dm/@giotramu/postcss-config?style=flat-square&colorA=141414&colorB=0055FF
-[npm-version-img]: https://img.shields.io/npm/v/@giotramu/postcss-config?style=flat-square&colorA=141414&colorB=0055FF
+
+[ci_badge]: https://img.shields.io/github/workflow/status/giotramu/postcss-config/test?style=flat-square&colorA=141414&colorB=0055FF
+[coverage_badge]: https://img.shields.io/coveralls/github/giotramu/postcss-config/stable?style=flat-square&colorA=141414&colorB=0055FF
+[download_badge]: https://img.shields.io/npm/dm/@giotramu/postcss-config?style=flat-square&colorA=141414&colorB=0055FF
+[version_badge]: https://img.shields.io/npm/v/@giotramu/postcss-config?style=flat-square&colorA=141414&colorB=0055FF
 
 <!-- Links -->
-[autoprefixer-url]: https://github.com/postcss/autoprefixer
-[browserslist-url]: https://browserl.ist/?q=last+2+versions%2C+not+ie+%3C%3D+11%2C+not+op_mini+all%2C+not+dead%2C+not+%3C+0.5%25
-[ci-url]: https://github.com/giotramu/postcss-config/actions
-[coverage-url]: https://coveralls.io/github/giotramu/postcss-config
-[cssnano-url]: https://github.com/cssnano/cssnano
-[deepmerge-url]: https://github.com/TehShrike/deepmerge
-[deps-url]: https://david-dm.org/giotramu/postcss-config
-[devdeps-url]: https://david-dm.org/giotramu/postcss-config?type=dev
-[npm-url]: https://www.npmjs.com/package/@giotramu/postcss-config
-[postcss-custom-media-url]: https://github.com/postcss/postcss-custom-media
-[postcss-doc-url]: https://postcss.org
-[postcss-inline-svg-url]: https://github.com/TrySound/postcss-inline-svg
-[postcss-plugins-url]: https://github.com/postcss/postcss/blob/master/docs/plugins.md
-[postcss-preset-env-url]: https://github.com/csstools/postcss-preset-env
-[postcss-reporter-url]: https://github.com/postcss/postcss-reporter
-[standard-config-url]: https://github.com/giotramu/postcss-config/blob/stable/src/tests/_config.ts
-[svgo-url]: https://github.com/svg/svgo
+
+[autoprefixer_url]: https://github.com/postcss/autoprefixer
+[browserslist_url]: https://browserl.ist/?q=last+2+versions%2C+not+ie+%3C%3D+11%2C+not+op_mini+all%2C+not+dead%2C+not+%3C+0.5%25
+[ci_url]: https://github.com/giotramu/postcss-config/actions
+[coverage_url]: https://coveralls.io/github/giotramu/postcss-config
+[cssnano_url]: https://github.com/cssnano/cssnano
+[deepmerge_url]: https://github.com/TehShrike/deepmerge
+[deps_url]: https://david-dm.org/giotramu/postcss-config
+[devdeps_url]: https://david-dm.org/giotramu/postcss-config?type=dev
+[npm_url]: https://www.npmjs.com/package/@giotramu/postcss-config
+[postcss-custom-media_url]: https://github.com/postcss/postcss-custom-media
+[postcss-doc_url]: https://postcss.org
+[postcss-inline-svg_url]: https://github.com/TrySound/postcss-inline-svg
+[postcss-plugins_url]: https://github.com/postcss/postcss/blob/master/docs/plugins.md
+[postcss-preset-env_url]: https://github.com/csstools/postcss-preset-env
+[postcss-reporter_url]: https://github.com/postcss/postcss-reporter
+[standard-config_url]: https://github.com/giotramu/postcss-config/blob/stable/src/tests/_config.ts
+[svgo_url]: https://github.com/svg/svgo
