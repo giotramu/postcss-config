@@ -195,7 +195,7 @@ module.exports = ctx =>
 
 <!-- Badges -->
 
-[ci_badge]: https://img.shields.io/github/workflow/status/giotramu/postcss-config/tests?style=flat-square&colorA=141414&colorB=0055FF
+[ci_badge]: https://img.shields.io/github/actions/workflow/status/giotramu/postcss-config/tests.yml?style=flat-square&colorA=141414&colorB=05F
 [coverage_badge]: https://img.shields.io/coveralls/github/giotramu/postcss-config/stable?style=flat-square&colorA=141414&colorB=0055FF
 [downloads_badge]: https://img.shields.io/npm/dm/@giotramu/postcss-config?style=flat-square&colorA=141414&colorB=0055FF
 [version_badge]: https://img.shields.io/npm/v/@giotramu/postcss-config?style=flat-square&colorA=141414&colorB=0055FF
@@ -204,7 +204,7 @@ module.exports = ctx =>
 
 [autoprefixer_url]: https://github.com/postcss/autoprefixer
 [browserslist_url]: https://browserl.ist/?q=last+2+versions%2C+not+ie+%3C%3D+11%2C+not+op_mini+all%2C+not+dead%2C+not+%3C+0.5%25
-[ci_url]: https://github.com/giotramu/postcss-config/actions
+[ci_url]: https://github.com/giotramu/postcss-config/actions/workflows/tests.yml
 [coverage_url]: https://coveralls.io/github/giotramu/postcss-config
 [cssnano_url]: https://github.com/cssnano/cssnano
 [deepmerge_url]: https://github.com/TehShrike/deepmerge

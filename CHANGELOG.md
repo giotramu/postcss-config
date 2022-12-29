@@ -206,4 +206,4 @@ All notable changes to the project will be documented in this file.
 
 - Update dependencies
 
-[breaking]: https://shields.io/badge/-breaking-202d3a?style=flat-square
+[breaking]: https://shields.io/badge/-breaking-d52941?style=flat-square
