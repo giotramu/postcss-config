@@ -195,10 +195,10 @@ module.exports = ctx =>
 
 <!-- Badges -->
 
-[ci_badge]: https://img.shields.io/github/actions/workflow/status/giotramu/postcss-config/tests.yml?style=flat-square&colorA=141414&colorB=05F
-[coverage_badge]: https://img.shields.io/coveralls/github/giotramu/postcss-config/stable?style=flat-square&colorA=141414&colorB=0055FF
-[downloads_badge]: https://img.shields.io/npm/dm/@giotramu/postcss-config?style=flat-square&colorA=141414&colorB=0055FF
-[version_badge]: https://img.shields.io/npm/v/@giotramu/postcss-config?style=flat-square&colorA=141414&colorB=0055FF
+[ci_badge]: https://img.shields.io/github/actions/workflow/status/giotramu/postcss-config/tests.yml?style=flat-square&colorA=313133&colorB=4169E1
+[coverage_badge]: https://img.shields.io/coveralls/github/giotramu/postcss-config/stable?style=flat-square&colorA=313133&colorB=4169E1
+[downloads_badge]: https://img.shields.io/npm/dm/@giotramu/postcss-config?style=flat-square&colorA=313133&colorB=4169E1
+[version_badge]: https://img.shields.io/npm/v/@giotramu/postcss-config?style=flat-square&colorA=313133&colorB=4169E1
 
 <!-- Links -->
 
