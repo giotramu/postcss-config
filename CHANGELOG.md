@@ -2,6 +2,16 @@
 
 All notable changes to the project will be documented in this file.
 
+## [4.2.0]
+
+**Internals:**
+
+- `cssnano` upgraded from `5.1.14` to `5.1.15`
+- `deepmerge` upgraded from `4.2.2` to `4.3.0`
+- `postcss` upgraded from `8.4.20` to `8.4.21`
+- `postcss-custom-media` upgraded from `9.0.1` to `9.1.2`
+- `postcss-inline-svg` upgraded from `5.0.0` to `6.0.0`
+
 ## [4.1.2]
 
 **Internals:**
@@ -206,6 +216,7 @@ All notable changes to the project will be documented in this file.
 
 - Update dependencies
 
+[4.2.0]: https://github.com/giotramu/postcss-config/releases/tag/4.2.0
 [4.1.2]: https://github.com/giotramu/postcss-config/releases/tag/4.1.2
 [4.1.1]: https://github.com/giotramu/postcss-config/releases/tag/4.1.1
 [4.1.0]: https://github.com/giotramu/postcss-config/releases/tag/4.1.0
