@@ -22,10 +22,17 @@ Flexible [PostCSS][postcss-doc_url] config that combines useful plugins like Aut
 
 ## Install
 
-Install PostCSS config and save them to your package.json `devDependencies`:
+Install the PostCSS config and save them to your package.json `devDependencies`:
 
 ```sh
-npm install --save-dev @giotramu/postcss-config
+# NPM
+npm add --save-dev @giotramu/postcss-config
+
+# PNPM
+pnpm add --save-dev @giotramu/postcss-config
+
+# Yarn
+yarn add --dev @giotramu/postcss-config
 ```
 
 ## Usage
