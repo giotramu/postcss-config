@@ -23,9 +23,8 @@
   "types": "types/index.d.ts",
   "files": [
     "{index,extends}.js",
-    "/common/",
-    "/types/",
-    "CHANGELOG.md"
+    "/core/",
+    "/types/"
   ],
   "prettier": "@giotramu/prettier-config",
   "scripts": {

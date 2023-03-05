@@ -1,4 +1,4 @@
-import type {PostcssConfig} from '../common/types';
+import type {PostcssConfig} from '../core/types';
 
 const postcssConfig: PostcssConfig = {
   map: undefined,

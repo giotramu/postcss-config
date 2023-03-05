@@ -1,9 +1,9 @@
 import merge from 'deepmerge';
-import {getPostcssConfig} from './common/config';
-import {debugConfig} from './common/debug';
-import {optionsParser} from './common/options';
-import {pluginsParser} from './common/plugins';
-import type {ExternalOptions, PostcssConfig, Plugins} from './common/types';
+import {getPostcssConfig} from './core/config';
+import {debugConfig} from './core/debug';
+import {optionsParser} from './core/options';
+import {pluginsParser} from './core/plugins';
+import type {ExternalOptions, PostcssConfig, Plugins} from './core/types';
 
 export = extendsConfig;
 
