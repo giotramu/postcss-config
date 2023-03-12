@@ -1,8 +1,8 @@
-/core/
-/coverage/
-/extends.js
 /index.js
+/extends.js
+/core/
 /types/
+/coverage/
 
 .cache
 .DS_Store
