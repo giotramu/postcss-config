@@ -13,8 +13,8 @@
     "url": "https://github.com/giotramu/postcss-config/issues"
   },
   "engines": {
-    "node": ">=16",
-    "npm": ">=8"
+    "node": "16.x || 18.x",
+    "npm": "8.x || 9.x"
   },
   "publishConfig": {
     "access": "public"
