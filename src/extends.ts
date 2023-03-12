@@ -18,7 +18,9 @@ function extendsConfig(
   const extendedPlugins = mergeObjects(source.plugins, parsedPlugins);
   const config = {...source, plugins: extendedPlugins};
 
-  if (options?.debug) debugConfig({browsers, sourceMap, syntax, config});
+  if (options?.debug) {
+    debugConfig({browsers, sourceMap, syntax, config});
+  }
 
   return config;
 }
