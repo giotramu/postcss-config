@@ -1,5 +1,8 @@
 {
   "extends": ["@giotramu/eslint-config", "@giotramu/eslint-config/typescript"],
+  "parserOptions": {
+    "project": ["./tsconfig.test.json"]
+  },
   "rules": {
     "@typescript-eslint/ban-types": [
       "error",

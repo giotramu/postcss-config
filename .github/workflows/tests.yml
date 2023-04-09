@@ -28,14 +28,12 @@ jobs:
       - name: 'Run TSC compiler, linters and tests'
         run: |
           npm run check
-          npm test
+          npm run test:coverage
         env:
           CI: true
 
       - name: 'Build the artifact'
         run: npm run build
-        env:
-          CI: true
 
       - name: 'Compile CSS and SCSS with postcss-cli'
         run: npm run compile:css

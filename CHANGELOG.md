@@ -2,6 +2,12 @@
 
 All notable changes to the project will be documented in this file.
 
+## [4.3.0]
+
+**Features:**
+
+- Update `cssnano` to v6
+
 ## [4.2.0]
 
 **Internals:**
