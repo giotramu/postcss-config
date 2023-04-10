@@ -222,6 +222,7 @@ All notable changes to the project will be documented in this file.
 
 - Update dependencies
 
+[4.3.0]: https://github.com/giotramu/postcss-config/releases/tag/4.3.0
 [4.2.0]: https://github.com/giotramu/postcss-config/releases/tag/4.2.0
 [4.1.2]: https://github.com/giotramu/postcss-config/releases/tag/4.1.2
 [4.1.1]: https://github.com/giotramu/postcss-config/releases/tag/4.1.1

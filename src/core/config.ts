@@ -1,5 +1,5 @@
-import * as settings from './settings';
-import type {ConfigOptions, PostcssConfig} from './types';
+import * as settings from './settings'
+import type { ConfigOptions, PostcssConfig } from './types'
 
 export function getPostcssConfig({
   browsers,
@@ -17,5 +17,5 @@ export function getPostcssConfig({
       cssnano: settings.cssnano(),
       'postcss-reporter': settings.reporter()
     }
-  };
+  }
 }

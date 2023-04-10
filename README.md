@@ -40,7 +40,7 @@ yarn add --dev @giotramu/postcss-config
 Create a `postcss.config.js` file in the root of your project and grab the configuration from the `node_modules` folder like so:
 
 ```js
-module.exports = require('@giotramu/postcss-config');
+module.exports = require('@giotramu/postcss-config')
 ```
 
 ## Standard config
@@ -85,7 +85,7 @@ module.exports = require('@giotramu/postcss-config/extends')([
       ]
     }
   ]
-]);
+])
 ```
 
 By design, the behaviour of the `extends` API is overwriting the existing array values completely rather than concatenating them.
@@ -100,14 +100,14 @@ You can disable and not load a single or a bunch of plugins by setting them to `
 // Disable a single plugin
 module.exports = require('@giotramu/postcss-config/extends')([
   ['autoprefixer', false]
-]);
+])
 
 // Turn off multiple plugins
 module.exports = require('@giotramu/postcss-config/extends')([
   ['postcss-custom-media', false],
   ['autoprefixer', false],
   ['cssnano', false]
-]);
+])
 ```
 
 ## Options
@@ -128,13 +128,13 @@ const options = {
   debug: true,
   browsers: ['> 1%', 'IE 10'],
   sourceMap: 'inline'
-};
+}
 
 // The standard way
-module.exports = require('@giotramu/postcss-config')(options);
+module.exports = require('@giotramu/postcss-config')(options)
 
 // With extends API
-module.exports = require('@giotramu/postcss-config/extends')([...], options);
+module.exports = require('@giotramu/postcss-config/extends')([...], options)
 ```
 
 ## Browsers support
@@ -154,15 +154,15 @@ You can change the query when you need. An example:
 ```js
 // postcss.config.js
 
-const browsers = ['> 1%', 'IE 10'];
+const browsers = ['> 1%', 'IE 10']
 
 // The standard way
-module.exports = require('@giotramu/postcss-config')({browsers});
+module.exports = require('@giotramu/postcss-config')({ browsers })
 
 // With extends API
 module.exports = require('@giotramu/postcss-config/extends')(['Your plugin'], {
   browsers
-});
+})
 ```
 
 ## Advanced usage
@@ -183,9 +183,9 @@ module.exports = ctx =>
           ['autoprefixer', false],
           ['cssnano', false]
         ],
-        {sourceMap: 'inline'}
+        { sourceMap: 'inline' }
       )
-    : require('@giotramu/postcss-config')({sourceMap: false});
+    : require('@giotramu/postcss-config')({ sourceMap: false })
 ```
 
 ## PostCSS Preset Env. Why not?

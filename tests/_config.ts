@@ -1,4 +1,4 @@
-import type {PostcssConfig} from '../src/core/types';
+import type { PostcssConfig } from '../src/core/types'
 
 const postcssConfig: PostcssConfig = {
   map: undefined,
@@ -22,12 +22,12 @@ const postcssConfig: PostcssConfig = {
       preset: [
         'default',
         {
-          discardComments: {removeAll: true},
+          discardComments: { removeAll: true },
           'postcss-svgo': {
             plugins: [
-              {removeDimensions: true},
-              {removeScriptElement: true},
-              {sortAttrs: true}
+              { removeDimensions: true },
+              { removeScriptElement: true },
+              { sortAttrs: true }
             ]
           }
         }
@@ -38,6 +38,6 @@ const postcssConfig: PostcssConfig = {
       positionless: 'last'
     }
   }
-};
+}
 
-export default postcssConfig;
+export default postcssConfig

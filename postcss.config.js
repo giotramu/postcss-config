@@ -1,5 +1,5 @@
 const options = {
   debug: true
-};
+}
 
-module.exports = require('./extends')([['cssnano', false]], options);
+module.exports = require('./extends')([['cssnano', false]], options)

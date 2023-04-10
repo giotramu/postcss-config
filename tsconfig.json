@@ -1,7 +1,7 @@
 {
   "extends": "@giotramu/tsc/node/tsconfig.cjs.json",
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "outDir": ".",
     "declaration": true,
     "declarationDir": "./types",
