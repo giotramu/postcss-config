@@ -1,39 +1,39 @@
-import {isNotEmptyObject, isString, printLog} from './helpers';
-import type {Plugin, Plugins} from './types';
+import { isNotEmptyObject, isString, printLog } from './helpers'
+import type { Plugin, Plugins } from './types'
 
-export function pluginsParser(plugins: Plugins): {} {
+export function pluginsParser(plugins: Plugins): Record<string, unknown> {
   if (Array.isArray(plugins) && plugins.length > 0) {
-    return plugins.reduce((result, item) => checkPlugin(result, item), {});
+    return plugins.reduce((result, item) => checkPlugin(result, item), {})
   }
 
   printLog({
     docHook: '#extend-the-config',
     message: 'Pass an array of PostCSS plugins.'
-  });
+  })
 
-  return {};
+  return {}
 }
 
-function checkPlugin(o: Record<string, unknown>, item: Plugin): {} {
+function checkPlugin(obj: Record<string, unknown>, item: Plugin): {} {
   if (isString(item)) {
-    o[item] = true;
+    obj[item] = true
   }
 
   if (Array.isArray(item) && item.length >= 2) {
-    const [identifier, settings] = item;
+    const [identifier, settings] = item
 
     if (isString(identifier) && !hasSettings(settings)) {
-      o[identifier] = true;
+      obj[identifier] = true
     }
 
     if (isString(identifier) && hasSettings(settings)) {
-      o[identifier] = settings;
+      obj[identifier] = settings
     }
   }
 
-  return o;
+  return obj
 }
 
-function hasSettings(a: unknown): boolean {
-  return typeof a === 'boolean' || isNotEmptyObject(a);
+function hasSettings(arg: unknown): boolean {
+  return typeof arg === 'boolean' || isNotEmptyObject(arg)
 }

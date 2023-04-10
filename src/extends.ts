@@ -1,28 +1,28 @@
-import merge from 'deepmerge';
-import {getPostcssConfig} from './core/config';
-import {debugConfig} from './core/debug';
-import {optionsParser} from './core/options';
-import {pluginsParser} from './core/plugins';
-import type {ExternalOptions, PostcssConfig, Plugins} from './core/types';
+import merge from 'deepmerge'
+import { getPostcssConfig } from './core/config'
+import { debugConfig } from './core/debug'
+import { optionsParser } from './core/options'
+import { pluginsParser } from './core/plugins'
+import type { ExternalOptions, PostcssConfig, Plugins } from './core/types'
 
-export = extendsConfig;
+export = extendsConfig
 
 function extendsConfig(
   plugins: Plugins,
   options?: ExternalOptions
 ): PostcssConfig {
-  const {browsers, sourceMap, syntax} = optionsParser(options);
-  const source = getPostcssConfig({browsers, sourceMap, syntax});
+  const { browsers, sourceMap, syntax } = optionsParser(options)
+  const source = getPostcssConfig({ browsers, sourceMap, syntax })
 
-  const parsedPlugins = pluginsParser(plugins);
-  const extendedPlugins = mergeObjects(source.plugins, parsedPlugins);
-  const config = {...source, plugins: extendedPlugins};
+  const parsedPlugins = pluginsParser(plugins)
+  const extendedPlugins = mergeObjects(source.plugins, parsedPlugins)
+  const config = { ...source, plugins: extendedPlugins }
 
   if (options?.debug) {
-    debugConfig({browsers, sourceMap, syntax, config});
+    debugConfig({ browsers, sourceMap, syntax, config })
   }
 
-  return config;
+  return config
 }
 
 // --- Helpers
@@ -30,9 +30,9 @@ function mergeObjects<T1, T2>(
   source: Partial<T1>,
   target: Partial<T2>
 ): T1 & T2 {
-  return merge(source, target, {arrayMerge: overwriteArrays});
+  return merge(source, target, { arrayMerge: overwriteArrays })
 }
 
 function overwriteArrays(_: [], source: []): [] {
-  return source;
+  return source
 }

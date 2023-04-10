@@ -1,5 +1,5 @@
-import {printLog} from './helpers';
-import type {DebugConfig} from './types';
+import { printLog } from './helpers'
+import type { DebugConfig } from './types'
 
 export function debugConfig({
   browsers,
@@ -7,8 +7,8 @@ export function debugConfig({
   syntax,
   config
 }: DebugConfig): void {
-  printLog('Supported Browsers: ', browsers.join(', '));
-  printLog('CSS Source-Map: ', sourceMap);
-  printLog('Syntax: ', syntax);
-  printLog('Generated PostCSS Config: ', JSON.stringify(config));
+  printLog('Supported Browsers: ', browsers.join(', '))
+  printLog('CSS Source-Map: ', sourceMap)
+  printLog('Syntax: ', syntax)
+  printLog('Generated PostCSS Config: ', JSON.stringify(config))
 }
