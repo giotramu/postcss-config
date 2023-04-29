@@ -1,5 +1,5 @@
 {
-  "extends": "@giotramu/tsc/node/tsconfig.cjs.json",
+  "extends": "@detra-lab/tsc/node/tsconfig.cjs.json",
   "compilerOptions": {
     "baseUrl": "./src",
     "outDir": ".",

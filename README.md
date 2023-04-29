@@ -2,8 +2,8 @@
 
 Flexible [PostCSS][postcss-doc_url] config that combines useful plugins like Autoprefixer, CSSNano, SVGO, Inline SVG, Custom Media, etc. It offers granular control instead of postcss-preset-env.
 
-[![NPM Version][version_badge]][npm_url]
-[![NPM Downloads][downloads_badge]][npm_url]
+[![NPM Version][npm_version_badge]][npm_url]
+[![NPM Downloads][npm_downloads_badge]][npm_url]
 [![CI Status][ci_badge]][ci_url]
 [![Coverage Status][coverage_badge]][coverage_url]
 
@@ -25,14 +25,7 @@ Flexible [PostCSS][postcss-doc_url] config that combines useful plugins like Aut
 Install the PostCSS config and save them to your package.json `devDependencies`:
 
 ```sh
-# NPM
 npm add --save-dev @giotramu/postcss-config
-
-# PNPM
-pnpm add --save-dev @giotramu/postcss-config
-
-# Yarn
-yarn add --dev @giotramu/postcss-config
 ```
 
 ## Usage
@@ -204,8 +197,8 @@ module.exports = ctx =>
 
 [ci_badge]: https://img.shields.io/github/actions/workflow/status/giotramu/postcss-config/tests.yml?style=flat-square&colorA=313133&colorB=4169E1
 [coverage_badge]: https://img.shields.io/coveralls/github/giotramu/postcss-config/stable?style=flat-square&colorA=313133&colorB=4169E1
-[downloads_badge]: https://img.shields.io/npm/dm/@giotramu/postcss-config?style=flat-square&colorA=313133&colorB=4169E1
-[version_badge]: https://img.shields.io/npm/v/@giotramu/postcss-config?style=flat-square&colorA=313133&colorB=4169E1
+[npm_downloads_badge]: https://img.shields.io/npm/dm/@giotramu/postcss-config?style=flat-square&colorA=313133&colorB=4169E1
+[npm_version_badge]: https://img.shields.io/npm/v/@giotramu/postcss-config?style=flat-square&colorA=313133&colorB=4169E1
 
 <!-- Links -->
 
@@ -215,8 +208,6 @@ module.exports = ctx =>
 [coverage_url]: https://coveralls.io/github/giotramu/postcss-config
 [cssnano_url]: https://github.com/cssnano/cssnano
 [deepmerge_url]: https://github.com/TehShrike/deepmerge
-[deps_url]: https://david-dm.org/giotramu/postcss-config
-[devdeps_url]: https://david-dm.org/giotramu/postcss-config?type=dev
 [npm_url]: https://www.npmjs.com/package/@giotramu/postcss-config
 [postcss-custom-media_url]: https://github.com/postcss/postcss-custom-media
 [postcss-doc_url]: https://postcss.org
