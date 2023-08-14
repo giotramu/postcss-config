@@ -1,6 +1,6 @@
 import { expect, test, vi } from 'vitest'
-import getConfig from '../src'
-import expectedConfig from './_config'
+import getConfig from '../main'
+import { postcssConfig as expectedConfig } from './constants'
 
 test('getConfig() returns the standard config.', () => {
   expect(getConfig()).toStrictEqual(expectedConfig)
@@ -15,7 +15,9 @@ test('getConfig() returns the standard config with default options.', () => {
 
   expect(config.syntax).toBeUndefined()
 
-  const autoprefixer = config.plugins.autoprefixer
+  const {
+    plugins: { autoprefixer }
+  } = config
 
   // @ts-expect-error
   expect(autoprefixer.overrideBrowserslist).toStrictEqual([
@@ -40,7 +42,7 @@ test('getConfig() returns the standard config with custom options.', () => {
 
   expect(config.syntax).toBeUndefined()
 
-  const autoprefixer = config.plugins.autoprefixer
+  const { autoprefixer } = config.plugins
 
   // @ts-expect-error
   expect(autoprefixer.overrideBrowserslist).toBe(browsers)

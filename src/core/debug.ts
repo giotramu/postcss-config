@@ -1,12 +1,12 @@
 import { printLog } from './helpers'
 import type { DebugConfig } from './types'
 
-export function debugConfig({
+export const debugConfig = ({
   browsers,
   sourceMap,
   syntax,
   config
-}: DebugConfig): void {
+}: DebugConfig): void => {
   printLog('Supported Browsers: ', browsers.join(', '))
   printLog('CSS Source-Map: ', sourceMap)
   printLog('Syntax: ', syntax)

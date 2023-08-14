@@ -2,6 +2,15 @@
 
 All notable changes to the project will be documented in this file.
 
+## [4.4.0]
+
+**Internals:**
+
+- Remove the old entry point for the package by replacing it with the recommended `exports' field. Read more [here](https://nodejs.org/api/packages.html#package-entry-points).
+- `autoprefixer` upgraded from `10.4.13` to `10.4.15`
+- `postcss` upgraded from `8.4.21` to `8.4.27`
+- `postcss-custom-media` upgraded from `9.1.2` to `10.0.0`
+
 ## [4.3.0]
 
 **Features:**
@@ -222,6 +231,7 @@ All notable changes to the project will be documented in this file.
 
 - Update dependencies
 
+[4.4.0]: https://github.com/giotramu/postcss-config/releases/tag/4.4.0
 [4.3.0]: https://github.com/giotramu/postcss-config/releases/tag/4.3.0
 [4.2.0]: https://github.com/giotramu/postcss-config/releases/tag/4.2.0
 [4.1.2]: https://github.com/giotramu/postcss-config/releases/tag/4.1.2

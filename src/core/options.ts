@@ -1,4 +1,4 @@
-import { isBoolean } from './helpers'
+import { isBrowserslist, isBoolean } from './helpers'
 import type { ConfigOptions, ExternalOptions } from './types'
 
 const DEFAULT_BROWSERS = [
@@ -13,7 +13,7 @@ const DEFAULT_SYNTAX = undefined
 
 const DEFAULT_SOURCE_MAP = undefined
 
-export function optionsParser(options?: ExternalOptions): ConfigOptions {
+export const optionsParser = (options?: ExternalOptions): ConfigOptions => {
   const browsers: ConfigOptions['browsers'] = DEFAULT_BROWSERS
 
   const syntax: ConfigOptions['syntax'] = DEFAULT_SYNTAX
@@ -33,13 +33,4 @@ export function optionsParser(options?: ExternalOptions): ConfigOptions {
     sourceMap: isBoolean(options.sourceMap) ? options.sourceMap : sourceMap,
     syntax: options.syntax ? options.syntax : syntax
   }
-}
-
-// --- Helpers
-function isBrowserslist(arg?: unknown): arg is string[] {
-  if (Array.isArray(arg) && arg.length > 0) {
-    return arg.filter(item => typeof item === 'string').length > 0
-  }
-
-  return false
 }

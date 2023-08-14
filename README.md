@@ -12,12 +12,11 @@ Flexible [PostCSS][postcss-doc_url] config that combines useful plugins like Aut
   - [Usage](#usage)
   - [Standard config](#standard-config)
   - [Extend the config](#extend-the-config)
-    - [Disable plugins](#disable-plugins)
+      - [Disable plugins](#disable-plugins)
   - [Options](#options)
   - [Browsers support](#browsers-support)
   - [Advanced usage](#advanced-usage)
-  - [PostCSS Preset Env. Why not?](#postcss-preset-env-why-not)
-  - [Thanks](#thanks)
+  - [Acknowledgments](#acknowledgments)
   - [License](#license)
 
 ## Install
@@ -181,21 +180,19 @@ module.exports = ctx =>
     : require('@giotramu/postcss-config')({ sourceMap: false })
 ```
 
-## PostCSS Preset Env. Why not?
+## Acknowledgments
 
-[PostCSS Preset Env][postcss-preset-env_url] is fantastic, but if you want more control over CSS output and appreciate both the SASS and PostCSS ecosystems, merge them through this config.
-
-## Thanks
+Thanks to the following projects for their contributions:
 
 - [deepmerge][deepmerge_url]
 
 ## License
 
-[MIT License](./LICENSE)
+[Apache License 2.0](./LICENSE)
 
 <!-- Badges -->
 
-[ci_badge]: https://img.shields.io/github/actions/workflow/status/giotramu/postcss-config/tests.yml?style=flat-square&colorA=313133&colorB=4169E1
+[ci_badge]: https://img.shields.io/github/actions/workflow/status/giotramu/postcss-config/test.yml?style=flat-square&colorA=313133&colorB=4169E1
 [coverage_badge]: https://img.shields.io/coveralls/github/giotramu/postcss-config/stable?style=flat-square&colorA=313133&colorB=4169E1
 [npm_downloads_badge]: https://img.shields.io/npm/dm/@giotramu/postcss-config?style=flat-square&colorA=313133&colorB=4169E1
 [npm_version_badge]: https://img.shields.io/npm/v/@giotramu/postcss-config?style=flat-square&colorA=313133&colorB=4169E1
