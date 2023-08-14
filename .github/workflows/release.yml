@@ -23,8 +23,9 @@ jobs:
       - name: 🟢 Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 16
           cache: pnpm
+          node-version: 16
+          registry-url: 'https://registry.npmjs.org'
 
       - name: 🧩 Install Dependencies
         run: pnpm install --frozen-lockfile
@@ -36,10 +37,10 @@ jobs:
         if: 'github.event.release.prerelease'
         run: npm publish --access public --tag next
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_PAT }}
 
       - name: 📣 Publish to NPM with the latest tag
         if: '!github.event.release.prerelease'
         run: npm publish --access public
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_PAT }}
