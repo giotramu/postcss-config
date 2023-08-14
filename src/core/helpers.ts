@@ -1,14 +1,22 @@
-export function isBoolean(arg?: unknown): arg is boolean {
-  return typeof arg === 'boolean'
+import merge from 'deepmerge'
+
+export const isBoolean = (arg?: unknown): arg is boolean =>
+  typeof arg === 'boolean'
+
+export const isBrowserslist = (arg?: unknown): arg is string[] => {
+  if (Array.isArray(arg) && arg.length > 0) {
+    return arg.filter(item => typeof item === 'string').length > 0
+  }
+
+  return false
 }
 
-export function isString(arg?: unknown): arg is string {
-  return typeof arg === 'string'
-}
+export const isString = (arg?: unknown): arg is string =>
+  typeof arg === 'string'
 
-export function isNotEmptyObject(
+export const isNotEmptyObject = (
   arg?: unknown
-): arg is Record<string, unknown> {
+): arg is Record<string, unknown> => {
   if (Object.prototype.toString.call(arg) !== '[object Object]') {
     return false
   }
@@ -16,21 +24,28 @@ export function isNotEmptyObject(
   return Object.entries(arg as Record<string, unknown>).length > 0
 }
 
-export function printLog(
+export const mergeObjects = <A, B>(
+  source: Partial<A>,
+  target: Partial<B>
+): A & B => merge(source, target, { arrayMerge: overwriteArrays })
+
+const overwriteArrays = (_: [], source: []): [] => {
+  return source
+}
+export const printLog = (
   content: string | { docHook: string; message: string },
   ...args: unknown[]
-): void {
-  const doc = 'https://github.com/giotramu/postcss-config'
-
-  const prefix = '[postcss-config] '
+): void => {
+  const DOC = 'https://github.com/giotramu/postcss-config'
+  const TAG = '[postcss-config] '
 
   /* eslint-disable no-console */
-  return typeof content === 'string'
-    ? console.log(prefix, content, ...args)
+  typeof content === 'string'
+    ? console.log(TAG, content, ...args)
     : console.log(
-        prefix,
+        TAG,
         content.message,
-        `Read the docs: ${doc}/${content.docHook}`
+        `Read the docs: ${DOC}/${content.docHook}`
       )
   /* eslint-enable no-console */
 }

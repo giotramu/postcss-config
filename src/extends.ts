@@ -1,16 +1,14 @@
-import merge from 'deepmerge'
 import { getPostcssConfig } from './core/config'
 import { debugConfig } from './core/debug'
+import { mergeObjects } from './core/helpers'
 import { optionsParser } from './core/options'
 import { pluginsParser } from './core/plugins'
 import type { ExternalOptions, PostcssConfig, Plugins } from './core/types'
 
-export = extendsConfig
-
-function extendsConfig(
+const extendsConfig = (
   plugins: Plugins,
   options?: ExternalOptions
-): PostcssConfig {
+): PostcssConfig => {
   const { browsers, sourceMap, syntax } = optionsParser(options)
   const source = getPostcssConfig({ browsers, sourceMap, syntax })
 
@@ -25,14 +23,4 @@ function extendsConfig(
   return config
 }
 
-// --- Helpers
-function mergeObjects<T1, T2>(
-  source: Partial<T1>,
-  target: Partial<T2>
-): T1 & T2 {
-  return merge(source, target, { arrayMerge: overwriteArrays })
-}
-
-function overwriteArrays(_: [], source: []): [] {
-  return source
-}
+export = extendsConfig

@@ -1,8 +1,5 @@
-/index.js
-/extends.js
-/core/
-/types/
-/coverage/
+/coverage
+/lib
 
 .cache
 .DS_Store

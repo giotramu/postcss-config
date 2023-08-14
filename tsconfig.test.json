@@ -1,9 +1,0 @@
-{
-  "extends": "@detra-lab/tsc/node/tsconfig.cjs.json",
-  "compilerOptions": {
-    "baseUrl": ".",
-    "noEmit": true
-  },
-  "include": ["./vite.config.ts", "./src/**/*", "./tests/**/*"],
-  "exclude": ["node_modules"]
-}

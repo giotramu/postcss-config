@@ -2,66 +2,71 @@
   "name": "@giotramu/postcss-config",
   "version": "4.3.0",
   "description": "Flexible PostCSS config that combines useful plugins.",
-  "license": "MIT",
-  "author": "giotramu <https://github.com/giotramu>",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./lib/main.js",
+      "require": "./lib/main.cjs",
+      "types": "./lib/main.d.ts"
+    },
+    "./extends": {
+      "import": "./lib/extends.js",
+      "require": "./lib/extends.cjs",
+      "types": "./lib/extends.d.ts"
+    }
+  },
+  "files": [
+    "./lib"
+  ],
+  "prettier": "@detra-lab/prettier-config",
+  "scripts": {
+    "check:tsc": "tsc --noEmit",
+    "check:src": "eslint . --ext .js,.ts --ignore-path .gitignore",
+    "check": "pnpm run /^check:.*/",
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "build": "tsup-node",
+    "compile:css": "pnpm run build && postcss ./examples/styles.pcss --dir=examples/ --ext=min.css"
+  },
+  "devDependencies": {
+    "@detra-lab/eslint-config": "^1.1.0",
+    "@detra-lab/prettier-config": "^0.2.0",
+    "@detra-lab/tsc": "^0.2.5",
+    "@evilmartians/lefthook": "^1.4.8",
+    "@types/node": "^16.18.40",
+    "@vitest/coverage-v8": "^0.34.1",
+    "eslint": "^8.47.0",
+    "postcss-cli": "^10.1.0",
+    "prettier": "^3.0.1",
+    "tsup": "^7.2.0",
+    "typescript": "^5.1.6",
+    "utility-types": "^3.10.0",
+    "vitest": "^0.34.1"
+  },
+  "dependencies": {
+    "autoprefixer": "10.4.15",
+    "cssnano": "6.0.1",
+    "deepmerge": "4.3.1",
+    "postcss": "8.4.27",
+    "postcss-custom-media": "10.0.0",
+    "postcss-inline-svg": "6.0.0",
+    "postcss-reporter": "7.0.5"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "homepage": "https://github.com/giotramu/postcss-config#readme",
+  "license": "Apache License 2.0",
+  "author": "giotramu <https://github.com/giotramu>",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/giotramu/postcss-config.git"
   },
   "bugs": {
     "url": "https://github.com/giotramu/postcss-config/issues"
-  },
-  "engines": {
-    "node": "16.x || 18.x",
-    "npm": "8.x || 9.x"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
-  "main": "index.js",
-  "types": "types/index.d.ts",
-  "files": [
-    "/index.js",
-    "/extends.js",
-    "/core/",
-    "/types/"
-  ],
-  "prettier": "@detra-lab/prettier-config",
-  "scripts": {
-    "check:tsc": "tsc --noEmit",
-    "check:src": "eslint . --ext .js,.ts",
-    "check": "npm run check:tsc && npm run check:src",
-    "test": "vitest",
-    "test:coverage": "vitest run --coverage",
-    "clean": "del ./{index,extends}.js ./common ./types",
-    "build": "npm run clean && tsc",
-    "precompile:css": "npm run build",
-    "compile:css": "postcss ./examples/styles.pcss --dir=examples/ --ext=min.css"
-  },
-  "devDependencies": {
-    "@detra-lab/eslint-config": "^0.1.0",
-    "@detra-lab/prettier-config": "^0.1.0",
-    "@detra-lab/tsc": "^0.1.0",
-    "@evilmartians/lefthook": "^1.3.0",
-    "@types/node": "^16.0.0",
-    "@vitest/coverage-c8": "^0.31.4",
-    "del-cli": "^5.0.0",
-    "eslint": "^8.39.0",
-    "postcss-cli": "^10.1.0",
-    "prettier": "^2.8.0",
-    "typescript": "^5.0.0",
-    "utility-types": "^3.10.0",
-    "vitest": "^0.31.4"
-  },
-  "dependencies": {
-    "autoprefixer": "10.4.14",
-    "cssnano": "6.0.1",
-    "deepmerge": "4.3.1",
-    "postcss": "8.4.23",
-    "postcss-custom-media": "9.1.3",
-    "postcss-inline-svg": "6.0.0",
-    "postcss-reporter": "7.0.5"
   },
   "keywords": [
     "css",

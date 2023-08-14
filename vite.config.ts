@@ -2,7 +2,7 @@ import { defineConfig } from 'vitest/config'
 
 const isCi = (process.env.CI ?? 'false') === 'true'
 
-export default defineConfig({
+export const viteConfig = defineConfig({
   test: {
     coverage: {
       reporter: isCi
@@ -10,7 +10,10 @@ export default defineConfig({
         : ['text', 'html', 'json']
     },
     typecheck: {
-      tsconfig: './tsconfig.test.json'
+      tsconfig: './tsconfig.json'
     }
   }
 })
+
+// eslint-disable-next-line no-restricted-exports
+export default viteConfig

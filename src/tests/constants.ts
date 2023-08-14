@@ -1,6 +1,6 @@
-import type { PostcssConfig } from '../src/core/types'
+import type { PostcssConfig } from '../core/types'
 
-const postcssConfig: PostcssConfig = {
+export const postcssConfig: PostcssConfig = {
   map: undefined,
   syntax: undefined,
   plugins: {
@@ -39,5 +39,3 @@ const postcssConfig: PostcssConfig = {
     }
   }
 }
-
-export default postcssConfig

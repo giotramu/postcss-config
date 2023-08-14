@@ -1,6 +1,7 @@
+import type { Syntax } from 'postcss'
 import { expect, test, vi } from 'vitest'
-import extendsConfig from '../src/extends'
-import expectedConfig from './_config'
+import extendsConfig from '../extends'
+import { postcssConfig as expectedConfig } from './constants'
 
 test('extendsConfig() appends "postcss-fake-plugin" to the plugins list.', () => {
   const config = extendsConfig(['postcss-fake-plugin'])
@@ -35,7 +36,8 @@ test('extendsConfig() returns the extended config with custom options.', () => {
 
   const sourceMap = 'inline'
 
-  const syntax = {
+  // @ts-expect-error
+  const syntax: Syntax = {
     parse: undefined,
     stringify: undefined
   }

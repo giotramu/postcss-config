@@ -1,12 +1,4 @@
 {
   "extends": "@detra-lab/tsc/node/tsconfig.cjs.json",
-  "compilerOptions": {
-    "baseUrl": "./src",
-    "outDir": ".",
-    "declaration": true,
-    "declarationDir": "./types",
-    "typeRoots": ["./types", "./node_modules/@types"]
-  },
-  "include": ["./src/**/*"],
-  "exclude": ["node_modules"]
+  "include": ["./src/**/*", "./tsup.config.ts", "./vite.config.ts"]
 }
