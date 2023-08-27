@@ -1,9 +1,0 @@
-version: 2
-updates:
-  - package-ecosystem: 'npm'
-    directory: '/'
-    labels: ['update: packages 📦']
-    schedule:
-      interval: 'monthly'
-      time: '08:00'
-      timezone: 'Europe/Rome'

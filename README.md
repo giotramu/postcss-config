@@ -1,11 +1,11 @@
 # PostCSS Config
 
+> ⚠️ The project will no longer be updated, but I am here to help with any concerns.
+
 Flexible [PostCSS][postcss-doc_url] config that combines useful plugins like Autoprefixer, CSSNano, SVGO, Inline SVG, Custom Media, etc. It offers granular control instead of postcss-preset-env.
 
 [![NPM Version][npm_version_badge]][npm_url]
 [![NPM Downloads][npm_downloads_badge]][npm_url]
-[![CI Status][ci_badge]][ci_url]
-[![Coverage Status][coverage_badge]][coverage_url]
 
 - [PostCSS Config](#postcss-config)
   - [Install](#install)
@@ -192,8 +192,6 @@ Thanks to the following projects for their contributions:
 
 <!-- Badges -->
 
-[ci_badge]: https://img.shields.io/github/actions/workflow/status/giotramu/postcss-config/test.yml?style=flat-square&colorA=313133&colorB=4169E1
-[coverage_badge]: https://img.shields.io/coveralls/github/giotramu/postcss-config/stable?style=flat-square&colorA=313133&colorB=4169E1
 [npm_downloads_badge]: https://img.shields.io/npm/dm/@giotramu/postcss-config?style=flat-square&colorA=313133&colorB=4169E1
 [npm_version_badge]: https://img.shields.io/npm/v/@giotramu/postcss-config?style=flat-square&colorA=313133&colorB=4169E1
 
@@ -201,8 +199,6 @@ Thanks to the following projects for their contributions:
 
 [autoprefixer_url]: https://github.com/postcss/autoprefixer
 [browserslist_url]: https://browserl.ist/?q=last+2+versions%2C+not+ie+%3C%3D+11%2C+not+op_mini+all%2C+not+dead%2C+not+%3C+0.5%25
-[ci_url]: https://github.com/giotramu/postcss-config/actions/workflows/tests.yml
-[coverage_url]: https://coveralls.io/github/giotramu/postcss-config
 [cssnano_url]: https://github.com/cssnano/cssnano
 [deepmerge_url]: https://github.com/TehShrike/deepmerge
 [npm_url]: https://www.npmjs.com/package/@giotramu/postcss-config
